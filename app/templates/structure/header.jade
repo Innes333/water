@@ -1,9 +1,20 @@
 header
-	div.container
-		div.row
-			div.col-md-12
-				nav
-					ul.nav
-						each val, index in {1:'Home',2:'About',3:'News',4:'Contacts'}
-							li
-								a(href=index + val)= val
+	nav
+		div.logo
+			img(src='../img/logo.png')
+		ul.nav
+			li
+				a(href='#')= 'About'
+				a(href='#')= 'Catalog'
+				a(href='#')= 'News'
+				a(href='#')= 'Partners'
+				a(href='#')= 'Contact'
+				a(href='#', class='shop-cart')
+					i.fa.fa-shopping-cart
+					| Shop
+	div.content-block.center
+		h1.title Aqua-enrichment
+		p.subtitle Feel power of water
+		a(href="elements.html").btn See all products				
+	
+				
