@@ -1,13 +1,24 @@
 footer
-	div.copy
-		div.container
-			div.row
-				div.col-md-4 © 
-					
-				div.col-md-4.center
-					a(href="sitemap.xml")
-						i.fa.fa-sitemap Sitemap
-				div.col-md-4
-					div.dev
+	div.container
+		div.row
+			h3.center Follow us
+			ul
+				each val, index in [{link: '#', icon:'fa fa-facebook'}, {link: '#', icon:'fa fa-instagram'}]
+					li.social-link
+						a(href=val.link)
+							i(class=val.icon)
+
+		div.row
+			div.col-md-4
+				each val, index in [{link: '#', label: 'Privacy policy'}, {link: '#', label: 'Returnd policy'},  {link: '#', label: 'Terms and conditions of use'}]
+					div.foter-link
+						a(href=val.link)= val.label
+				
+			div.col-md-4.center
+				img(src="../img/white_logo.png", alt="")
+			div.col-md-4
+				each val, index in [{link: '#', label: 'Sale terms'}, {link: '#', label: 'Patent and trademarks'}]
+					div.foter-link
+						a(href=val.link)= val.label
 						
 					
