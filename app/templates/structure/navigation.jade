@@ -1,12 +1,15 @@
 nav
-	div.logo
-		a(href="/")
-			img(src='../img/logo.png')
-	ul.nav
-		each val,ind in ['About','Catalog','News','Partners','Contact']
-			li
-				a(href=val+'.html')=val
-		li
-			a(href='#', class='shop-cart')
-				i.fa.fa-shopping-cart
-				| Shop
+	div.container
+		div.row
+			div.col-md-12
+				div.logo
+					a(href="/")
+						img(src='../img/logo.png')
+				ul.nav
+					each val,ind in ['About','Catalog','News','Partners','Contact']
+						li
+							a(href=val+'.html')=val
+					li
+						a(href='Basket-page.html', class='shop-cart')
+							i.fa.fa-shopping-cart
+							| Shop

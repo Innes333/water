@@ -79,6 +79,8 @@ input,textarea,button
 	font-size: 22px
 	&.black
 		color: $black
+	&.white
+		color: $white
 
 .subtitle
 	font-size: 18px
@@ -87,6 +89,8 @@ input,textarea,button
 	margin-bottom: 45px
 	&.black
 		color: $black
+	&.white
+		color: $white
 
 .label
 	display: inline-block
@@ -94,6 +98,10 @@ input,textarea,button
 	line-height: 19px
 	font-size: 12px
 	color: $grey
+
+.dib
+	display: inline-block
+	vertical-align: top
 
 //Navigation start--------------------
 header
@@ -175,14 +183,24 @@ header
 	background-size: cover
 	background-position: 50% top
 	height: 100vh
-	&::after
+//main promo block---------------------
+
+//Gradient after-----------------------
+.gradient
+	position: relative
+	z-index: 1
+	&:after
 		position: absolute
 		content: ''
+		top: 0
+		left: 0
 		height: 100%
 		width: 100%
 		background: linear-gradient(to right, $warmMain 0%, $lavanda 100%)
 		opacity: 0.4
-//main promo block---------------------
+		z-index: -1
+//Gradient after-----------------------
+
 
 // Button start------------------------
 .btn

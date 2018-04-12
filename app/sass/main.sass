@@ -80,7 +80,42 @@
 
 .product-card-inner
 	img
-		max-height: 400px
+		max-height: 480px
+
+.product-card-basket
+	.container-fluid
+		border-bottom: 1px solid $grey
+		padding-bottom: 10px
+	img
+		max-height: 100px
+	.product-options
+		>div
+			position: relative
+			width: 24.5%
+			display: inline-block!important
+			vertical-align: top
+			border-right: 1px solid $grey
+			text-align: center
+			&:last-child
+				border-right: none
+			li
+				margin-right: 5px!important
+			.option-name
+				margin-bottom: 0
+		.product-color
+			ul
+				display: inline-block
+				vertical-align: text-top
+				line-height: 20px
+		.close
+			position: absolute
+			top: 3px
+			right: -20px
+			color: $black
+			background-color: transparent
+
+.product-card-basket,
+.product-card-inner
 	.title
 		line-height: 40px
 	.description
@@ -120,8 +155,32 @@
 						height: 24px
 						border: 1px solid $main
 						z-index: -1
-
+.total
+	p
+		line-height: 40px
+		margin-right: 20px
 //Product-card--------------
+
+//Subscribe block-----------
+.subscribe
+	padding: 20px 0
+	background-size: cover
+	background-position: 50% top
+	.subtitle
+		margin-bottom: 15px
+	.form-subscribe-body
+		position: relative
+		input
+			height: 49px
+			width: 100%
+			border-top-right-radius: 22px
+			border-bottom-right-radius: 22px
+			text-indent: 10px
+		button
+			position: absolute
+			top: 2px
+			right: 2px
+//Subscribe block-----------
 
 #content 
 	padding-top: 20px
@@ -304,6 +363,28 @@ section
 				top: 0
 
 
+#someone-purchased
+	position: fixed
+	bottom: 20px
+	left: 20px
+	padding: 5px 10px
+	background-color: $white
+	z-index: 100
+	.close
+		position: absolute
+		top: 0px
+		right: 0px
+		width: 25px
+		height: 25px
+		line-height: 25px
+		color: $black
+		text-align: center
+		cursor: pointer
+	img
+		max-height: 80px
+		margin-left: -10px
+	a
+		display: block
 
 
 footer 
@@ -315,10 +396,8 @@ footer
 	bottom: 0
 	left: 0
 	width: 100%
-
 	a
 		color: $white
-
 	ul
 		li
 			display: inline-block
