@@ -1,0 +1,52 @@
+doctype html
+html.no-js(lang="en")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		h1.title.black.center News Alkastone
+		p.subtitle.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, vitae.
+		div.container
+			div.row
+				-
+					var blogList = [{
+							image: "img/run-medium.jpg",
+							title: "Alkastone bottle",
+							date: "12.04.1018",
+							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
+						},{
+							image: "img/girl-medium.jpg",
+							title: "Get more info about the Alkastone",
+							date: "11.04.1018",
+							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
+						},{
+							image: "img/yoga-medium.jpg",
+							title: "Keep doing",
+							date: "10.04.1018",
+							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
+						},{
+							image: "img/run-medium.jpg",
+							title: "Alkastone bottle",
+							date: "12.04.1018",
+							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
+						},{
+							image: "img/girl-medium.jpg",
+							title: "Get more info about the Alkastone",
+							date: "11.04.1018",
+							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
+						}];
+				for blog in blogList
+					div.col-md-6.mt1.mb1
+						div.card.hover
+							div.img-wrap.small
+								a(href="content-page.html")
+									img(src=blog.image alt=blog.title)
+							div.descr
+								i.fa.fa-calendar.label 
+								span.label=blog.date 
+									|  | Posted by Alkastone.com
+								h3=blog.title
+								p=blog.introtext
+									a(href="Content-page.html")  read more &#8250;
+		include templates/structure/pagination
+		include templates/structure/footer			
+		include templates/structure/scripts

@@ -1,0 +1,49 @@
+doctype html
+html.no-js(lang="en")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		section#content.product-card-inner
+			div.cont-wrap
+				div.container-fluid
+					div.row
+						div.col-sm-4
+							img(src="img/bottle-0.jpg")
+						div.col-sm-8
+							h1.title.black Water Bottle
+							p.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sunt, quibusdam. Repellat debitis adipisci aspernatur iure sapiente eum, magnam, dolorem sed incidunt, excepturi nesciunt dolores repellendus, nam mollitia! Deleniti quisquam eaque possimus explicabo nihil vel! Sunt architecto dolorem consequuntur, fugit adipisci mollitia perspiciatis repellendus minus quibusdam quaerat sapiente labore at.
+							div.product-options.mt2
+								div.product.size
+									span.option-name Size:
+									div.options
+										ul
+											li.active 450ml
+											li 600ml
+								div.product-color
+									span.option-name Color:
+									div.options
+										ul
+											- var productColor = 0
+											while productColor < 4
+												if(productColor==0)
+													li(style="background: url('img/color-"+ productColor++ +".jpg')" class="active")
+												else
+													li(style="background: url('img/color-"+ productColor++ +".jpg')")
+								div.product-count
+									span.option-name Count:
+									div.options
+										span.input-number-decrement –
+										input(class="input-number" type="text" value="1" min="1" max="100")
+										span.input-number-increment +
+								div.product-price
+									span.option-name Price: 
+									div.options
+										ul 
+											li.active.big 46.00$
+								button(type="button" name="ms2_action" value="cart/add" class="btn") add to basket
+						div.col-sm-12
+							include templates/structure/share-btns
+		
+						
+		include templates/structure/footer
+		include templates/structure/scripts

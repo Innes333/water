@@ -1,0 +1,20 @@
+ul.share-btns-list
+	li.label Share in social:
+	-
+		var btnsList = [{
+			url: "https://facebook.com/sharer/sharer.php?u=http://tsumbaluk.in.ua/",
+			icon: "facebook"
+		},{
+			url: "https://twitter.com/intent/tweet/?text=Lorem ipsum dolor sit amet, consectetur adipisicing elit&amp;url=http://tsumbaluk.in.ua/",
+			icon: "twitter"
+		},{
+			url: "https://plus.google.com/share?url=http://tsumbaluk.in.ua/",
+			icon: "google"
+		},{
+			url: "https://pinterest.com/pin/create/button/?url=http://tsumbaluk.in.ua/&amp;description=Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+			icon: "pinterest"
+		}]
+	for btns in btnsList
+		li
+			a(class="resp-sharing-button" href=btns.url target="_blank" title="Share in "+btns.icon)
+				i(class="fa fa-"+btns.icon)

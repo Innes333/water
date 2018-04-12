@@ -1,0 +1,40 @@
+doctype html
+html.no-js(lang="en")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		h1.title.black.center Каталог Alkastone
+		p.subtitle.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, vitae.
+		div.container
+			div.row
+			- var productCard = 0
+				while productCard < 6
+					if(productCard < 4)
+						div.col-md-4.col-sm-6.col-xs-12.mb3
+							div.product-card.card
+								a(href="Product-page.html")
+									img(src="img/bottle-"+ productCard +".jpg")
+								div.product-options
+									h3.product-name
+										a(href="Product-page.html")	Water Bottle
+									p.product-color Green
+										span(style="background: url('img/color-"+ productCard++ +".jpg')")
+									p.product-size Size:
+										strong  600 ml.
+									p.product-price 46.00$
+									button(type="button" name="ms2_action" value="cart/add" class="btn mt2") add to basket
+					else
+						div.col-md-4.col-sm-6.col-xs-12.mb3
+							div.product-card.card
+								a(href="Product-page.html")
+									img(src="img/filter-"+ productCard++ +".jpg")
+								div.product-options
+									h3.product-name
+										a(href="Product-page.html")	Water Filter
+									p.product-size Size:
+										strong  600 ml.
+									p.product-price 26.00$
+									button(type="button" name="ms2_action" value="cart/add" class="btn mt2") add to basket
+						
+		include templates/structure/footer
+		include templates/structure/scripts

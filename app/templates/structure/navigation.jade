@@ -1,0 +1,12 @@
+nav
+	div.logo
+		a(href="/")
+			img(src='../img/logo.png')
+	ul.nav
+		each val,ind in ['About','Catalog','News','Partners','Contact']
+			li
+				a(href=val+'.html')=val
+		li
+			a(href='#', class='shop-cart')
+				i.fa.fa-shopping-cart
+				| Shop

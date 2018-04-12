@@ -213,6 +213,36 @@ form
 			+ label
 				@include transform(rotate(180deg))
 
+*
+	box-sizing: border-box
+
+.input-number
+	width: 47px
+	height: 35px
+	margin-left: -5px
+	padding: 0 12px
+	vertical-align: top
+	text-align: center
+	outline: none
+	pointer-events: none
+	border-top: 1px solid $main
+	border-bottom: 1px solid $main
+
+.input-number-decrement,
+.input-number-increment
+	display: inline-block
+	height: 35px
+	width: 35px
+	background: $main
+	color: $white
+	line-height: 33px
+	text-align: center
+	font-weight: bold
+	cursor: pointer
+	user-select: none
+	&:active
+		background: $black
+
 .addui-slider
 	display: block
 	box-sizing: border-box

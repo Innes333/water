@@ -1,20 +1,7 @@
 header
-	nav
-		div.logo
-			img(src='../img/logo.png')
-		ul.nav
-			li
-				a(href='#')= 'About'
-				a(href='#')= 'Catalog'
-				a(href='#')= 'News'
-				a(href='#')= 'Partners'
-				a(href='#')= 'Contact'
-				a(href='#', class='shop-cart')
-					i.fa.fa-shopping-cart
-					| Shop
-	div.content-block.center
-		h1.title Aqua-enrichment
-		p.subtitle Feel power of water
-		a(href="elements.html").btn See all products				
-	
-				
+	include navigation
+	div.main-promo(style="background-image:url('img/girl-with-bottle-fancy.jpg')")
+		div.content-block.center
+			h1.title Aqua-enrichment
+			p.subtitle Feel power of water
+			a(href="elements.html").btn See all products

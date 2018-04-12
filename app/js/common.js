@@ -1,3 +1,45 @@
+(function() {
+ 
+	window.inputNumber = function(el) {
+
+		var min = el.attr('min') || false;
+		var max = el.attr('max') || false;
+
+		var els = {};
+
+		els.dec = el.prev();
+		els.inc = el.next();
+
+		el.each(function() {
+			init($(this));
+		});
+
+		function init(el) {
+
+			els.dec.on('click', decrement);
+			els.inc.on('click', increment);
+
+			function decrement() {
+				var value = el[0].value;
+				value--;
+				if(!min || value >= min) {
+					el[0].value = value;
+				}
+			}
+
+			function increment() {
+				var value = el[0].value;
+				value++;
+				if(!max || value <= max) {
+					el[0].value = value++;
+				}
+			}
+		}
+	}
+})();
+
+inputNumber($('.input-number'));
+
 $(function() {
 	var main = {
 		opt: {
@@ -9,6 +51,7 @@ $(function() {
 			wind: $(window),
 			mobButton: $('.mob-button'),
 			slider: $('.slider'),
+			inputNumber: $('.input-number'),
 			owlOptions: {
 				autoPlay: 3000,
 				navigation: true,
@@ -19,11 +62,39 @@ $(function() {
 				navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']								
 			}
 		},
+		inputNumber: function(el) {
+			var min = el.attr('min') || false;
+			var max = el.attr('max') || false;
+			var els = {};
+			els.dec = el.prev();
+			els.inc = el.next();
+			el.each(function() {
+				init($(this));
+			});
+			function init(el) {
+				els.dec.on('click', decrement);
+				els.inc.on('click', increment);
+				function decrement() {
+					var value = el[0].value;
+					value--;
+					if(!min || value >= min) {
+						el[0].value = value;
+					}
+				}
+				function increment() {
+					var value = el[0].value;
+					value++;
+					if(!max || value <= max) {
+						el[0].value = value++;
+					}
+				}
+			}
+		},
 		tabs: function(el){
 			var linc = el.find('.tab-link'),
 					tab  = el.find('.tab'),
 					dataShow;
-			linc.on('click',function(){				
+			linc.on('click',function(){
 				dataShow = $(this).data('show');
 				linc.removeClass('active');
 				$(this).addClass('active');
@@ -86,6 +157,8 @@ $(function() {
 			this.opt.slider.owlCarousel(this.opt.owlOptions);
 			//mob button toggle
 			this.toggleC(this.opt.mobButton);
+			//
+			this.inputNumber(this.opt.inputNumber);
 		}
 	};
 
