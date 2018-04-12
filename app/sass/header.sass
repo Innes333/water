@@ -137,7 +137,7 @@ header
 					font-weight: 600
 
 					&.shop-cart
-						background-color: $main
+						background: linear-gradient(to right, #6eeef2, $main)
 						color: $white
 						border-radius: 20px
 						box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37)
@@ -214,12 +214,16 @@ header
 	text-align: center
 	text-transform: uppercase
 	letter-spacing: 1px
-	background-color: $main
 	border-radius: 20px
-	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37)
-	transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1)
+	background-color: $main
+	background-image: linear-gradient(to right, #6eeef2, $main)
+	background-position: 100% 0
+	background-size: 200% 200%	
+	box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35)
+	transition: all 0.5s ease	
 	&:hover
-		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.3)
+		box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0)
+ 		background-position: 0 0
 		color: $white
 
 	&.full
