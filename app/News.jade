@@ -4,33 +4,38 @@ html.no-js(lang="en")
 	body
 		include templates/structure/header-inner
 		h1.title.black.center News Alkastone
-		p.subtitle.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, vitae.
+		p.subtitle.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, vitae.						
 		div.container
 			div.row
 				-
 					var blogList = [{
 							image: "img/run-medium.jpg",
 							title: "Alkastone bottle",
+							tags: ["sport", "health"],
 							date: "12.04.1018",
 							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
 						},{
 							image: "img/girl-medium.jpg",
 							title: "Get more info about the Alkastone",
+							tags: ["sport", "health"],
 							date: "11.04.1018",
 							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
 						},{
 							image: "img/yoga-medium.jpg",
 							title: "Keep doing",
+							tags: ["sport", "health"],
 							date: "10.04.1018",
 							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
 						},{
 							image: "img/run-medium.jpg",
 							title: "Alkastone bottle",
+							tags: ["sport", "health"],
 							date: "12.04.1018",
 							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
 						},{
 							image: "img/girl-medium.jpg",
 							title: "Get more info about the Alkastone",
+							tags: ["sport", "health"],
 							date: "11.04.1018",
 							introtext: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo deserunt quis aliquid fugit. Nesciunt, repellendus."
 						}];
@@ -41,9 +46,12 @@ html.no-js(lang="en")
 								a(href="content-page.html")
 									img(src=blog.image alt=blog.title)
 							div.descr
-								i.fa.fa-calendar.label 
+								i.fa.fa-calendar.label
 								span.label=blog.date 
 									|  | Posted by Alkastone.com
+								ul.tags
+									for tag in blog.tags
+										li= tag						
 								h3=blog.title
 								p=blog.introtext
 									a(href="Content-page.html")  read more &#8250;

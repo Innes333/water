@@ -91,10 +91,10 @@ input,textarea,button
 		color: $white
 
 .subtitle
+	margin-bottom: 45px
 	font-size: 18px
 	line-height: 24px
 	color: $main
-	margin-bottom: 45px
 	&.black
 		color: $black
 	&.white
@@ -142,10 +142,10 @@ header
 					line-height: 35px
 					color: $main
 					font-size: 18px
-					font-weight: 600
+					font-family: "RobotoBold"
 
 					&.shop-cart
-						background: linear-gradient(to right, #6eeef2, $main)
+						background: linear-gradient(to right, $main, #6eeef2)
 						color: $white
 						border-radius: 20px
 						box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37)
@@ -157,11 +157,11 @@ header
 	.content-block
 		z-index: 5
 	.title
-		color: $white
+		text-shadow: 1px 1px 1px $white
 		font-size: 45px
 		letter-spacing: 5px
 	.subtitle
-		color: $white
+		text-shadow: 1px 1px 1px $white
 		font-size: 32px
 		font-style: italic
 		font-family: serif
@@ -185,12 +185,51 @@ header
 		top: -2px
 // breadcrumb--------------------------
 
+// tags -------------------------------
+
+.tags
+	li
+		position: relative
+		display: inline-block
+		margin-left: 8px
+		padding-left: 20px
+		padding-right: 8px
+		height: 25px
+		line-height: 25px
+		border-radius: 12px 4px 4px 12px
+		background-color: $main
+		color: $white
+		font-size: 12px
+		text-transform: uppercase
+
+		&:before
+			position: absolute
+			left: 6px
+			top: 9px
+			content: ''
+			width: 7px
+			height: 7px
+			background: $white
+			border-radius: 50%			
+			
+
+
+// tags -------------------------------		
+
 //main promo block---------------------
 .main-promo
+	position: relative
 	background-attachment: fixed
 	background-size: cover
 	background-position: 50% top
-	height: 100vh
+	min-height: 700px
+	overflow: hidden
+
+	video
+		position: absolute
+		min-width: 100%
+		min-height: 100%
+
 //main promo block---------------------
 
 //Gradient after-----------------------
@@ -204,8 +243,8 @@ header
 		left: 0
 		height: 100%
 		width: 100%
-		background: linear-gradient(to right, $warmMain 0%, $lavanda 100%)
-		opacity: 0.4
+		background: linear-gradient(to right, $main 0%, #6cebf1 100%)
+		opacity: 0.2
 		z-index: -1
 //Gradient after-----------------------
 
@@ -218,15 +257,13 @@ header
 	color: $white
 	line-height: 35px
 	font-size: 14px
-	font-weight: 600
+	font-family: RobotoBold
 	text-align: center
 	text-transform: uppercase
 	letter-spacing: 1px
 	border-radius: 20px
 	background-color: $main
-	background-image: linear-gradient(to right, #6eeef2, $main)
-	background-position: 100% 0
-	background-size: 200% 200%	
+	background-image: linear-gradient(to right, $main, #6eeef2)
 	box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35)
 	transition: all 0.5s ease	
 	&:hover
@@ -315,25 +352,33 @@ header
 	&.hover
 		@include transition(box-shadow 0.3s)
 		.descr
-			height: 130px
+			padding: 20px 15px
+			height: 220px
 			.btn
 				position: absolute
 				left: 50%
 				margin-left: -85px
 				bottom: -50px
 	.descr
-		padding: 10px 5px
+		padding: 20px 15px
 		height: 230px
 		position: relative
 		h3
+			margin-top: 10px
 			color: $black
 		p
+			margin-top: 15px
 			color: $textColor
-			margin-bottom: 14px
 		.btn
 			display: block
 			margin: 0 auto
 			max-width: 170px
+		a
+			color: $main
+			font-family: RobotoRegular
+			transition: color ease-in 0.3s
+			&:hover
+				color: $deepMain	
 // Card text content end--------------------
 
 
@@ -424,10 +469,9 @@ header
 .block
 	min-height: 300px
 	position: relative
+	
 .content-block
 	position: absolute
 	max-width: 600px
-	position: absolute
-	top: 50%
-	left: 50%
-	@include transform(translateX(-50%) translateY(-50%))
+	bottom: 20%
+	left: 10%

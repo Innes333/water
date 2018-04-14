@@ -1,7 +1,11 @@
 header
 	include navigation
-	div.main-promo.gradient(style="background-image:url('img/girl-with-bottle-fancy.jpg')")
-		div.content-block.center
+	div.main-promo.gradient
+		video(poster="/img/waterline1.jpg" autoplay loop)
+			source(src="/img/water-splash.mp4" type="video/mp4")
+			object
+				emded(src="/img/water-splash.mp4" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="always")
+		div.content-block
 			h1.title Aqua-enrichment
 			p.subtitle Feel power of water
 			a(href="elements.html").btn See all products
