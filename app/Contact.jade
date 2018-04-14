@@ -1,0 +1,55 @@
+doctype html
+html.no-js(lang="en")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		h1.title.black.center Get in touch say hello
+		p.subtitle.center Alkastone.com support team	24/7
+		section#content.product-card-inner
+			div.cont-wrap
+				div.container-fluid
+					div.row
+						div.col-sm-8
+							h3.title.black.left Leave A Message
+							p.description Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.
+							form.mt3
+								div.container-fluid
+									div.row
+										div.col-sm-6.clrp
+											div.form-group.pr-half
+												input(type="text" name="name" id="name" placeholder="Nick")
+												label(for="name") Your Name*
+										div.col-sm-6.clrp
+											div.form-group.pl-half
+												input(type="email" name="email" id="email" required placeholder="nick@gmail.com")
+												label(for="email") Your Email*
+										div.col-sm-12.clrp
+											div.form-group
+												input(type="text" name="place" id="place" required placeholder="Manager")
+												label(for="place") Subject
+								div.form-group.textarea-block.right
+									textarea(name="fancy-textarea" id="fancy-textarea" placeholder="Hello my name is...")
+									label(for="fancy-textarea") Your Message
+									button(type="submit" class="btn mt1") Send Message
+								input(type="hidden" name="project_name" value="Имя сайта")
+								input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
+								input(type="hidden" name="form_subject" value="Заявка с имя сайта")
+						div.col-sm-4
+							h3.title.black.left Our Store
+							p.description 24/7 support.
+								| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, incidunt.
+							ul
+								li.mt2
+									span.label.mt-half.pr1 e-mail:
+									a(href="mailto:support@alcastone.com") support@alcastone.com
+								li.mt2
+									span.label.mt-half.pr1 phone:
+									a(href="tel://(+31)20 2400 212") (+31)20 2400 212
+							div.mt2
+								span.label.mt1.pr1 Follow us:
+								include templates/structure/soc-block
+							
+						
+		include templates/structure/subscribe
+		include templates/structure/footer
+		include templates/structure/scripts

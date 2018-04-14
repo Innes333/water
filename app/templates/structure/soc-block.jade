@@ -1,0 +1,12 @@
+ul.soc-block.dib
+	-
+		var social = {
+			1:'fa fa-facebook',
+			2:'fa fa-instagram',
+			3:'fa fa-google',
+			4:'fa fa-twitter'
+		};		
+	each val, index in social
+		li
+			a(href="#" target="_blank" rel="nofollow")
+				i(class=val)
