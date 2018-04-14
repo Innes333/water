@@ -3,10 +3,16 @@ html.no-js(lang="en")
 	include templates/structure/head
 	body
 		include templates/structure/header-inner
-		h1.title.black.center Get more info about the Alkastone
-		p.center
-			i.fa.fa-calendar.label 
-			span.label 11.04.1018 / Posted by Alkastone.com
+		.container
+			.row
+				.col-md-12.center
+					h1.title.black Get more info about the Alkastone
+					p
+						i.fa.fa-calendar.label 
+						span.label 11.04.1018 / Posted by AlkaStoneH2O.com		
+					ul.tags
+						each val,ind in ['Sport','Health','News']
+							li= val		
 		section#content
 			div.cont-wrap
 				div.content
