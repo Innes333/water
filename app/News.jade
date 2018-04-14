@@ -49,12 +49,13 @@ html.no-js(lang="en")
 								i.fa.fa-calendar.label
 								span.label=blog.date 
 									|  | Posted by Alkastone.com
-								ul.tags
+								ul.tags.dib
 									for tag in blog.tags
-										li= tag						
+										li
+											a(href="News.html")= tag
 								h3=blog.title
 								p=blog.introtext
 									a(href="Content-page.html")  read more &#8250;
 		include templates/structure/pagination
-		include templates/structure/footer			
+		include templates/structure/footer
 		include templates/structure/scripts
