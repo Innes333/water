@@ -11,7 +11,6 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	padding-bottom: 150px
 	line-height: 1.6
 	font-family: "RobotoLight", sans-serif
 	overflow-x: hidden
@@ -142,7 +141,7 @@ header
 					line-height: 35px
 					color: $main
 					font-size: 18px
-					font-family: "RobotoBold"
+					font-family: "RobotoRegular"
 
 					&.shop-cart
 						background: linear-gradient(to right, $main, #6eeef2)
@@ -232,7 +231,7 @@ header
 	background-attachment: fixed
 	background-size: cover
 	background-position: 50% top
-	min-height: 700px
+	height: 700px
 	overflow: hidden
 
 	video
@@ -255,7 +254,7 @@ header
 		width: 100%
 		background: linear-gradient(to right, $main 0%, #6cebf1 100%)
 		opacity: 0.2
-		z-index: -1
+		z-index: 0
 //Gradient after-----------------------
 
 
@@ -274,10 +273,10 @@ header
 	border-radius: 20px
 	background-color: $main
 	background-image: linear-gradient(to right, $main, #6eeef2)
-	box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35)
+	box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0)
 	transition: all 0.5s ease	
 	&:hover
-		box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0)
+		box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35)
  		background-position: 0 0
 		color: $white
 
