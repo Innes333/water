@@ -51,10 +51,20 @@ $(function() {
 			wind: $(window),
 			mobButton: $('.mob-button'),
 			slider: $('.slider'),
+			mineralSlider: $('.mineral-slider'),
 			inputNumber: $('.input-number'),
 			owlOptions: {
 				autoPlay: 3000,
 				navigation: true,
+				singleItem: true,
+				autoPlay: false,	
+				pagination: true,
+				scrollPerPage: true,
+				navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']								
+			},
+			owlOptions: {
+				autoPlay: 3000,
+				navigation: false,
 				singleItem: true,
 				autoPlay: false,	
 				pagination: true,
@@ -155,6 +165,8 @@ $(function() {
 			this.fullHeight(this.opt.body);
 			//owl slider init
 			this.opt.slider.owlCarousel(this.opt.owlOptions);
+			//owl slider init
+			this.opt.mineralSlider.owlCarousel(this.opt.mineralOwlOptions);
 			//mob button toggle
 			this.toggleC(this.opt.mobButton);
 			//

@@ -1,14 +1,4 @@
-//- div#someone-purchased.card
-//- 	div.container-fluid
-//- 		div.row
-//- 			div.col-xs-3
-//- 				img(src="img/bottle-0.jpg")
-//- 			div.col-xs-9
-//- 				h4.label Gabriela in Mexico 
-//- 				a(href="Product-page.html") Water Bottle
-//- 				p.label about 13 minutes ago
-//- 	span.close 
-//- 		i.fa.fa-close
+include purchase-popup
 
 footer.br-top
 	div.container
@@ -21,20 +11,32 @@ footer.br-top
 						li.social-link.dib
 							a(href=val.link)
 								i(class=val.icon)
-
 	div.footer-info.br-top
 		div.container
-			div.row					
+			div.row
 				div.col-md-4.center
-					img(src="../img/main_logo.png", alt="")
-				div.col-md-4			
-					each val, index in [{link: '#', label: 'Sale terms'}, {link: '#', label: 'Returnd policy'},  {link: '#', label: 'Terms and conditions of use'}]
+					img(src="../img/main_logo.png", alt="AlkaStone H2O")
+				div.col-md-8
+					-
+						var footerLinks = [{
+								url: '#', 
+								label: 'Sale terms'
+							},{
+								url: '#',
+								label: 'Returnd policy'
+							},{
+								url: '#',
+								label: 'Terms and conditions of use'
+							}, {
+								url: '#',
+								label: 'Patent and trademarks'
+							}, {
+								url: '#',
+								label: 'FAQ'
+							}];
+					for link in footerLinks	
 						div.info-link
-							a(href=val.link)= val.label
-				div.col-md-4
-					each val, index in [{link: '#', label: 'Patent and trademarks'}, {link: '#', label: 'FAQ'}]
-						div.info-link
-							a(href=val.link)= val.label			
+							a(href=link.url)= link.label			
 	div.copyright.br-top
 		div.center Copyright &copy; 2018 AlkaStone H2O. All rights reserved.
 			a(href="#") Privacy And Cookies

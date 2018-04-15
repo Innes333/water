@@ -64,7 +64,7 @@ body
 a
 	&:hover
 		text-decoration: none
-		color: $darkMain
+		color: $blueHover
 
 h1,h2,h3,h4,h5,h6
 	font-family: "OpenSansBold",sans-serif
@@ -77,6 +77,9 @@ h1,h2,h3,h4,h5,h6,ul,p
 input,textarea,button
 	outline: none
 	border: none
+
+.container-fluid
+	padding: 0		
 
 .title
 	text-transform: uppercase
@@ -153,17 +156,7 @@ header
 							box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.3)
 						i
 							margin-right: 12px
-	.content-block
-		z-index: 5
-	.title
-		text-shadow: 1px 1px 1px $white
-		font-size: 45px
-		letter-spacing: 5px
-	.subtitle
-		text-shadow: 1px 1px 1px $white
-		font-size: 32px
-		font-style: italic
-		font-family: serif
+	
 //Navigation end-----------------------
 
 // breadcrumb--------------------------
@@ -231,13 +224,45 @@ header
 	background-attachment: fixed
 	background-size: cover
 	background-position: 50% top
-	height: 700px
+	height: 750px
 	overflow: hidden
 
 	video
 		position: absolute
 		min-width: 100%
 		min-height: 100%
+
+	.promo-content
+		position: absolute
+		max-width: 600px
+		top: 50%
+		left: 10%
+		z-index: 8
+		transform: translateY(-50%)
+		.promo-text
+			color: $silver
+			font-size: 30px
+			text-transform: uppercase
+			letter-spacing: 6px
+
+		.title
+			font-size: 45px
+			letter-spacing: 5px
+		.subtitle
+			font-size: 32px
+			font-style: italic
+			font-family: serif
+	.promo-img
+		position: absolute
+		top: 50%
+		right: 10%
+		margin-top: -200px
+		z-index: 8
+
+		img
+			height: 400px
+		.promo-btn
+			margin-top: 20px	
 
 //main promo block---------------------
 
