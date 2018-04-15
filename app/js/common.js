@@ -163,7 +163,7 @@ $(function() {
 	};
 
 	//E-mail Ajax Send
-	$("form").submit(function() { 
+	$("form.send").submit(function() { 
 		var th = $(this);
 		$.ajax({
 			type: "POST",
