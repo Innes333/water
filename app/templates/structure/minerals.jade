@@ -1,0 +1,46 @@
+section.minerals
+	div.container
+		div.row
+			h3 8 extra natural elements to enrich and purify your water
+			div.col-md-12
+				-
+					var mineralList = [{
+							img:'/img/magnetite.jpg',
+							title: 'Mineral name',
+							text: 'Some nice description will be here about minerall. How it is good and etc'
+						},{
+							img: '/img/aluna.jpg',
+							title: 'Mineral name',
+							text: 'Some nice description will be here about minerall. How it is good and etc'
+						},{
+							img: '/img/germanuin.jpg',
+							title: 'Mineral name',
+							text: 'Some nice description will be here about minerall. How it is good and etc'
+						},{	
+							img: '/img/illite.jpg',
+							title: 'Mineral name',
+							text: 'Some nice description will be here about minerall. How it is good and etc'
+						}, {
+							img:'/img/magnetite.jpg',
+							title: 'Mineral name',
+							text: 'Some nice description will be here about minerall. How it is good and etc'
+						},{
+							img: '/img/aluna.jpg',
+							title: 'Mineral name',
+							text: 'Some nice description will be here about minerall. How it is good and etc'
+						},{
+							img: '/img/germanuin.jpg',
+							title: 'Mineral name',
+							text: 'Some nice description will be here about minerall. How it is good and etc'
+						},{	
+							img: '/img/illite.jpg',
+							title: 'Mineral name',
+							text: 'Some nice description will be here about minerall. How it is good and etc'
+						}]
+				for mineral in mineralList
+					div.col-md-3
+						div.flip-card
+							div.front
+								img(src=mineral.img)
+								div.card-title= mineral.title
+							div.back= mineral.text

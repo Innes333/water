@@ -10,27 +10,34 @@
 //- 	span.close 
 //- 		i.fa.fa-close
 
-footer
+footer.br-top
 	div.container
 		div.row
-			h3.center Follow us
-			ul
-				each val, index in [{link: '#', icon:'fa fa-facebook'}, {link: '#', icon:'fa fa-instagram'}]
-					li.social-link
-						a(href=val.link)
-							i(class=val.icon)
+			div.w-follow
+				h4.follow-title.center Follow us
+				div.follow-subtitle.center Stay in touch and keep up with the latest news from AlkaStoneH2O
+				ul.center
+					each val, index in [ {link: '#', icon:'fa fa-instagram'}, {link: '#', icon:'fa fa-facebook'}, {link: '#', icon:'fa fa-pinterest-p'}, {link: '#', icon:'fa fa-youtube'}]
+						li.social-link.dib
+							a(href=val.link)
+								i(class=val.icon)
 
-		div.row
-			div.col-md-4
-				each val, index in [{link: '#', label: 'Privacy policy'}, {link: '#', label: 'Returnd policy'},  {link: '#', label: 'Terms and conditions of use'}]
-					div.foter-link
-						a(href=val.link)= val.label
-				
-			div.col-md-4.center
-				img(src="../img/white_logo.png", alt="")
-			div.col-md-4
-				each val, index in [{link: '#', label: 'Sale terms'}, {link: '#', label: 'Patent and trademarks'}]
-					div.foter-link
-						a(href=val.link)= val.label
+	div.footer-info.br-top
+		div.container
+			div.row					
+				div.col-md-4.center
+					img(src="../img/main_logo.png", alt="")
+				div.col-md-4			
+					each val, index in [{link: '#', label: 'Sale terms'}, {link: '#', label: 'Returnd policy'},  {link: '#', label: 'Terms and conditions of use'}]
+						div.info-link
+							a(href=val.link)= val.label
+				div.col-md-4
+					each val, index in [{link: '#', label: 'Patent and trademarks'}, {link: '#', label: 'FAQ'}]
+						div.info-link
+							a(href=val.link)= val.label			
+	div.copyright.br-top
+		div.center Copyright &copy; 2018 AlkaStone H2O. All rights reserved.
+			a(href="#") Privacy And Cookies
+									
 						
 					
