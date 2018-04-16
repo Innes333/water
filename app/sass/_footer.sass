@@ -1,8 +1,7 @@
 .br-top
-		border-top: 1px solid $greyLight 
+	border-top: 1px solid $greyLight 
 
 footer
-	margin-top: 40px
 	padding: 40px 0
 	width: 100%
 	min-height: 150px	
@@ -50,6 +49,9 @@ footer
 			max-width: 200px
 
 		.info-link
+			display: inline-block
+			width: 49%
+			padding: 0 10px
 			margin-bottom: 15px
 
 			a
@@ -72,3 +74,37 @@ footer
 				color: $main	
 
 
+#someone-purchased
+	position: fixed
+	bottom: 20px
+	right: 20px
+	padding: 20px 35px
+	width: 330px
+	background-color: $white
+	box-shadow: 0px 2px 4px rgba(0,0,0,.3)
+	z-index: 100
+
+	.close
+		position: absolute
+		top: 0px
+		right: 0px
+		width: 25px
+		height: 25px
+		line-height: 25px
+		color: $silver
+		text-align: center
+		cursor: pointer
+
+	img
+		max-height: 80px
+
+	a
+		display: block
+		text-transform: uppercase
+		font-size: 14px
+		font-family: RobotoBold
+		color: $main
+		letter-spacing: 2px
+		transition: color ease-in 0.3s
+		&:hover
+			color: $blueHover

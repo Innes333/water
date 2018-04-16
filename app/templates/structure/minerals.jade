@@ -1,46 +1,98 @@
 section.minerals
 	div.container
 		div.row
-			h3 8 extra natural elements to enrich and purify your water
-			div.col-md-12
-				-
-					var mineralList = [{
-							img:'/img/magnetite.jpg',
-							title: 'Mineral name',
-							text: 'Some nice description will be here about minerall. How it is good and etc'
-						},{
-							img: '/img/aluna.jpg',
-							title: 'Mineral name',
-							text: 'Some nice description will be here about minerall. How it is good and etc'
-						},{
-							img: '/img/germanuin.jpg',
-							title: 'Mineral name',
-							text: 'Some nice description will be here about minerall. How it is good and etc'
-						},{	
-							img: '/img/illite.jpg',
-							title: 'Mineral name',
-							text: 'Some nice description will be here about minerall. How it is good and etc'
-						}, {
-							img:'/img/magnetite.jpg',
-							title: 'Mineral name',
-							text: 'Some nice description will be here about minerall. How it is good and etc'
-						},{
-							img: '/img/aluna.jpg',
-							title: 'Mineral name',
-							text: 'Some nice description will be here about minerall. How it is good and etc'
-						},{
-							img: '/img/germanuin.jpg',
-							title: 'Mineral name',
-							text: 'Some nice description will be here about minerall. How it is good and etc'
-						},{	
-							img: '/img/illite.jpg',
-							title: 'Mineral name',
-							text: 'Some nice description will be here about minerall. How it is good and etc'
-						}]
-				for mineral in mineralList
-					div.col-md-3
-						div.flip-card
-							div.front
-								img(src=mineral.img)
-								div.card-title= mineral.title
-							div.back= mineral.text
+			h3 What helps to get live water
+			h5 16 extra natural elements to enrich and purify your water
+			div.slider
+				div.item
+					-
+						var mineralList = [{
+								img:'/img/magnetite.jpg',
+								title: 'Mineral name',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{
+								img: '/img/aluna.jpg',
+								title: 'Mineral name',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{
+								img: '/img/zeolite.jpg',
+								title: 'Mineral name',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{	
+								img: '/img/illite.jpg',
+								title: 'Mineral name',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							}, {
+								img:'/img/magnetite.jpg',
+								title: 'Mineral name',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{
+								img: '/img/aluna.jpg',
+								title: 'Mineral name',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{
+								img: '/img/germanuin.jpg',
+								title: 'Mineral name',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{	
+								img: '/img/illite.jpg',
+								title: 'Mineral name',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							}]
+					for mineral in mineralList					
+						div.col-md-3.col-sm-4.col-xs-6
+							div.flip-card
+								div.front
+									div.front-img
+										img(src= mineral.img)
+									div.card-title= mineral.title
+								div.back= mineral.text
+				div.item
+					-
+						var filterList = [{
+								img:'/img/alkaline.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{
+								img:'/img/charged.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{
+								img:'/img/pellets.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{	
+								img:'/img/alkaline.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							}, {
+								img:'/img/pellets.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{
+								img:'/img/charged.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{
+								img:'/img/alkaline.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{	
+								img:'/img/alkaline.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							}]
+					for filter in filterList
+						div.col-md-3.col-sm-4.col-xs-6
+							div.flip-card
+								div.front
+									div.front-img
+										img(src= filter.img)
+									div.card-title= filter.title
+								div.back= filter.text
+
+			div.slider-descr
+				div.slider-name.center Enrichers and Minerals
+				div.slider-info Lorem, ipsum dolor sit amet consectetur adipisicing elit. A at facere distinctio, eligendi adipisci molestiae harum et laboriosam voluptate, tempora reiciendis, eos illo libero accusantium neque cumque minus sit fuga!
+
+					
