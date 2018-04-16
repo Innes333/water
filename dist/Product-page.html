@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Start gulp template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="sass,css,gulp,front-end">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <meta property="og:url" content="http://tsumbaluk.in.ua">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="front-end developer">
+    <meta property="og:description" content="front-end developer">
+    <meta property="og:image" content="design/img/sass.png">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo"><a href="/"><img src="../img/logo.png"></a></div>
+              <ul class="nav">
+                <li><a href="About.html">About</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Partners.html">Partners</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Basket-page.html" class="shop-cart"><i class="fa fa-shopping-cart"></i>Shop</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="mt2 mb1">
+            <li class="breadcrumb-item"><a href="Home.html"><span>Home</span></a></li>
+            <li class="breadcrumb-item"><a href="Catalog.html"><span>Catalog</span></a></li>
+            <li class="breadcrumb-item">Current page</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <form id="search" class="right">
+            <div class="w-search">
+              <input type="text" placeholder="Search">
+              <button type="submit" class="search-btn"> <i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section id="content" class="product-card-inner">
+      <div class="cont-wrap">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-4"><img src="img/bottle-0.jpg"></div>
+            <div class="col-sm-8">
+              <h1 class="title black">Water Bottle</h1>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sunt, quibusdam. Repellat debitis adipisci aspernatur iure sapiente eum, magnam, dolorem sed incidunt, excepturi nesciunt dolores repellendus, nam mollitia! Deleniti quisquam eaque possimus explicabo nihil vel! Sunt architecto dolorem consequuntur, fugit adipisci mollitia perspiciatis repellendus minus quibusdam quaerat sapiente labore at.</p>
+              <div class="product-options mt2">
+                <div class="product size"><span class="option-name">Size:</span>
+                  <div class="options">
+                    <ul>
+                      <li class="active">450ml</li>
+                      <li>600ml</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-color"><span class="option-name">Color:</span>
+                  <div class="options">
+                    <ul>
+                      <li style="background: url('img/color-0.jpg')" class="active"></li>
+                      <li style="background: url('img/color-1.jpg')"></li>
+                      <li style="background: url('img/color-2.jpg')"></li>
+                      <li style="background: url('img/color-3.jpg')"></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="product-count"><span class="option-name">Count:</span>
+                  <div class="options"><span class="input-number-decrement">–</span>
+                    <input type="text" value="1" min="1" max="100" class="input-number"><span class="input-number-increment">+</span>
+                  </div>
+                </div>
+                <div class="product-price"><span class="option-name">Price: </span>
+                  <div class="options">
+                    <ul> 
+                      <li class="active big">46.00$</li>
+                    </ul>
+                  </div>
+                </div>
+                <button type="button" name="ms2_action" value="cart/add" class="btn">add to basket</button>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <ul class="share-btns-list">
+                <li class="label">Share in social:</li>
+                <li><a href="https://facebook.com/sharer/sharer.php?u=http://tsumbaluk.in.ua/" target="_blank" title="Share in facebook" class="resp-sharing-button"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/intent/tweet/?text=Lorem ipsum dolor sit amet, consectetur adipisicing elit&amp;amp;url=http://tsumbaluk.in.ua/" target="_blank" title="Share in twitter" class="resp-sharing-button"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://plus.google.com/share?url=http://tsumbaluk.in.ua/" target="_blank" title="Share in google" class="resp-sharing-button"><i class="fa fa-google"></i></a></li>
+                <li><a href="https://pinterest.com/pin/create/button/?url=http://tsumbaluk.in.ua/&amp;amp;description=Lorem ipsum dolor sit amet, consectetur adipisicing elit" target="_blank" title="Share in pinterest" class="resp-sharing-button"><i class="fa fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="background-image:url('../img/subscribe.jpg')" class="subscribe gradient center">
+      <form action="" method="post" class="mb3">
+        <div class="block-content">
+          <div class="form-subscribe-header">
+            <h3 class="title white">Stay in touch</h3>
+            <p class="subtitle white">Sign up to get the latest on sales, new products and more…</p>
+          </div>
+          <div class="form-subscribe-body">
+            <input type="textfield" name="email" value="" placeholder="Enter your email address...">
+            <button type="submit" class="btn">Sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer class="br-top">
+      <div class="container">
+        <div class="row">
+          <div class="w-follow">
+            <h4 class="follow-title center">Follow us</h4>
+            <div class="follow-subtitle center">Stay in touch and keep up with the latest news from AlkaStoneH2O</div>
+            <ul class="center">
+              <li class="social-link dib"><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info br-top">
+        <div class="container">
+          <div class="row">					
+            <div class="col-md-4 center"><img src="../img/main_logo.png" alt=""></div>
+            <div class="col-md-4">			
+              <div class="info-link"><a href="#">Sale terms</a></div>
+              <div class="info-link"><a href="#">Returnd policy</a></div>
+              <div class="info-link"><a href="#">Terms and conditions of use</a></div>
+            </div>
+            <div class="col-md-4">
+              <div class="info-link"><a href="#">Patent and trademarks</a></div>
+              <div class="info-link"><a href="#">FAQ</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright br-top">
+        <div class="center">Copyright &copy; 2018 AlkaStone H2O. All rights reserved.<a href="#">Privacy And Cookies</a></div>
+      </div>
+    </footer>
+    <!--[if lt IE 9]
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    -->
+    <!--![endif]-->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/plagin.min.js"></script>
+    <script src="js/common.min.js"></script>
+  </body>
+</html>
