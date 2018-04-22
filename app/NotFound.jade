@@ -1,0 +1,18 @@
+doctype html
+html.no-js(lang="en")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		section.not-found.container.center
+			.row
+				.col-md-12
+					.not-found-title 404
+					.not-found-msg Opps, sorry we can't find that page!
+					.not-found-info Either something went wrong or the page doesn't exist anymore.
+					.not-found-btn
+						a(href="/").btn Home page
+							
+						
+		include templates/structure/subscribe
+		include templates/structure/footer
+		include templates/structure/scripts
