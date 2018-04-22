@@ -152,6 +152,12 @@ $(function() {
 				event.preventDefault();
 			});
 		},
+		dropDown: function(btn, el) {
+			$(btn).on('click', function() {
+				$(el).not($(this).next()).slideUp('fast');
+				$(this).next().slideToggle('fast');
+			});
+		},
 		init: function(){
 			// default functions
 			this.dragstart(this.opt.img);
@@ -171,6 +177,8 @@ $(function() {
 			this.toggleC(this.opt.mobButton);
 			//
 			this.inputNumber(this.opt.inputNumber);
+
+			this.dropDown('.question-title', '.answer');
 		}
 	};
 
