@@ -1,0 +1,37 @@
+section.how-works
+		h3 How it works
+		h5 Natural magic inside
+		.container
+				.row.work-list
+					-
+						var configList = [{
+										num: '1',
+										img:'/img/water-option1.png',
+										title: 'Increases the PH balance of water to the optimum level',
+										text: 'All major body fluids have a slightly alkaline pH reaction from 7.34 to 7.44',
+								},{
+										num: '2',
+										img:'/img/water-option2.png',
+										title: 'Enriched with minerals',
+										text: 'The closest thing to nature',
+										class: 'w-choice-block highlighted'
+								},{
+										num: '3',
+										img:'/img/water-option3.png',
+										title: 'Filtered water',
+										text: 'Dead water washes away useful minerals',
+										class: 'w-choice-block'                    
+								},{
+										num: '4',
+										img:'/img/water-option3.png',
+										title: 'Filtered water',
+										text: 'Dead water washes away useful minerals',
+										class: 'w-choice-block'
+								}]
+					for config, index in configList
+						.col-md-4.col-sm-4.col-xs-4
+							.work-title= config.title
+						.col-md-8.col-sm-8.col-xs-8
+							.work-text= config.text
+							img(src= config.img)
+							div.work-number= index
