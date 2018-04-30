@@ -2,36 +2,29 @@ section.how-works
 		h3 How it works
 		h5 Natural magic inside
 		.container
-				.row.work-list
+				.row
 					-
 						var configList = [{
-										num: '1',
 										img:'/img/water-option1.png',
 										title: 'Increases the PH balance of water to the optimum level',
 										text: 'All major body fluids have a slightly alkaline pH reaction from 7.34 to 7.44',
 								},{
-										num: '2',
 										img:'/img/water-option2.png',
 										title: 'Enriched with minerals',
-										text: 'The closest thing to nature',
-										class: 'w-choice-block highlighted'
+										text: 'The closest thing to nature'
 								},{
-										num: '3',
 										img:'/img/water-option3.png',
 										title: 'Filtered water',
-										text: 'Dead water washes away useful minerals',
-										class: 'w-choice-block'                    
+										text: 'Dead water washes away useful minerals'
 								},{
-										num: '4',
 										img:'/img/water-option3.png',
 										title: 'Filtered water',
-										text: 'Dead water washes away useful minerals',
-										class: 'w-choice-block'
+										text: 'Dead water washes away useful minerals'
 								}]
 					for config, index in configList
-						.col-md-4.col-sm-4.col-xs-4
-							.work-title= config.title
-						.col-md-8.col-sm-8.col-xs-8
-							.work-text= config.text
-							img(src= config.img)
-							div.work-number= index
+						.work-item.col-md-8
+							.work-title(class='col-md-6')
+								img(src= config.img width="40")
+								span.label config.title							
+							.work-text(class='col-md-6')= config.text
+								div.work-number= index+1

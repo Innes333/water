@@ -11,5 +11,12 @@ nav
 							a(href=val+'.html')=val
 					li
 						a(href='Basket-page.html', class='shop-cart')
-							i.fa.fa-shopping-cart
-							| Shop
+							.not_empty
+								.total-price-basket
+									span.lbl
+										i.fa.fa-shopping-cart
+										| Shop
+									.total-price
+										span.value 350$	
+								.basket-item-count
+									span.count (10)
