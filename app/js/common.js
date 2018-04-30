@@ -52,7 +52,9 @@ $(function() {
 			mobButton: $('.mob-button'),
 			slider: $('.slider'),
 			mineralSlider: $('.elements-slider'),
-			inputNumber: $('.input-number'),			
+			inputNumber: $('.input-number'),
+			minBag: $('.dropdown-mini-bag'),	
+			bagBtn: $('.shop-cart'),
 			mineralOwlOptions: {
 				autoPlay: false,
 				navigation: false,
@@ -125,28 +127,45 @@ $(function() {
 				});
 			});
 		},
+
 		toggleC: function(el){
 			el.on('click',function(){
 				el.toggleClass('active');
 			});
 		},
+
 		winH: function(){
 			return this.opt.wind.height();
 		},
+
 		fullHeight: function(el){
 			$(el).css('min-height',this.winH()+'px');
 		},
+
 		dragstart: function(el){
 			$(el).on('dragstart',function(event){
 				event.preventDefault();
 			});
 		},
+
 		dropDown: function(btn, el) {
 			$(btn).on('click', function() {
 				$(el).not($(this).next()).slideUp('fast');
 				$(this).next().slideToggle('fast');
 			});
 		},
+
+		showMiniBag: function(btn, bag) {
+			btn.on('mouseover', function() {
+				bag.fadeIn(300);
+			});
+
+			bag.on('mouseleave', function(){
+				bag.fadeOut(800);
+			});
+		},
+
+
 		init: function(){
 			// default functions
 			this.dragstart(this.opt.img);
@@ -158,6 +177,8 @@ $(function() {
 			this.popup(this.opt.popup);
 			// Add el window height
 			this.fullHeight(this.opt.body);
+			// show mini bag
+			this.showMiniBag(this.opt.bagBtn, this.opt.minBag);
 			//owl slider init
 			this.opt.mineralSlider.owlCarousel(this.opt.mineralOwlOptions);
 			//mob button toggle

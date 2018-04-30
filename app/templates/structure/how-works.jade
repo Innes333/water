@@ -2,29 +2,34 @@ section.how-works
 		h3 How it works
 		h5 Natural magic inside
 		.container
-				.row
-					-
-						var configList = [{
-										img:'/img/water-option1.png',
-										title: 'Increases the PH balance of water to the optimum level',
-										text: 'All major body fluids have a slightly alkaline pH reaction from 7.34 to 7.44',
-								},{
-										img:'/img/water-option2.png',
-										title: 'Enriched with minerals',
-										text: 'The closest thing to nature'
-								},{
-										img:'/img/water-option3.png',
-										title: 'Filtered water',
-										text: 'Dead water washes away useful minerals'
-								},{
-										img:'/img/water-option3.png',
-										title: 'Filtered water',
-										text: 'Dead water washes away useful minerals'
-								}]
-					for config, index in configList
-						.work-item.col-md-8
-							.work-title(class='col-md-6')
-								img(src= config.img width="40")
-								span.label config.title							
-							.work-text(class='col-md-6')= config.text
-								div.work-number= index+1
+			.row
+				-
+					var configList = [{
+									img:'/img/ph.png',
+									title: 'Increases the PH balance of water to the optimum level',
+									text: 'All major body fluids have a slightly alkaline pH reaction from 7.34 to 7.44',
+							},{
+									img:'/img/mg-cl.png',
+									title: 'Enriched water with 8 minerals',
+									text: 'Minerals (calcium, magnesium, potassium and others) make water curative for health'
+							},{
+									img:'/img/filter.png',
+									title: 'Cleans water of harmful impurities',
+									text: 'Removal of heavy metals, chlorine and water disinfection'
+							},{
+									img:'/img/ion.png',
+									title: 'Ionizes water',
+									text: 'Ions - powerful antioxidants, neutralize free radicals - the perpetrators of aging'
+							}]
+				for config, index in configList
+					.work-item.col-md-8
+						.work-option
+							.work-title= config.title					
+							img(src= config.img)
+						.work-text= config.text
+			.row.work-descr
+				.col-md-12.center
+					p According to the results of testing of Korean scientists, The best effect of enrichment and mineralization of water is achieved
+					p.work-time from 15 minutes to 3 hours
+					p water infusion in aqua-enrichment
+					a(href='#') The study of Korean scientists

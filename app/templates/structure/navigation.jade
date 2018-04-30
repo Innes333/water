@@ -14,9 +14,36 @@ nav
 							.not_empty
 								.total-price-basket
 									span.lbl
-										i.fa.fa-shopping-cart
+										i.fa.fa-shopping-bag
 										| Shop
 									.total-price
 										span.value 350$	
 								.basket-item-count
 									span.count (10)
+
+						.dropdown-mini-bag
+							.bag-list
+								.container-fluid
+									.row
+										.col-xs-4
+											a(href="Product-page.html")
+												img(src="/img/bottle-3.jpg" class="lazy")
+										.col-xs-8
+											.w-product
+												.w-product-name
+													a(href="Product-page.html" class="product-name") Blue bottle
+												.product-price Price: 45$
+									.row
+										.col-xs-4
+											a(href="Product-page.html")
+												img(src="/img/bottle-0.jpg" class="lazy")
+										.col-xs-8
+											.w-product
+												.w-product-name
+													a(href="Product-page.html" class="product-name") Green bottle
+												.product-price Price: 45$
+									
+							
+								
+							.view-bag.center
+								a(href="Checkout-page.html" class="btn invert") Checkout
