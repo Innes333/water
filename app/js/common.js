@@ -51,25 +51,14 @@ $(function() {
 			wind: $(window),
 			mobButton: $('.mob-button'),
 			slider: $('.slider'),
-			mineralSlider: $('.mineral-slider'),
-			inputNumber: $('.input-number'),
-			owlOptions: {
-				autoPlay: 3000,
-				navigation: true,
-				singleItem: true,
-				autoPlay: false,	
-				pagination: true,
-				scrollPerPage: true,
-				navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']								
-			},
-			owlOptions: {
-				autoPlay: 3000,
+			mineralSlider: $('.elements-slider'),
+			inputNumber: $('.input-number'),			
+			mineralOwlOptions: {
+				autoPlay: false,
 				navigation: false,
-				singleItem: true,
-				autoPlay: false,	
+				singleItem: true,	
 				pagination: true,
-				scrollPerPage: true,
-				navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']								
+				scrollPerPage: true							
 			}
 		},
 		inputNumber: function(el) {
@@ -170,8 +159,6 @@ $(function() {
 			// Add el window height
 			this.fullHeight(this.opt.body);
 			//owl slider init
-			this.opt.slider.owlCarousel(this.opt.owlOptions);
-			//owl slider init
 			this.opt.mineralSlider.owlCarousel(this.opt.mineralOwlOptions);
 			//mob button toggle
 			this.toggleC(this.opt.mobButton);
@@ -187,21 +174,36 @@ $(function() {
 		main.init();
 
 		//Shop add product count--------
-		$('.le-quantity a').click(function(e){
-				e.preventDefault();
-				var elem = $(this).parent().parent().find('input.counter');
+		$('.le-quantity button').click(function(e){
+				// e.preventDefault();
+				var elem = $(this).parents('form').find('input.counter');
 				var currentQty= elem.val();
-				if( $(this).hasClass('minus') && currentQty>0){
-					 elem.val(parseInt(currentQty, 10) - 1);
+				if($(this).hasClass('minus') && currentQty > 0){
+					 elem.val(currentQty-1);
 					 elem.trigger('change');
-				}else{
-						if( $(this).hasClass('plus')){
-								elem.val(parseInt(currentQty, 10) + 1);
-								elem.trigger('change');
-						}
+				}else	if($(this).hasClass('plus')){
+					elem.val(currentQty-0+1);
+					elem.trigger('change');
 				}
 		});
 		//Shop add product count--------
+
+		//Ajax mini cart----------------
+		$(document).on('mouseover', '#dropdown-cart', function(e) {
+			e.preventDefault();
+			$.ajax({  
+			  type: "POST",
+			  url: $(this).attr('data-url'), 
+			  data: {parent: '[[*id]]'},
+			  success:  function(data) { 
+					if (data){
+					  $('.dropdown-mini-cart').html(data);
+					}else{
+					  miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
+					}} 
+			}); 
+		 });
+		//Ajax mini cart----------------
 
 		//E-mail Ajax Send--------------
 		$("form.send").submit(function() { 

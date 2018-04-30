@@ -1,0 +1,51 @@
+section.water-choice
+    h3 Why our product?
+    h5 What you achive with our product 
+    .container
+        .row.choice-step
+            .choice-point 1. Good for health
+            -
+                var choiceList = [{
+                        img:'/img/water-option1.png',
+                        title: 'Bottled water',
+                        text: 'Contains molecules of plastic',
+                        class: 'w-choice-block'
+                    },{
+                        img:'/img/water-option2.png',
+                        title: 'Enriched with minerals',
+                        text: 'The closest thing to nature',
+                        class: 'w-choice-block highlighted'
+                    },{
+                        img:'/img/water-option3.png',
+                        title: 'Filtered water',
+                        text: 'Dead water washes away useful minerals',
+                        class: 'w-choice-block'
+
+                    }]
+            for choice in choiceList	
+                .col-md-4.col-sm-4.col-xs-12
+                    div(class=choice.class)
+                        .choice-img
+                            img(src=choice.img, alt=choice.title)
+                        .choice-title= choice.title
+                        .choice-descr= choice.text
+
+        .row.choice-step
+            .choice-point 2. You save money
+            .col-md-5.choice-pic
+                img(src="/img/bottled-water.png")   
+            .col-md-7.choice-content
+                .choice-content-title Our product help you to replace all plastic bottles
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque adipisci rem quis magnam quos? Esse odit dolorem molestias vel consequatur, voluptatem, ut aspernatur voluptas, labore eligendi voluptatum nulla natus. Voluptatum!    
+                
+
+        .row.choice-step
+            .choice-point 3. Ecological awareness
+            .col-md-8.choice-content
+                .choice-content-title Change is simple - and make a real difference!
+                | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam mollitia, illum cum laudantium porro, enim hic praesentium temporibus exercitationem fugiat odio. Laborum quia eligendi molestiae unde quod aut recusandae optio.
+                | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quas nostrum, perferendis alias vel labore magnam a commodi eum fugiat velit cum, mollitia aperiam quae ut iure molestias dicta ad! 
+            .col-md-4
+                .choice-pic
+                    img(src="/img/waterr-earth.png")
+                   

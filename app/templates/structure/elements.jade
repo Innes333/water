@@ -1,0 +1,98 @@
+section.minerals
+	div.container
+		div.row
+			h3 What helps to get live water
+			h5 16 extra natural elements to enrich and purify your water
+			div.elements-slider
+				div.item
+					-
+						var mineralList = [{
+								img:'/img/magnetite.jpg',
+								title: 'magnetite',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{
+								img: '/img/germanium.jpg',
+								title: 'germanium',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{
+								img: '/img/tourmaline.jpg',
+								title: 'tourmaline',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{	
+								img: '/img/zeolite.jpg',
+								title: 'zeolite',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							}, {
+								img:'/img/red-clay.jpg',
+								title: 'red clay',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{
+								img: '/img/illite.jpg',
+								title: 'illite',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{
+								img: '/img/aluna.jpg',
+								title: 'Korean Alun stone',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							},{	
+								img: '/img/bioceramic.jpg',
+								title: 'bioceramics',
+								text: 'Some nice description will be here about minerall. How it is good and etc'
+							}]
+					for mineral in mineralList					
+						div.col-md-3.col-sm-4.col-xs-6
+							div.flip-card
+								div.front
+									div.front-img
+										img(src= mineral.img)
+									div.card-title= mineral.title
+								div.back= mineral.text
+				div.item
+					-
+						var filterList = [{
+								img:'/img/alkaline.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{
+								img:'/img/charged.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{
+								img:'/img/pellets.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{	
+								img:'/img/alkaline.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							}, {
+								img:'/img/pellets.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{
+								img:'/img/charged.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{
+								img:'/img/alkaline.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							},{	
+								img:'/img/alkaline.jpg',
+								title: 'Enricher name',
+								text: 'Some nice description will be here about enricher. How it is good and etc'
+							}]
+					for filter in filterList
+						div.col-md-3.col-sm-4.col-xs-6
+							div.flip-card
+								div.front
+									div.front-img
+										img(src= filter.img)
+									div.card-title= filter.title
+								div.back= filter.text
+				
+
+			div.slider-descr
+				div.slider-info Lorem, ipsum dolor sit amet consectetur adipisicing elit. A at facere distinctio, eligendi adipisci molestiae harum et laboriosam voluptate, tempora reiciendis, eos illo libero accusantium neque cumque minus sit fuga!
+
+					

@@ -256,6 +256,113 @@ section
 		letter-spacing: 1px
 		margin-bottom: 40px
 
+
+// water-choice
+.water-choice
+	.choice-step
+		margin-bottom: 40px
+
+	.w-choice-block
+		position: relative
+		margin-bottom: 30px
+		padding: 20px 20px 30px
+		text-align: center
+		border: 1px solid $blueLight
+
+		.choice-title
+			margin-bottom: 10px
+			text-transform: uppercase
+			letter-spacing: 2px	
+
+		.choice-descr
+			height: 45px
+			line-height: 18px	
+		
+		&.highlighted
+			box-shadow: 0 1px 12px 2px rgba(21,101,192,.3)
+
+			&::before
+				position: absolute
+				content: '\002714'
+				top: 5px
+				right: 25px
+				height: 40px
+				font-size: 40px
+				color: $main
+				z-index: 10
+
+		.choice-img
+			width: 100%
+			min-height: 335px
+			overflow: hidden
+			text-align: center
+			img
+				width: 100%
+				transform: scale(0.9)
+				transition: transform 0.5s
+		&:hover
+			img
+				transform: scale(1.1)
+
+	.choice-point
+		margin: 20px 0 40px
+		font-family: RobotoBold
+		letter-spacing: 2px
+		color: $black
+		text-transform: uppercase			
+
+	.choice-pic
+		img
+			width: 100%
+
+	.choice-content-title
+		margin-bottom: 20px
+		color: $grey
+		font-style: italic
+		font-family: serif
+		font-size: 20px		
+
+			
+// How it works
+
+.how-works
+	.work-item
+		&:nth-child(even)
+			margin-left: 33%
+
+			.work-title
+				border-top: 2px solid $blueLight
+				border-bottom: 2px solid $blueLight
+
+
+	.work-title
+		position: relative
+		padding-top: 30px
+		padding-right: 35px
+		min-height: 100px
+		border-right: 2px solid $blueLight
+		text-align: right
+
+		.work-number
+			position: absolute
+			content: ''
+			top: 25px
+			right: -18px
+			height: 36px
+			width: 36px
+			background: $main
+			color: $white
+			line-height: 36px
+			border-radius: 36px
+			text-align: center
+
+	.work-text
+		padding-top: 30px
+		min-height: 100px		
+
+
+
+
 // water-enrichment
 .water-enrichment
 	.descr
@@ -325,13 +432,40 @@ section
 // end 
 
 // minerals -----------------
-.minerals
-	position: relative
 
-	.slider-name
-		margin-bottom: 20px
-		color: $silver
-		font-size: 20px	
+.minerals
+	.owl-pagination
+		margin-bottom: 40px
+		.owl-page
+			position: relative
+			opacity: 0.6
+			transition: opacity 0.3s
+
+			&.active,
+			&:hover
+				opacity: 1
+				
+			span
+				visibility: hidden
+
+			&::before
+				position: absolute
+				top: -10px
+				padding: 7px 25px
+				background: $main
+				color: $white
+				font-size: 16px
+				text-transform: uppercase	
+
+		.owl-page:nth-child(1)::before
+			right: 10px
+			content: 'Enrichment'
+			border-radius: 15px 0 0 15px
+
+		.owl-page:nth-child(2)::before
+			left: 10px
+			content: 'Purifying'
+			border-radius: 0 15px 15px 0
 
 
 
