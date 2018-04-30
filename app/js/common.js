@@ -152,6 +152,12 @@ $(function() {
 				event.preventDefault();
 			});
 		},
+		dropDown: function(btn, el) {
+			$(btn).on('click', function() {
+				$(el).not($(this).next()).slideUp('fast');
+				$(this).next().slideToggle('fast');
+			});
+		},
 		init: function(){
 			// default functions
 			this.dragstart(this.opt.img);
@@ -171,31 +177,50 @@ $(function() {
 			this.toggleC(this.opt.mobButton);
 			//
 			this.inputNumber(this.opt.inputNumber);
+
+			this.dropDown('.question-title', '.answer');
 		}
 	};
-
-	//E-mail Ajax Send
-	$("form.send").submit(function() { 
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {		
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
 
 	$(document).ready(function(){
 
 		main.init();
 
-		//Chrome Smooth Scroll
+		//Shop add product count--------
+		$('.le-quantity a').click(function(e){
+				e.preventDefault();
+				var elem = $(this).parent().parent().find('input.counter');
+				var currentQty= elem.val();
+				if( $(this).hasClass('minus') && currentQty>0){
+					 elem.val(parseInt(currentQty, 10) - 1);
+					 elem.trigger('change');
+				}else{
+						if( $(this).hasClass('plus')){
+								elem.val(parseInt(currentQty, 10) + 1);
+								elem.trigger('change');
+						}
+				}
+		});
+		//Shop add product count--------
+
+		//E-mail Ajax Send--------------
+		$("form.send").submit(function() { 
+			var th = $(this);
+			$.ajax({
+				type: "POST",
+				url: "mail.php",
+				data: th.serialize()
+			}).done(function() {
+				alert("Thank you!");
+				setTimeout(function() {
+					th.trigger("reset");
+				}, 1000);
+			});
+			return false;
+		});
+		//E-mail Ajax Send--------------
+
+		//Chrome Smooth Scroll----------
 		try {
 			$.browserSelector();
 			if($("html").hasClass("chrome")) {

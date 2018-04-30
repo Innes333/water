@@ -1,0 +1,39 @@
+doctype html
+html.no-js(lang="en")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		section.info
+			.container
+				.row
+					.col-md-12
+						.info-header
+							i.fa.fa-info-circle
+							span.info-label Customer information
+					.col-md-12
+						.info-content
+							h1.title.center.black FAQ
+							.info-subtitle.center Quickly find out if we've already answered your question
+							-
+								var questionsList = [{
+									title: 'How to order bottle?',
+									answer: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate vitae aliquam sapiente molestias nisi, corporis incidunt esse quibusdam possimus praesentium tempora at voluptates. Voluptatem explicabo odit rerum eaque velit deleniti!',
+								}, {
+									title: 'How long delivery process takes?',
+									answer: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate vitae aliquam sapiente molestias nisi, corporis incidunt esse quibusdam possimus praesentium tempora at voluptates. Voluptatem explicabo odit rerum eaque velit deleniti!',
+								}, {
+									title: 'How often filter replacement is recommended?',
+									answer: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate vitae aliquam sapiente molestias nisi, corporis incidunt esse quibusdam possimus praesentium tempora at voluptates. Voluptatem explicabo odit rerum eaque velit deleniti!',
+								}]
+
+							for question in questionsList
+								.w-question
+									.question-title= question.title
+										i.fa.fa-angle-down
+									.answer= question.answer
+
+
+							
+		include templates/structure/subscribe
+		include templates/structure/footer
+		include templates/structure/scripts
