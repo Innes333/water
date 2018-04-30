@@ -5,7 +5,7 @@ section.benefits
 			.row
 				-
 					var benefitList = [{
-							img:'/img/girl-medium.jpg',
+							img:'../img/girl-medium.jpg',
 							text: 'Activation of metabolism',
 						},{
 							img:'/img/run-medium.jpg',
@@ -28,6 +28,6 @@ section.benefits
 						}]
 				for benefit in benefitList
 					.col-md-3
-						.benefit-img
-							img(src=benefit.img)
-						.benefit-text= benefit.text
+						.w-benefit
+							.benefit-img(style="background-image: url(" + benefit.img + ")").gradient
+							.benefit-text= benefit.text
