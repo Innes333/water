@@ -5,29 +5,28 @@ section.benefits
 			.row
 				-
 					var benefitList = [{
-							img:'../img/girl-medium.jpg',
+							img:'../img/runers.jpg',
 							text: 'Activation of metabolism',
 						},{
-							img:'/img/run-medium.jpg',
+							img:'/img/kid.jpg',
 							text: 'Increase of immunity'
 						},{
-							img:'/img/girl-medium.jpg',
+							img:'/img/man.jpg',
 							text: 'Detoxification'
 						},{
-							img:'/img/girl-medium.jpg',
+							img:'/img/skin.jpg',
 							text: 'Improvement of skin'
 						},{
-							img:'/img/girl-medium.jpg',
+							img:'/img/girl.jpg',
 							text: 'Weight loss stimulation'
 						},{
-							img:'/img/girl-medium.jpg',
+							img:'/img/yoga.jpg',
 							text: 'Increased tone'
 						},{
-							img:'/img/girl-medium.jpg',
+							img:'/img/gradpar.jpg',
 							text: 'Prevention of chronic diseases'
 						}]
 				for benefit in benefitList
-					.col-md-3
-						.w-benefit
-							.benefit-img(style="background-image: url(" + benefit.img + ")").gradient
-							.benefit-text= benefit.text
+					.col-md-3.w-benefit						
+						.benefit-img(style="background-image: url(" + benefit.img + ")").gradient
+						.benefit-text= benefit.text

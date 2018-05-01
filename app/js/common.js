@@ -52,6 +52,7 @@ $(function() {
 			mobButton: $('.mob-button'),
 			slider: $('.slider'),
 			mineralSlider: $('.elements-slider'),
+			partnersSlider: $('.partners-slider'),
 			inputNumber: $('.input-number'),
 			minBag: $('.dropdown-mini-bag'),	
 			bagBtn: $('.shop-cart'),
@@ -61,6 +62,13 @@ $(function() {
 				singleItem: true,	
 				pagination: true,
 				scrollPerPage: true							
+			},
+			partnersOwlOptions: {
+				autoPlay: false,
+				navigation: false,
+				pagination: true,
+				scrollPerPage: true,
+				items: 4					
 			}
 		},
 		inputNumber: function(el) {
@@ -181,6 +189,8 @@ $(function() {
 			this.showMiniBag(this.opt.bagBtn, this.opt.minBag);
 			//owl slider init
 			this.opt.mineralSlider.owlCarousel(this.opt.mineralOwlOptions);
+			// owl partners slider
+			this.opt.partnersSlider.owlCarousel(this.opt.partnersOwlOptions);
 			//mob button toggle
 			this.toggleC(this.opt.mobButton);
 			//

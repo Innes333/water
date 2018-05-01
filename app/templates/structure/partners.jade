@@ -1,0 +1,33 @@
+section.partner
+		h3 Our partners
+		h5 There can be description
+		.container
+			.row
+				.partners-slider
+					-
+						var partnersList = [{
+								img:'../img/part1.jpg',
+								text: 'Activation of metabolism',
+							},{
+								img:'/img/part2.jpg',
+								text: 'Increase of immunity'
+							},{
+								img:'/img/part3.jpg',
+								text: 'Detoxification'
+							},{
+								img:'/img/part4.jpg',
+								text: 'Improvement of skin'
+							},{
+								img:'/img/part1.jpg',
+								text: 'Weight loss stimulation'
+							},{
+								img:'/img/part2.jpg',
+								text: 'Increased tone'
+							},{
+								img:'/img/part3.jpg',
+								text: 'Prevention of chronic diseases'
+							}]
+					for partner in partnersList
+						.item
+							.partner-img
+								img(src=partner.img)

@@ -6,11 +6,7 @@ footer.br-top
 			div.w-follow
 				h4.follow-title.center Follow us
 				div.follow-subtitle.center Stay in touch and keep up with the latest news from AlkaStoneH2O
-				ul.w-social-links.center
-					each val, index in [ {link: '#', icon:'fa fa-instagram'}, {link: '#', icon:'fa fa-facebook'}, {link: '#', icon:'fa fa-pinterest-p'}, {link: '#', icon:'fa fa-youtube'}]
-						li.social-link.dib
-							a(href=val.link)
-								i(class=val.icon)
+				include soc-block
 	div.footer-info.br-top
 		div.container
 			div.row
@@ -19,19 +15,19 @@ footer.br-top
 				div.col-md-8
 					-
 						var footerLinks = [{
-								url: '#', 
+								url: 'Info.html', 
 								label: 'Sale terms'
 							},{
-								url: '#',
+								url: 'Info.html',
 								label: 'Returnd policy'
 							},{
-								url: '#',
+								url: 'Info.html',
 								label: 'Terms and conditions of use'
 							}, {
-								url: '#',
+								url: 'Info.html',
 								label: 'Patent and trademarks'
 							}, {
-								url: '#',
+								url: 'FAQ.html',
 								label: 'FAQ'
 							}];
 					for link in footerLinks	
@@ -39,7 +35,7 @@ footer.br-top
 							a(href=link.url)= link.label			
 	div.copyright.br-top
 		div.center Copyright &copy; 2018 AlkaStone H2O. All rights reserved.
-			a(href="#") Privacy And Cookies
+			a(href="Info.html") Privacy And Cookies
 									
 						
 					
