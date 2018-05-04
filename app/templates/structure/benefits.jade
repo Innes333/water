@@ -1,0 +1,33 @@
+section.benefits
+		h3 Health benefits
+		h5 Pure water for active life
+		.container
+			.row
+				-
+					var benefitList = [{
+							img:'/img/girl-medium.jpg',
+							text: 'Activation of metabolism',
+						},{
+							img:'/img/run-medium.jpg',
+							text: 'Increase of immunity'
+						},{
+							img:'/img/girl-medium.jpg',
+							text: 'Detoxification'
+						},{
+							img:'/img/girl-medium.jpg',
+							text: 'Improvement of skin'
+						},{
+							img:'/img/girl-medium.jpg',
+							text: 'Weight loss stimulation'
+						},{
+							img:'/img/girl-medium.jpg',
+							text: 'Increased tone'
+						},{
+							img:'/img/girl-medium.jpg',
+							text: 'Prevention of chronic diseases'
+						}]
+				for benefit in benefitList
+					.col-md-3
+						.benefit-img
+							img(src=benefit.img)
+						.benefit-text= benefit.text

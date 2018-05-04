@@ -135,6 +135,7 @@ header
 			display: inline-block
 			float: right
 			li
+				position: relative
 				display: inline-block
 				vertical-align: top
 				a
@@ -155,9 +156,11 @@ header
 						transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1)
 						&:hover
 							box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.3)
+
 						i
 							margin-right: 12px
-			
+
+			// shopping bag
 			.total-price-basket
 				display: inline-block
 
@@ -168,7 +171,63 @@ header
 
 			.basket-item-count
 				display: inline-block
-				font-family: RobotoLight		
+				font-family: RobotoLight	
+
+	.dropdown-mini-bag
+		display: none
+		position: absolute
+		top: 75px
+		right: -20px
+		padding: 5px 20px 20px
+		width: 290px
+		background: $white
+		border: 1px solid $greyLight
+		line-height: 20px
+
+		.bag-list
+			margin: 20px 0
+			max-height: 150px
+			overflow-y: auto
+			overflow-x: hidden
+
+		&:before
+			position: absolute
+			content: ''
+			top: -29px
+			right: 60px
+			border-top: 15px solid transparent
+			border-bottom: 15px solid $greyLight
+			border-left: 15px solid transparent
+			border-right: 15px solid transparent
+		&:after
+			position: absolute
+			content: ''
+			top: -28px
+			right: 60px
+			border-top: 15px solid transparent
+			border-bottom: 15px solid $white
+			border-left: 15px solid transparent
+			border-right: 15px solid transparent
+
+		a
+			margin: 3px 0
+		.w-product
+			padding-top: 10px
+			height: 50px
+		
+		.w-product-name
+			line-height: 30px
+
+		.product-price
+			color: $silver
+			font-size: 14px
+
+		.product-name
+			margin: 0
+			padding: 0
+
+		img
+			height: 55px		
 	
 //Navigation end-----------------------
 
@@ -317,12 +376,13 @@ header
 			background-color: transparent
 			color: $main
 			border-color: $main
-	&.grey
-		border-color: $textColor
-		color: $textColor
-		&:hover
-			background-color: $textColor
-			color: $white
+
+	&.invert
+		border-color: $white
+		background: $white
+		color: $main
+		border: 2px solid $main
+		
 	&.small
 		border: none
 		position: relative
