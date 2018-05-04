@@ -20,39 +20,48 @@
 
 //Share btns----------------
 .share-btns-list
-	text-align: right
-	border-bottom: 1px solid $grey
 	li
-		display: inline-block
-		vertical-align: top
-		width: 40px
-		height: 40px
-		&:first-child
-			float: left
-			width: 200px
-			text-align: left
-			line-height: 40px
+		margin-left: 5px
+		display: inline-block		
 		a
-			display: block
-			color: $black
-			font-size: 18px
+			display: inline-block
+			width: 35px
+			height: 35px
+			font-size: 16px
+			line-height: 35px
+			border-radius: 50%
+			background-color: $white
+			color: $main
+			border: 1px solid $main
+			text-align: center
 .contacts
+
 	.share-btns-list
 		border-bottom: none
-		text-align: left
+		text-align: center
+	.share-btn
+		.label
+			margin-top: 20px
+			margin-bottom: 10px
+		
+
+	.soc-btn
+		.label
+			margin-top: 20px
+			margin-bottom: 10px
 		li
-			width: 30px
-			height: 30px
-			line-height: 30px
-			margin-left: 5px
-			&:first-child
-				width: 90px
-				margin-left: 0px
+			margin-left: 5px			
 			a
+				width: 35px
+				height: 35px
+				font-size: 16px
+				line-height: 35px
 				border-radius: 50%
-				background-color: $black
+				background-color: $main
 				color: $white
-				text-align: center
+				text-align: center		
+
+
 //Share btns----------------
 
 //Product-card--------------
@@ -227,7 +236,7 @@
 
 section
 	padding: 50px 0
-	border-bottom: 1px solid $greyLight
+	border-bottom: 1px solid $blueLight
 
 	h3
 		font-size: 30px
@@ -384,18 +393,43 @@ section
 		a
 			margin-top: 20px	
 
+
 // benefits
 
 .benefits
+	.w-benefit
+		position: relative
+
+		&:nth-child(5)
+			margin-left: 10%
+
 	.benefit-img
+		position: relative
 		max-width: 250px
 		height: 250px
 		border-radius: 50%
 		overflow: hidden
-		img
-			height: 100%	
-		
+		background-size: cover
 
+		img
+			height: 100%
+
+	.benefit-text
+		margin: 10px 0 35px
+		color: $silver
+		font-family: serif
+		font-style: italic
+		font-size: 22px
+		color: $silver
+		text-align: center
+
+		
+// parthners
+.partner-img
+	padding: 25px
+	
+	img
+		width: 100%	
 
 // water-enrichment
 .water-enrichment
@@ -466,7 +500,6 @@ section
 // end 
 
 // minerals -----------------
-
 .minerals
 	.owl-pagination
 		margin-bottom: 40px

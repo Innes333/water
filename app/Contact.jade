@@ -11,7 +11,7 @@ html.no-js(lang="en")
 					div.row
 						div.col-sm-8
 							h3.title.black.left Leave A Message
-							p.description Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.
+							p Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.
 							form.mt3
 								div.container-fluid
 									div.row
@@ -27,25 +27,32 @@ html.no-js(lang="en")
 											div.form-group
 												input(type="text" name="place" id="place" required placeholder="Manager")
 												label(for="place") Subject
-								div.form-group.textarea-block.right
-									textarea(name="fancy-textarea" id="fancy-textarea" placeholder="Hello my name is...")
-									label(for="fancy-textarea") Your Message
-									button(type="submit" class="btn mt1") Send Message
-								input(type="hidden" name="project_name" value="Имя сайта")
-								input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
-								input(type="hidden" name="form_subject" value="Заявка с имя сайта")
+										div.col-sm-12.clrp		
+											div.form-group.textarea-block.right
+												textarea(name="fancy-textarea" id="fancy-textarea" placeholder="Hello my name is...")
+												label(for="fancy-textarea") Your Message
+												button(type="submit" class="btn mt1") Send Message
+											input(type="hidden" name="project_name" value="Имя сайта")
+											input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
+											input(type="hidden" name="form_subject" value="Заявка с имя сайта")
 						div.col-sm-4
 							h3.title.black.left Our Store
-							p.description 24/7 support.
+							p 24/7 support.
 								| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, incidunt.
 							ul
 								li.mt2
 									span.label.mt-half.pr1 e-mail:
-									a(href="mailto:support@alcastone.com") support@alcastone.com
+									a(href="mailto:support@alkastone.com") support@alcastone.com
 								li.mt2
 									span.label.mt-half.pr1 phone:
 									a(href="tel://(+31)20 2400 212") (+31)20 2400 212
+<<<<<<< HEAD
 							div.mt2
+=======
+							div.share-btn.center
+								include templates/structure/share-btns
+							div.soc-btn.center
+>>>>>>> 698a34324a382ee5727dfae1a9f4d59556bd2f02
 								span.label.mt1.pr1 Follow us:
 								include templates/structure/soc-block
 							
