@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Start gulp template</title>
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta name="keywords" content="sass,css,gulp,front-end">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <meta property="og:url" content="http://tsumbaluk.in.ua">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="front-end developer">
+    <meta property="og:description" content="front-end developer">
+    <meta property="og:image" content="design/img/sass.png">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo"><a href="/"><img src="../img/logo.png"></a></div>
+              <ul class="nav">
+                <li><a href="About.html">About</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Partners.html">Partners</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Basket-page.html" class="shop-cart">
+                    <div class="not_empty">
+                      <div class="total-price-basket"><span class="lbl"><i class="fa fa-shopping-bag"></i>Shop</span>
+                        <div class="total-price"><span class="value">350$	</span></div>
+                      </div>
+                      <div class="basket-item-count"><span class="count">(10)</span></div>
+                    </div></a>
+                  <div class="dropdown-mini-bag">
+                    <div class="bag-list">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-xs-4"><a href="Product-page.html"><img src="/img/bottle-3.jpg" class="lazy"></a></div>
+                          <div class="col-xs-8">
+                            <div class="w-product">
+                              <div class="w-product-name"><a href="Product-page.html" class="product-name">Blue bottle</a></div>
+                              <div class="product-price">Price: 45$</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-4"><a href="Product-page.html"><img src="/img/bottle-0.jpg" class="lazy"></a></div>
+                          <div class="col-xs-8">
+                            <div class="w-product">
+                              <div class="w-product-name"><a href="Product-page.html" class="product-name">Green bottle</a></div>
+                              <div class="product-price">Price: 45$</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="view-bag center"><a href="Checkout-page.html" class="btn invert">Checkout</a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="main-promo gradient">
+        <video poster="/img/waterline1.jpg" autoplay loop>
+          <source src="/img/water-splash.mp4" type="video/mp4">
+          <object>
+            <emded src="/img/water-splash.mp4" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="always"></emded>
+          </object>
+        </video>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 promo-content">
+              <h1 class="title">AlkaStone H2O</h1>
+              <p class="subtitle">Feel power of water</p>
+              <h3 class="promo-text">Aqua-enrichment</h3>
+            </div>
+            <div class="col-md-4 promo-img center"><img src="/img/black-bottle.png">
+              <div class="promo-btn"><a href="elements.html" class="btn">Get you own bottle</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <section class="tabs">
+              <ul> 
+                <li data-show="form" class="tab-link active">form</li>
+                <li data-show="image" class="tab-link">image</li>
+                <li data-show="slider" class="tab-link">slider</li>
+                <li data-show="popup" class="tab-link">popup</li>
+                <li data-show="over" class="tab-link">over</li>
+              </ul>
+              <div class="tabs-wrap">
+                <div id="form" class="tab">
+                  <div class="tab-content">
+                    <h1 class="title center mt4">Forms example								</h1>
+                    <form action="#">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-md-6 clrp">
+                            <div class="form-group">
+                              <input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
+                              <label for="fancy-checkbox">Checkbox</label>
+                            </div>
+                            <div class="form-group">
+                              <input type="radio" name="fancy-radio" id="radio-1" checked>
+                              <label for="radio-1">Radio</label>
+                              <input type="radio" name="fancy-radio" id="radio-2">
+                              <label for="radio-2">Radio</label>
+                            </div>
+                          </div>
+                          <div class="col-md-6 clrp right">
+                            <div class="form-group">
+                              <select name="lengvich1" id="lengvich1">
+                                <option value="0">Select lengvich</option>
+                                <option value="1">JavaScript</option>
+                                <option value="2">CSS</option>
+                                <option value="3">HTML</option>
+                                <option value="4">PHP</option>
+                                <option value="5">C#</option>
+                                <option value="6">Java</option>
+                                <option value="7">C++</option>
+                                <option value="8">Ruby</option>
+                              </select>
+                              <label for="lengvich1"><i class="fa fa-angle-down"></i></label>
+                            </div>
+                            <div class="form-group">
+                              <select name="lengvich" id="lengvich2">
+                                <option value="0">Select lengvich</option>
+                                <option value="1">JavaScript</option>
+                                <option value="2">CSS</option>
+                                <option value="3">HTML</option>
+                                <option value="4">PHP</option>
+                                <option value="5">C#</option>
+                                <option value="6">Java</option>
+                                <option value="7">C++</option>
+                                <option value="8">Ruby</option>
+                              </select>
+                              <label for="lengvich2"><i class="fa fa-angle-down"></i></label>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input data-addui="slider" data-step="1" data-id="range" data-min="1" data-max="100" value="20">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input data-addui="slider" data-min="-20" data-step="0.1" data-max="20" value="0">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input data-addui="slider" data-min="-5" data-max="5" data-range="true" value="-2,2">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="col-md-6 clrp">
+                                  <div class="form-group">
+                                    <input data-addui="slider" data-direction="vertical">
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <input data-addui="slider" data-direction="vertical" data-range="true" data-min="20" data-max="40" data-step="1" value="25,35">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="fancy-text" id="fancy-text">
+                        <label for="fancy-text">Name</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="fancy-email" id="fancy-email" required>
+                        <label for="fancy-email">E-mail</label>
+                      </div>
+                      <div class="form-group">
+                        <textarea name="fancy-textarea" id="fancy-textarea"></textarea>
+                        <label for="fancy-textarea">Description</label>
+                      </div>
+                      <button type="submit" class="btn mb2">Submit</button>
+                      <button type="submit" class="btn grey mb2">Submit</button>
+                      <button type="submit" class="btn small mb2">Submit</button>
+                      <button type="submit" class="btn full mb2">Submit</button>
+                      <input type="hidden" name="project_name" value="Имя сайта">
+                      <input type="hidden" name="admin_email" value="tsumbaluk888@gmail.com">
+                      <input type="hidden" name="form_subject" value="Заявка с имя сайта">
+                    </form>
+                  </div>
+                </div>
+                <div id="image" class="tab">
+                  <div class="tab-content">
+                    <h1 class="title center mt4">Image card example</h1>
+                    <div class="container-fluid">
+                      <div class="col-md-3 clrp">
+                        <div class="card">
+                          <div class="img-wrap small"><img src="img/seampl0.jpg" alt="foto"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 clrp">
+                        <div class="card">
+                          <div class="img-wrap small"><img src="img/seampl1.jpg" alt="foto"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 clrp">
+                        <div class="card">
+                          <div class="img-wrap small"><img src="img/seampl2.jpg" alt="foto"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 clrp">
+                        <div class="card">
+                          <div class="img-wrap small"><img src="img/seampl3.jpg" alt="foto"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 clrp">
+                        <div class="card hover">
+                          <div class="img-wrap small"><img src="img/seampl4.jpg" alt="foto"></div>
+                          <div class="descr">
+                            <h3>card hover||img-wrap small 5</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi atque tempore illo necessitatibus reprehenderit, soluta quasi quos!</p><a href="#" class="btn grey">Reed</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 clrp">
+                        <div class="card hover">
+                          <div class="img-wrap small"><img src="img/seampl5.jpg" alt="foto"></div>
+                          <div class="descr">
+                            <h3>card hover||img-wrap small 6</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi atque tempore illo necessitatibus reprehenderit, soluta quasi quos!</p><a href="#" class="btn grey">Reed</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 clrp">
+                        <div class="card hover">
+                          <div class="img-wrap small"><img src="img/seampl6.jpg" alt="foto"></div>
+                          <div class="descr">
+                            <h3>card hover||img-wrap small 7</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi atque tempore illo necessitatibus reprehenderit, soluta quasi quos!</p><a href="#" class="btn grey">Reed</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="slider" class="tab">
+                  <div class="tab-content">
+                    <h1 class="title center mt4">Slider example</h1>
+                    <section class="slider">
+                      <div class="item"><img src="img/slider0.jpg" alt="foto"></div>
+                      <div class="item"><img src="img/slider1.jpg" alt="foto"></div>
+                      <div class="item"><img src="img/slider2.jpg" alt="foto"></div>
+                    </section>
+                  </div>
+                </div>
+                <div id="popup" class="tab">
+                  <div class="tab-content center">
+                    <h1 class="title center mt4">Popup example</h1>
+                    <button type="button" data-show="popup-ex" class="btn pop mt4">Seample popup</button>
+                    <button type="button" data-show="popup-an" class="btn pop ье4">Animation popup</button></button>
+                  </div>
+                  <div id="popup-ex" class="popup">
+                    <div class="popup-content">
+                      <h2>Popup content title</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eius, facilis non at harum labore facere repellendus ea, perferendis sit.</p>
+                    </div>
+                  </div>
+                  <div id="popup-an" class="popup">
+                    <div class="popup-content anim">
+                      <h2>Popup content title</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eius, facilis non at harum labore facere repellendus ea, perferendis sit.</p>
+                    </div>
+                  </div>
+                </div>
+                <div id="over" class="tab">
+                  <div class="tab-content center">
+                    <h3 class="title center mt4">Over DOM element</h3>
+                    <div class="container-fluid">
+                      <div class="col-md-3 block">
+                        <h3 class="subtitle mt2">Burger menu</h3>
+                        <div class="mob-button mt4"><span></span><span></span><span></span></div>
+                      </div>
+                      <div class="col-md-3 block">
+                        <h3 class="subtitle mt2 mb0">Gif preloader</h3>
+                        <div class="preloader-wrap">
+                          <div class="preloader gif"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <h3 class="subtitle mt2 mb0">CSS preloader</h3>
+                        <div class="preloader-wrap">
+                          <div class="preloader css"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 block">
+                        <h3 class="subtitle mt2">Dropdown</h3>
+                        <div class="dropdown">
+                          <button type="button" class="btn">dropdown button</button>
+                          <ul>
+                            <li>item-0</li>
+                            <li>item-1</li>
+                            <li>item-2</li>
+                            <li>item-3</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-3 block">
+                        <h3 class="subtitle mt2">Pagination</h3>
+                        <div class="pagination">
+                          <ul class="pagination">
+                            <li class="control"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="control"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-3 block">
+                        <h3 class="subtitle mt2">Pagination light</h3>
+                        <div class="pagination light">
+                          <ul class="pagination">
+                            <li class="control"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="control"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="someone-purchased" class="card">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3"><img src="img/bottle-0.jpg"></div>
+          <div class="col-xs-9"><a href="Product-page.html">Green bottle, 500ml</a>
+            <p class="label">purchased about 13 minutes ago</p>
+            <h4 class="label">by Gabriela from New-York </h4>
+          </div>
+        </div>
+      </div><span class="close"> <i class="fa fa-close"></i></span>
+    </div>
+    <footer class="br-top">
+      <div class="container">
+        <div class="row">
+          <div class="w-follow">
+            <h4 class="follow-title center">Follow us</h4>
+            <div class="follow-subtitle center">Stay in touch and keep up with the latest news from AlkaStoneH2O</div>
+            <ul class="w-social-links center">
+              <li class="social-link dib"><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info br-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 center"><img src="../img/logo.png" alt="AlkaStone H2O"></div>
+            <div class="col-md-8">
+              <div class="info-link"><a href="Info.html">Sale terms</a></div>
+              <div class="info-link"><a href="Info.html">Returnd policy</a></div>
+              <div class="info-link"><a href="Info.html">Terms and conditions of use</a></div>
+              <div class="info-link"><a href="Info.html">Patent and trademarks</a></div>
+              <div class="info-link"><a href="FAQ.html">FAQ</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright br-top">
+        <div class="center">Copyright &copy; 2018 AlkaStone H2O. All rights reserved.<a href="Info.html">Privacy And Cookies</a></div>
+      </div>
+    </footer>
+    <!--[if lt IE 9]
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    -->
+    <!--![endif]-->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/plagin.min.js"></script>
+    <script src="js/common.min.js"></script>
+  </body>
+</html>

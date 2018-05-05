@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Start gulp template</title>
+    <meta name="description" content="">
+    <meta name="robots" content="noindex">
+    <meta name="keywords" content="sass,css,gulp,front-end">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <meta property="og:url" content="http://tsumbaluk.in.ua">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="front-end developer">
+    <meta property="og:description" content="front-end developer">
+    <meta property="og:image" content="design/img/sass.png">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo"><a href="/"><img src="../img/logo.png"></a></div>
+              <ul class="nav">
+                <li><a href="About.html">About</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Partners.html">Partners</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Basket-page.html" class="shop-cart">
+                    <div class="not_empty">
+                      <div class="total-price-basket"><span class="lbl"><i class="fa fa-shopping-bag"></i>Shop</span>
+                        <div class="total-price"><span class="value">350$	</span></div>
+                      </div>
+                      <div class="basket-item-count"><span class="count">(10)</span></div>
+                    </div></a>
+                  <div class="dropdown-mini-bag">
+                    <div class="bag-list">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-xs-4"><a href="Product-page.html"><img src="/img/bottle-3.jpg" class="lazy"></a></div>
+                          <div class="col-xs-8">
+                            <div class="w-product">
+                              <div class="w-product-name"><a href="Product-page.html" class="product-name">Blue bottle</a></div>
+                              <div class="product-price">Price: 45$</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-4"><a href="Product-page.html"><img src="/img/bottle-0.jpg" class="lazy"></a></div>
+                          <div class="col-xs-8">
+                            <div class="w-product">
+                              <div class="w-product-name"><a href="Product-page.html" class="product-name">Green bottle</a></div>
+                              <div class="product-price">Price: 45$</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="view-bag center"><a href="Checkout-page.html" class="btn invert">Checkout</a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="mt2 mb1">
+            <li class="breadcrumb-item"><a href="Home.html"><span>Home</span></a></li>
+            <li class="breadcrumb-item"><a href="Catalog.html"><span>Catalog</span></a></li>
+            <li class="breadcrumb-item">Current page</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <form id="search" class="right">
+            <div class="w-search">
+              <input type="text" placeholder="Search">
+              <button type="submit" class="search-btn"> <i class="fa fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section class="no-result container center">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="no-result-title">oh no! no results for:</div>
+          <div class="no-result-query"><i class="fa fa-search"></i>"bad content"</div>
+          <div class="no-result-text">Don't give up - and try something else.</div>
+        </div>
+      </div>
+    </section>
+    <div style="background-image:url('../img/subscribe.jpg')" class="subscribe gradient center">
+      <form action="" method="post" class="mb3">
+        <div class="block-content">
+          <div class="form-subscribe-header">
+            <h3 class="title white">Stay in touch</h3>
+            <p class="subtitle white">Sign up to get the latest on sales, new products and more…</p>
+          </div>
+          <div class="form-subscribe-body">
+            <input type="textfield" name="email" value="" placeholder="Enter your email address...">
+            <button type="submit" class="btn">Sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="someone-purchased" class="card">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-3"><img src="img/bottle-0.jpg"></div>
+          <div class="col-xs-9"><a href="Product-page.html">Green bottle, 500ml</a>
+            <p class="label">purchased about 13 minutes ago</p>
+            <h4 class="label">by Gabriela from New-York </h4>
+          </div>
+        </div>
+      </div><span class="close"> <i class="fa fa-close"></i></span>
+    </div>
+    <footer class="br-top">
+      <div class="container">
+        <div class="row">
+          <div class="w-follow">
+            <h4 class="follow-title center">Follow us</h4>
+            <div class="follow-subtitle center">Stay in touch and keep up with the latest news from AlkaStoneH2O</div>
+            <ul class="w-social-links center">
+              <li class="social-link dib"><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+              <li class="social-link dib"><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info br-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 center"><img src="../img/logo.png" alt="AlkaStone H2O"></div>
+            <div class="col-md-8">
+              <div class="info-link"><a href="Info.html">Sale terms</a></div>
+              <div class="info-link"><a href="Info.html">Returnd policy</a></div>
+              <div class="info-link"><a href="Info.html">Terms and conditions of use</a></div>
+              <div class="info-link"><a href="Info.html">Patent and trademarks</a></div>
+              <div class="info-link"><a href="FAQ.html">FAQ</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright br-top">
+        <div class="center">Copyright &copy; 2018 AlkaStone H2O. All rights reserved.<a href="Info.html">Privacy And Cookies</a></div>
+      </div>
+    </footer>
+    <!--[if lt IE 9]
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    -->
+    <!--![endif]-->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/plagin.min.js"></script>
+    <script src="js/common.min.js"></script>
+  </body>
+</html>

@@ -1,44 +1,6 @@
 (function() {
  
-	window.inputNumber = function(el) {
-
-		var min = el.attr('min') || false;
-		var max = el.attr('max') || false;
-
-		var els = {};
-
-		els.dec = el.prev();
-		els.inc = el.next();
-
-		el.each(function() {
-			init($(this));
-		});
-
-		function init(el) {
-
-			els.dec.on('click', decrement);
-			els.inc.on('click', increment);
-
-			function decrement() {
-				var value = el[0].value;
-				value--;
-				if(!min || value >= min) {
-					el[0].value = value;
-				}
-			}
-
-			function increment() {
-				var value = el[0].value;
-				value++;
-				if(!max || value <= max) {
-					el[0].value = value++;
-				}
-			}
-		}
-	}
 })();
-
-inputNumber($('.input-number'));
 
 $(function() {
 	var main = {
@@ -73,30 +35,21 @@ $(function() {
 		},
 		inputNumber: function(el) {
 			var min = el.attr('min') || false;
-			var max = el.attr('max') || false;
-			var els = {};
-			els.dec = el.prev();
-			els.inc = el.next();
-			el.each(function() {
-				init($(this));
-			});
-			function init(el) {
-				els.dec.on('click', decrement);
-				els.inc.on('click', increment);
-				function decrement() {
-					var value = el[0].value;
-					value--;
-					if(!min || value >= min) {
-						el[0].value = value;
-					}
-				}
-				function increment() {
-					var value = el[0].value;
-					value++;
-					if(!max || value <= max) {
-						el[0].value = value++;
-					}
-				}
+			var max = el.attr('max') || false;			
+			el.prev().on('click', decrement);
+			el.next().on('click', increment);
+			el.trigger('change');
+			function decrement(e) {
+				var el = $(e.target).next();
+				var value = el[0].value;
+				value--;
+				if(!min || value >= min) el[0].value = value;
+			}
+			function increment(e) {
+				var el = $(e.target).prev();
+				var value = el[0].value;
+				value++;
+				if(!max || value <= max) el[0].value = value++;
 			}
 		},
 		tabs: function(el){
@@ -193,7 +146,7 @@ $(function() {
 			this.opt.partnersSlider.owlCarousel(this.opt.partnersOwlOptions);
 			//mob button toggle
 			this.toggleC(this.opt.mobButton);
-			//
+
 			this.inputNumber(this.opt.inputNumber);
 
 			this.dropDown('.question-title', '.answer');
@@ -205,18 +158,18 @@ $(function() {
 		main.init();
 
 		//Shop add product count--------
-		$('.le-quantity button').click(function(e){
-				// e.preventDefault();
-				var elem = $(this).parents('form').find('input.counter');
-				var currentQty= elem.val();
-				if($(this).hasClass('minus') && currentQty > 0){
-					 elem.val(currentQty-1);
-					 elem.trigger('change');
-				}else	if($(this).hasClass('plus')){
-					elem.val(currentQty-0+1);
-					elem.trigger('change');
-				}
-		});
+		// $('.le-quantity button').click(function(e){
+		// 		// e.preventDefault();
+		// 		var elem = $(this).parents('form').find('input.counter');
+		// 		var currentQty= elem.val();
+		// 		if($(this).hasClass('minus') && currentQty > 0){
+		// 			 elem.val(currentQty-1);
+		// 			 elem.trigger('change');
+		// 		}else	if($(this).hasClass('plus')){
+		// 			elem.val(currentQty-0+1);
+		// 			elem.trigger('change');
+		// 		}
+		// });
 		//Shop add product count--------
 
 		//Ajax mini cart----------------
