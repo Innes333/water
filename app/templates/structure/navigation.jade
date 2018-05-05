@@ -9,8 +9,8 @@ nav
 					each val,ind in ['About','Catalog','News','Partners','Contact']
 						li
 							a(href=val+'.html')=val
-					li
-						a(href='Basket-page.html', class='shop-cart')
+					li.w-bag
+						a(href='Basket-page.html', class='shop-bag')
 							.not_empty
 								.total-price-basket
 									span.lbl
@@ -24,7 +24,7 @@ nav
 						.dropdown-mini-bag
 							.bag-list
 								.container-fluid
-									.row
+									.row.bag-product
 										.col-xs-4
 											a(href="Product-page.html")
 												img(src="/img/bottle-3.jpg" class="lazy")
@@ -33,17 +33,11 @@ nav
 												.w-product-name
 													a(href="Product-page.html" class="product-name") Blue bottle
 												.product-price Price: 45$
-									.row
-										.col-xs-4
-											a(href="Product-page.html")
-												img(src="/img/bottle-0.jpg" class="lazy")
-										.col-xs-8
-											.w-product
-												.w-product-name
-													a(href="Product-page.html" class="product-name") Green bottle
-												.product-price Price: 45$
+											form(method="post" class="mini-bag-delete")
+												input(type="hidden" name="key" value="val")
+												btn(class="close-btn close" type="submit" name="ms2_action" title="Remove from basket" value="cart/remove")
+													i.fa.fa-close
 									
-							
 								
 							.view-bag.center
 								a(href="Checkout-page.html" class="btn invert") Checkout

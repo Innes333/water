@@ -139,7 +139,7 @@ $(function() {
 			// Add el window height
 			this.fullHeight(this.opt.body);
 			// show mini bag
-			this.showMiniBag(this.opt.bagBtn, this.opt.minBag);
+			// this.showMiniBag(this.opt.bagBtn, this.opt.minBag);
 			//owl slider init
 			this.opt.mineralSlider.owlCarousel(this.opt.mineralOwlOptions);
 			// owl partners slider

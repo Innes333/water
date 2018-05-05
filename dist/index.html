@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Start gulp template</title>
+    <title>Alkastone H2O</title>
     <meta name="description" content="">
     <meta name="robots" content="noindex">
     <meta name="keywords" content="sass,css,gulp,front-end">
@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/header.min.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <meta property="og:url" content="http://tsumbaluk.in.ua">
+    <meta property="og:url" content="https://alkastoneh2o.com">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="front-end developer">
-    <meta property="og:description" content="front-end developer">
+    <meta property="og:title" content="alkastone h2o sport bottle">
+    <meta property="og:description" content="alkastone h2o sport bottle">
     <meta property="og:image" content="design/img/sass.png">
   </head>
   <body>
@@ -31,7 +31,7 @@
                 <li><a href="News.html">News</a></li>
                 <li><a href="Partners.html">Partners</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Basket-page.html" class="shop-cart">
+                <li class="w-bag"><a href="Basket-page.html" class="shop-bag">
                     <div class="not_empty">
                       <div class="total-price-basket"><span class="lbl"><i class="fa fa-shopping-bag"></i>Shop</span>
                         <div class="total-price"><span class="value">350$	</span></div>
@@ -41,22 +41,17 @@
                   <div class="dropdown-mini-bag">
                     <div class="bag-list">
                       <div class="container-fluid">
-                        <div class="row">
+                        <div class="row bag-product">
                           <div class="col-xs-4"><a href="Product-page.html"><img src="/img/bottle-3.jpg" class="lazy"></a></div>
                           <div class="col-xs-8">
                             <div class="w-product">
                               <div class="w-product-name"><a href="Product-page.html" class="product-name">Blue bottle</a></div>
                               <div class="product-price">Price: 45$</div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-xs-4"><a href="Product-page.html"><img src="/img/bottle-0.jpg" class="lazy"></a></div>
-                          <div class="col-xs-8">
-                            <div class="w-product">
-                              <div class="w-product-name"><a href="Product-page.html" class="product-name">Green bottle</a></div>
-                              <div class="product-price">Price: 45$</div>
-                            </div>
+                            <form method="post" class="mini-bag-delete">
+                              <input type="hidden" name="key" value="val">
+                              <btn type="submit" name="ms2_action" title="Remove from basket" value="cart/remove" class="close-btn close"><i class="fa fa-close"></i></btn>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -181,31 +176,31 @@
       <h5>Pure water for active life</h5>
       <div class="container">
         <div class="row">
-          <div class="col-md-3 w-benefit">						
+          <div class="w-benefit">						
             <div style="background-image: url(../img/runers.jpg)" class="benefit-img gradient"></div>
             <div class="benefit-text">Activation of metabolism</div>
           </div>
-          <div class="col-md-3 w-benefit">						
+          <div class="w-benefit">						
             <div style="background-image: url(/img/kid.jpg)" class="benefit-img gradient"></div>
             <div class="benefit-text">Increase of immunity</div>
           </div>
-          <div class="col-md-3 w-benefit">						
+          <div class="w-benefit">						
             <div style="background-image: url(/img/man.jpg)" class="benefit-img gradient"></div>
             <div class="benefit-text">Detoxification</div>
           </div>
-          <div class="col-md-3 w-benefit">						
+          <div class="w-benefit">						
             <div style="background-image: url(/img/skin.jpg)" class="benefit-img gradient"></div>
             <div class="benefit-text">Improvement of skin</div>
           </div>
-          <div class="col-md-3 w-benefit">						
+          <div class="w-benefit">						
             <div style="background-image: url(/img/girl.jpg)" class="benefit-img gradient"></div>
             <div class="benefit-text">Weight loss stimulation</div>
           </div>
-          <div class="col-md-3 w-benefit">						
+          <div class="w-benefit">						
             <div style="background-image: url(/img/yoga.jpg)" class="benefit-img gradient"></div>
             <div class="benefit-text">Increased tone</div>
           </div>
-          <div class="col-md-3 w-benefit">						
+          <div class="w-benefit">						
             <div style="background-image: url(/img/gradpar.jpg)" class="benefit-img gradient"></div>
             <div class="benefit-text">Prevention of chronic diseases</div>
           </div>
@@ -214,49 +209,56 @@
     </section>
     <section class="bottle-structure">
       <h3>How it's made</h3>
+      <h5>The latest development in the field of ecology and water</h5>
       <div class="container">
-        <div class="row">			
-          <div class="col-md-12">				
+        <div class="row">
+          <div class="col-md-12">
             <div class="bottle-schema"><img src="../img/black-bottle.png" alt="">
               <div class="one">
+                <div class="line"></div>
+                <div class="dot"></div>
                 <div class="item-content">
-                  <div class="item-title">COVER LOCK IS OPENED BY PRESSING THE BUTTON</div>
-                  <div class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elitnumquam.</div>
+                  <div class="item-title">Cup with a lock pushes up by pressing the button</div>
+                  <div class="item-descr">Silicon gasket and lock prevent water from spilling</div>
                 </div>
               </div>
               <div class="two">
+                <div class="line"></div>
+                <div class="dot"></div>
                 <div class="item-content">
-                  <div class="item-title">CONVENIENT HOLDER</div>
-                  <div class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elitnumquam.</div>
+                  <div class="item-title">Tritan body</div>
+                  <div class="item-descr">Durable, transparent and environmentally friendly material. Used in the production of children`s tableware. BBPA, BSP, EA free</div>
                 </div>
               </div>
               <div class="three">
+                <div class="line"></div>
+                <div class="dot"></div>
                 <div class="item-content">
-                  <div class="item-title">CASE OF TRITANE</div>
-                  <div class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elitnumquam.</div>
+                  <div class="item-title">Colored sleeve</div>
+                  <div class="item-descr">Plesant to touch silicone sleeve for slip protection &amp; aesthetic allure</div>
                 </div>
               </div>
               <div class="four">
+                <div class="line"></div>
+                <div class="dot"></div>
                 <div class="item-content">
                   <div class="item-title">MINERAL FILTER</div>
-                  <div class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elitnumquam.</div>
+                  <div class="item-descr">16 natural components enrich and purify water</div>
                 </div>
               </div>
             </div>
-            <div class="intro-text">
-              <h4>Enriched water</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur aliquam libero ea. 
-              Quas repellendus maiores, numquam nobis debitis nulla eos quo ipsam fuga, architecto ut vitae. Consequuntur, vero voluptatibus.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur aliquam libero ea. 
-              Quas repellendus maiores, numquam nobis debitis nulla eos quo ipsam fuga, architecto ut vitae. Consequuntur, vero voluptatibus.
+            <div class="intro-text center">
+              <h4>The human body is more than 60% composed of water</h4>
+              <div class="descr">all life-forming liquids of the organism determines water composition, which we drink</div><a href="Catalog.html" class="btn">Choose your own Aqua-enricher</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="minerals">
+    <section class="elements">
       <div class="container">
         <div class="row">
-          <h3>What helps to get live water</h3>
+          <h3>What helps to get pure and healthy water</h3>
           <h5>16 extra natural elements to enrich and purify your water</h5>
           <div class="elements-slider">
             <div class="item">

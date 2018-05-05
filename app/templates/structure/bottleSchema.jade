@@ -1,21 +1,41 @@
 section.bottle-structure
 	h3 How it's made
+	h5 The latest development in the field of ecology and water
 	div.container
-		div.row			
-			div.col-md-12				
+		div.row
+			div.col-md-12
 				div.bottle-schema
 					img(src="../img/black-bottle.png", alt="")
-					each val, index in [{selector: 'one', title:'COVER LOCK IS OPENED BY PRESSING THE BUTTON', descr:'Lorem ipsum dolor sit amet consectetur adipisicing elitnumquam.'}, {selector: 'two', title: 'CONVENIENT HOLDER', descr:'Lorem ipsum dolor sit amet consectetur adipisicing elitnumquam.'}, {selector: 'three', title:'CASE OF TRITANE', descr:'Lorem ipsum dolor sit amet consectetur adipisicing elitnumquam.'}, {selector: 'four', title:'MINERAL FILTER', descr:'Lorem ipsum dolor sit amet consectetur adipisicing elitnumquam.'}]
-						div(class= val.selector)
-							div.item-content
-								div.item-title= val.title
-								div.item-descr= val.descr
+					-
+						var configList = [{
+								selector: 'one',
+								title:'Cup with a lock pushes up by pressing the button',
+								descr: 'Silicon gasket and lock prevent water from spilling'
+							},{
+								selector: 'two',
+								title: 'Tritan body',
+								descr:'Durable, transparent and environmentally friendly material. Used in the production of children`s tableware. BBPA, BSP, EA free'
+							}, {
+								selector: 'three',
+								title:'Colored sleeve',
+								descr:'Plesant to touch silicone sleeve for slip protection & aesthetic allure'
+							}, {
+								selector: 'four',
+								title:'MINERAL FILTER',
+								descr:'16 natural components enrich and purify water'
+							}]
 
-				div.intro-text
-					h4 Enriched water
-					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur aliquam libero ea. 
-					| Quas repellendus maiores, numquam nobis debitis nulla eos quo ipsam fuga, architecto ut vitae. Consequuntur, vero voluptatibus.
-					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur aliquam libero ea. 
-					| Quas repellendus maiores, numquam nobis debitis nulla eos quo ipsam fuga, architecto ut vitae. Consequuntur, vero voluptatibus.
+					for config in configList		
+						div(class= config.selector)
+							.line
+							.dot
+							div.item-content
+								div.item-title= config.title
+								div.item-descr= config.descr
+
+				div.intro-text.center
+					h4 The human body is more than 60% composed of water
+					.descr all life-forming liquids of the organism determines water composition, which we drink
+					a(href="Catalog.html").btn Choose your own Aqua-enricher
 									
 					
