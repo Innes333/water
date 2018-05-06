@@ -38,18 +38,23 @@ $(function() {
 			var max = el.attr('max') || false;			
 			el.prev().on('click', decrement);
 			el.next().on('click', increment);
-			el.trigger('change');
 			function decrement(e) {
 				var el = $(e.target).next();
 				var value = el[0].value;
 				value--;
-				if(!min || value >= min) el[0].value = value;
+				if(!min || value >= min){
+					el[0].value = value;
+					el.trigger('change');
+				};
 			}
 			function increment(e) {
 				var el = $(e.target).prev();
 				var value = el[0].value;
 				value++;
-				if(!max || value <= max) el[0].value = value++;
+				if(!max || value <= max){
+					el[0].value = value++;
+					el.trigger('change');
+				};
 			}
 		},
 		tabs: function(el){
@@ -173,7 +178,7 @@ $(function() {
 		//Shop add product count--------
 
 		//Ajax mini cart----------------
-		$(document).on('mouseover', '#dropdown-cart', function(e) {
+		$(document).on('mouseenter', '#dropdown-cart', function(e) {
 			e.preventDefault();
 			$.ajax({  
 			  type: "POST",
