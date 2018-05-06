@@ -144,7 +144,7 @@ $(function() {
 			// Add el window height
 			this.fullHeight(this.opt.body);
 			// show mini bag
-			this.showMiniBag(this.opt.bagBtn, this.opt.minBag);
+			// this.showMiniBag(this.opt.bagBtn, this.opt.minBag);
 			//owl slider init
 			this.opt.mineralSlider.owlCarousel(this.opt.mineralOwlOptions);
 			// owl partners slider
@@ -181,14 +181,14 @@ $(function() {
 		$(document).on('mouseenter', '#dropdown-cart', function(e) {
 			e.preventDefault();
 			$.ajax({  
-			  type: "POST",
-			  url: $(this).attr('data-url'), 
-			  data: {parent: '[[*id]]'},
-			  success:  function(data) { 
+				type: "POST",
+				url: $(this).attr('data-url'), 
+				data: {parent: '[[*id]]'},
+				success:  function(data) { 
 					if (data){
-					  $('.dropdown-mini-cart').html(data);
+						$('.dropdown-mini-cart').html(data);
 					}else{
-					  miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
+						miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
 					}} 
 			}); 
 		 });

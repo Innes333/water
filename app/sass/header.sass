@@ -147,7 +147,7 @@ header
 					font-size: 18px
 					font-family: "RobotoRegular"
 
-					&.shop-cart
+					&.shop-bag
 						padding: 8px 20px
 						background: $main
 						color: $white
@@ -171,10 +171,32 @@ header
 
 			.basket-item-count
 				display: inline-block
-				font-family: RobotoLight	
+				font-family: RobotoLight
+
+// bag menu item	
+.w-bag
+	overflow: hidden
+
+	.bag-product
+		position: relative
+
+		.mini-bag-delete
+			display: inline-block
+			position: absolute
+			right: 20px
+			top: 15px
+			font-size: 20px
+		.close-btn
+			cursor: pointer
+			background-color: transparent
+
+	&:hover
+		overflow: visible
+		.dropdown-mini-bag
+			opacity: 1
 
 	.dropdown-mini-bag
-		display: none
+		opacity: 0
 		position: absolute
 		top: 75px
 		right: -20px
@@ -183,10 +205,11 @@ header
 		background: $white
 		border: 1px solid $greyLight
 		line-height: 20px
+		transition: opacity 0.4s
 
 		.bag-list
 			margin: 20px 0
-			height: 150px
+			max-height: 150px
 			overflow-y: auto
 			overflow-x: hidden
 
