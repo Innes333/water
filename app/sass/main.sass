@@ -20,6 +20,15 @@
 
 //Share btns----------------
 .share-btns-list
+	margin-top: 45px
+	padding-top: 20px
+	border-top: 1px solid $greyLight
+	text-align: right
+
+	.label
+		font-size: 16px
+		line-height: 28px
+
 	li
 		margin-left: 5px
 		display: inline-block		
@@ -136,8 +145,8 @@
 	.title
 		line-height: 40px
 	.description
-		border-bottom: 1px solid $grey
-		border-top: 1px solid $grey
+		border-bottom: 1px solid $greyLight
+		border-top: 1px solid $greyLight
 		padding: 15px 0
 	.product-options
 		span, li, .options
@@ -177,6 +186,19 @@
 		line-height: 40px
 		margin-right: 20px
 //Product-card--------------
+
+
+.circle-img
+	position: relative
+	display: inline-block
+	width: 250px
+	height: 250px
+	border-radius: 50%
+	overflow: hidden
+	background-size: cover
+
+	img
+		height: 100%	
 
 //Subscribe block-----------
 .subscribe
@@ -261,6 +283,10 @@ section
 .water-choice
 	.choice-step
 		margin-bottom: 40px
+
+		.circle-img
+			width: 310px
+			height: 310px
 
 	.w-choice-block
 		position: relative
@@ -402,19 +428,7 @@ section
 		position: relative
 		display: inline-block
 		width: 24%
-		vertical-align: top
-
-	.benefit-img
-		position: relative
-		display: inline-block
-		width: 250px
-		height: 250px
-		border-radius: 50%
-		overflow: hidden
-		background-size: cover
-
-		img
-			height: 100%
+		vertical-align: top	
 
 	.benefit-text
 		margin: 10px 0 35px
@@ -425,27 +439,6 @@ section
 		color: $silver
 		text-align: center
 
-		
-// parthners
-.partner-img
-	padding: 25px
-	
-	img
-		width: 100%	
-
-// water-enrichment
-.water-enrichment
-	.descr
-		margin-top: 50px
-		font-size: 16px
-
-	.btn
-		margin-top: 30px	
-
-	.w-img
-		text-align: center
-		img
-			max-height: 450px			
 
 // bottle structure
 .bottle-structure
@@ -594,6 +587,73 @@ section
 
 // minerals end -------------		
 
+// use and care start -------	
+.use-care
+	h6
+		margin-bottom: 20px
+		font-size: 22px
+		letter-spacing: 2px
+		font-family: RobotoLight
+		color: $black
+
+	.step
+		position: absolute
+		top: 50%
+		left: -30px
+		margin-top: -30px
+		display: inline-block
+		height: 60px
+		width: 60px
+		line-height: 60px
+		font-size: 35px
+		font-family: RobotoRegular
+		background: $blueLight
+		color: $white
+		border-radius: 50%
+		text-align: center
+
+	.w-use,
+	.w-care
+		margin-bottom: 20px
+		.item-img
+			line-height: 120px
+			img
+				width: 50%	
+		.item
+			position: relative
+			padding: 25px 30px 25px 70px
+			min-height: 120px
+			border: 1px solid $blueLight
+			border-radius: 0 100px 100px 0
+		.title
+			font-size: 18px	
+
+	.care
+		margin-top: 60px	
+
+
+
+// use and care end ---------	
+// partners start ---------	
+.partner
+	.partner-img
+		padding: 25px		
+		img
+			width: 100%	
+	.btn
+		margin-top: 30px
+
+	.headline
+		margin-top: 50px
+		text-align: center
+		font-size: 30px
+		color: $silver
+		font-style: italic
+		font-family: serif		
+
+// use and care end ---------	
+
+
 .info-gallery
 	padding: 0
 
@@ -640,7 +700,15 @@ section
 					opacity: 1
 
 
+// info gallery end --------
 
+.certificates
+	.item-img
+		img	
+			width: 100%
+	.item-title
+		margin-top: 20px
+		text-align: center		
 
 
 .soc-block

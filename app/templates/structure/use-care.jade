@@ -1,5 +1,61 @@
-section.user-care
-	h3 Care routine
+section.use-care
+	h3 Use and care
 	h5 Easy steps to keep it clean and fresh
-	.container
-		.row
+	.container		
+		.use
+			h6 Before start to use:
+			-
+				var useList = [{
+					img:'/img/flask.png',
+					title: 'Rinse the bottle with a weak solution of vinegar',
+					text: 'Pour tap water into the aqua-enriched water just above the filter level, add 2 tablespoons of weak vinegar solution 6-9% (apple, rice). Then shake the aqua-dresser until a thick foam' 
+				}, {
+					img:'/img/water-faucet.png',
+					title: 'Rinse with tap water',
+					text: 'Rinse several times with tap water until the odor of vinegar is completely eliminated.'
+				}]
+			for use, index in useList
+				.row.w-use
+					.col-md-2
+						.item-img.center
+							img(src=use.img)
+					.col-md-10
+						.item
+							.step= index + 1
+							.title= use.title
+							.text= use.text
+
+		.care
+			h6 Care routing:
+			-
+				var careList = [{
+					img:'/img/water-faucet.png',
+					title: 'Once per day',
+					text: 'Rinse with tap water' 
+				}, {
+					img:'/img/flask.png',
+					title: 'Once per week',
+					text: 'Wash with a mild vinegar solution until foamy'
+				}, {
+					img:'/img/filter-icon.png',
+					title: 'Once per year',
+					text: 'Replace the filter cartridge'
+				}, {
+					img:'/img/water.png',
+					title: 'Water',
+					text: 'Use bottled or filtered water'
+				}, {
+					img:'/img/warning.png',
+					title: 'Do not do!',
+					text: 'Do not keep it in the freeze chamber!'
+				}]
+			for care, index in careList
+				.row.w-care
+					.col-md-2
+						.item-img.center
+							img(src=care.img)
+					.col-md-10
+						.item
+							.step= index + 1
+							.title= care.title
+							.text= care.text
