@@ -636,6 +636,9 @@ section
 // use and care end ---------	
 // partners start ---------	
 .partner
+	.become-partner
+		margin-top: 25px
+
 	.partner-img
 		padding: 25px		
 		img
@@ -702,10 +705,21 @@ section
 
 // info gallery end --------
 
-.certificates
+.certificate
+	text-align: center
+	.w-item
+		display: inline-block
+		margin: 10px 20px
+		cursor: pointer
+		
 	.item-img
+		border: 1px solid $blueLight
+		transition: box-shadow 0.4s
+		&:hover
+			box-shadow: 0 1px 12px 2px rgba(21,101,192,.3)
+
 		img	
-			width: 100%
+			height: 180px
 	.item-title
 		margin-top: 20px
 		text-align: center		
