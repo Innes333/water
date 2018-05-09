@@ -6,7 +6,7 @@ $(function() {
 	var main = {
 		opt: {
 			tabs: $('.tabs'),
-			popup: $('.btn.pop'),
+			popup: $('.pop'),
 			img: $('img'),
 			linc: $('a'),
 			body: $('body'),
