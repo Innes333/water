@@ -85,101 +85,62 @@
         </div>
       </div>
     </div>
-    <section id="content" class="product-card-basket">
-      <div class="cont-wrap">
-        <div class="item-in-basket mb1">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-1"><img src="img/bottle-0.jpg"></div>
-              <div class="col-sm-11">
-                <div class="product-options mt4">
-                  <div class="product size"><span class="option-name">Size:</span>
-                    <div class="options">
-                      <ul>
-                        <li class="active">450ml</li>
-                        <li>600ml</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-color"><span class="option-name">Color:</span>
-                    <div class="options">
-                      <ul>
-                        <li style="background: url('img/color-0.jpg')" class="active"></li>
-                        <li style="background: url('img/color-1.jpg')"></li>
-                        <li style="background: url('img/color-2.jpg')"></li>
-                        <li style="background: url('img/color-3.jpg')"></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-count"><span class="option-name">Count:</span>
-                    <div class="options"><span class="input-number-decrement">–</span>
-                      <input type="text" value="1" min="1" max="100" class="input-number"><span class="input-number-increment">+</span>
-                    </div>
-                  </div>
-                  <div class="product-price"><span class="option-name">Price: </span>
-                    <div class="options">
-                      <ul> 
-                        <li class="active big">46.00$</li>
-                      </ul>
-                    </div>
-                    <button type="button" title="Remove from basket" class="close"><i class="fa fa-close"></i></button>
-                  </div>
-                </div>
+    <section class="checkout">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h3 class="title black left">Contact information</h3>
+            <p>Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.</p>
+            <form class="mt3">
+              <div class="form-group half">
+                <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" name="firstName" id="firstName" required placeholder="First name">
+                <label for="firstName">First name</label>
               </div>
-            </div>
+              <div class="form-group half">
+                <input type="text" value="" name="lastName" id="lastName" required placeholder="Last name">
+                <label for="lastName">Last name</label>
+              </div>
+              <div class="form-group half">
+                <input type="text" value="" name="city" id="city" required placeholder="City">
+                <label for="city">City</label>
+              </div>
+              <div class="form-group half">
+                <input type="text" value="" name="country" id="country" placeholder="Country">
+                <label for="country">Country</label>
+              </div>
+              <div class="form-group">
+                <input type="text" value="" name="address" id="address" required placeholder="Address">
+                <label for="address">Address</label>
+              </div>
+              <div class="form-group half">
+                <input type="text" value="" name="apt" id="apt" placeholder="Apt, suite, etc.(optional)">
+                <label for="apt">Apt, suite, etc.</label>
+              </div>
+              <div class="form-group half">
+                <input type="text" value="" name="postalCode" id="postalCode" placeholder="Postal code">
+                <label for="postalCode">Postal code</label>
+              </div>
+              <div class="form-group">
+                <input type="text" value="" name="company" id="company" placeholder="Company(optional)">
+              </div>
+              <div class="form-group">
+                <input type="text" value="" name="phone" id="phone" required placeholder="Phone">
+              </div>
+              <div class="form-group right">
+                <button type="submit" class="btn mt1">Continue to shipping method</button>
+              </div>
+            </form>
           </div>
-        </div>
-        <div class="item-in-basket mb1">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-1"><img src="img/bottle-2.jpg"></div>
-              <div class="col-sm-11">
-                <div class="product-options mt4">
-                  <div class="product size"><span class="option-name">Size:</span>
-                    <div class="options">
-                      <ul>
-                        <li class="active">450ml</li>
-                        <li>600ml</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-color"><span class="option-name">Color:</span>
-                    <div class="options">
-                      <ul>
-                        <li style="background: url('img/color-0.jpg')"></li>
-                        <li style="background: url('img/color-1.jpg')"></li>
-                        <li style="background: url('img/color-2.jpg')" class="active"></li>
-                        <li style="background: url('img/color-3.jpg')"></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="product-count"><span class="option-name">Count:</span>
-                    <div class="options"><span class="input-number-decrement">–</span>
-                      <input type="text" value="1" min="1" max="100" class="input-number"><span class="input-number-increment">+</span>
-                    </div>
-                  </div>
-                  <div class="product-price"><span class="option-name">Price: </span>
-                    <div class="options">
-                      <ul> 
-                        <li class="active big">46.00$</li>
-                      </ul>
-                    </div>
-                    <button type="button" title="Remove from basket" class="close"><i class="fa fa-close"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="total">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-sm-6">
-                  <p class="dib mt2">Order Total:</p>
-                  <h4 class="dib mt2 title black">92$</h4>
-                </div>
-                <div class="col-sm-6 right"><a href="Checkout.html" class="btn mt2">Checkout</a></div>
-              </div>
-            </div>
+          <div class="col-md-5">
+            <h3 class="title black left">Our Store</h3>
+            <p>
+              24/7 support.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, incidunt.
+            </p>
+            <ul>
+              <li class="mt2"><span class="label mt-half pr1">e-mail:</span><a href="mailto:support@alkastone.com">support@alcastone.com</a></li>
+              <li class="mt2"><span class="label mt-half pr1">phone:</span><a href="tel://(+31)20 2400 212">(+31)20 2400 212</a></li>
+            </ul>
           </div>
         </div>
       </div>
