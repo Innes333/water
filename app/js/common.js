@@ -33,6 +33,13 @@ $(function() {
 				items: 4					
 			}
 		},
+		owlSetPaginName: function(slider){
+			var items = slider.find('.owl-item > .item');
+			var pagin = slider.find('.owl-pagination > .owl-page');			
+			for(var i = 0; i < items.length; i++){
+				$(pagin[i]).html($(items[i]).data('name'));
+			};
+		},
 		inputNumber: function(el) {
 			var min = el.attr('min') || false;
 			var max = el.attr('max') || false;			
@@ -152,6 +159,7 @@ $(function() {
 			// this.showMiniBag(this.opt.bagBtn, this.opt.minBag);
 			//owl slider init
 			this.opt.mineralSlider.owlCarousel(this.opt.mineralOwlOptions);
+			this.owlSetPaginName(this.opt.mineralSlider);
 			// owl partners slider
 			this.opt.partnersSlider.owlCarousel(this.opt.partnersOwlOptions);
 			//mob button toggle
