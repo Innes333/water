@@ -4,7 +4,7 @@ section.elements
 			h3 What helps to get pure and healthy water
 			h5 16 extra natural elements to enrich and purify your water
 			div.elements-slider
-				div.item
+				div.item(data-name="Enrichment")
 					-
 						var mineralList = [{
 								img:'/img/magnetite.jpg',
@@ -47,7 +47,7 @@ section.elements
 										img(src= mineral.img)
 									div.card-title= mineral.title
 								div.back= mineral.text
-				div.item
+				div.item(data-name="Purifyng")
 					-
 						var filterList = [{
 								img:'/img/alkaline.jpg',

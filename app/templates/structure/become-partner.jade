@@ -1,0 +1,29 @@
+section.become-partner
+    .container
+        .row
+            .col-xs-4.center
+                .circle-img(style="background-image: url(img/man.jpg)").gradient
+            .col-xs-8
+                .w-become-intro
+                    .title Partnership with Alkastone
+                    .text We offer pecial conditions - fitness clubs, aesthetic medicine centers, yoga clubs, advertising agencies and other organizations. If you are interested to become Alkastone H2O partner, please fill in the form below. Members of our team will contact you shortly.
+        .row
+            .col-md-12
+                .title.center Fill out the form to join us
+                form(action="")
+                    .form-group.half
+                        input(type="text" value="" name="firstName" id="firstName" required placeholder="First name")
+                        label(for="firstName") First name*
+                    .form-group.half
+                        input(type="text" value="" name="lastName" id="lastName" required placeholder="Last name")
+                        label(for="lastName") Last name*
+                    .form-group
+                        input(type="email" value="" name="email" id="email" required placeholder="nick@gmail.com")
+                        label(for="email") Email*                    
+                    .form-group.textarea-block.center
+                        textarea(name="fancy-textarea" value="" id="fancy-textarea" placeholder="Comments...")
+                        label(for="fancy-textarea") Comment
+                        button(type="submit" class="btn mt1") Send
+                    input(type="hidden" name="project_name" value="AlkastoneH2O")
+                    input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
+                    input(type="hidden" name="form_subject" value="Comment from AlkastoneH2O")

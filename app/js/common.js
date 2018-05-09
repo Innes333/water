@@ -33,6 +33,13 @@ $(function() {
 				items: 4					
 			}
 		},
+		owlSetPaginName: function(slider){
+			var items = slider.find('.owl-item > .item');
+			var pagin = slider.find('.owl-pagination > .owl-page');			
+			for(var i = 0; i < items.length; i++){
+				$(pagin[i]).html($(items[i]).data('name'));
+			};
+		},
 		inputNumber: function(el) {
 			var min = el.attr('min') || false;
 			var max = el.attr('max') || false;			
@@ -78,7 +85,7 @@ $(function() {
 				.css('height', $(window).height() + 'px')
 				.find('.popup-content')
 				.removeClass('anim')
-				.append('<span class="fade_out">&#9587;</span>')
+				.append('<span class="fade_out">&#x2a2f;</span>')
 
 				$('.fade_out').click(function(){
 					pop.fadeOut(600)
@@ -86,6 +93,12 @@ $(function() {
 					.addClass('anim');
 					$(this).detach();
 				});
+
+				$('.popup').on('click', function(){
+					pop.fadeOut(600)
+					.find('.popup-content')
+					.addClass('anim');
+				})
 			});
 		},
 
@@ -126,9 +139,9 @@ $(function() {
 			});
 		},
 
-		fillValue: function(input) {
-			input.on('keyup', function(e){
-				e.target.value.length > 0 && this.setAttribute('value', e.target.value);
+		fillValue: function(formEl) {
+			formEl.on('change', function(e){
+				this.setAttribute('value', e.target.value);
 			});
 		},
 
@@ -147,6 +160,7 @@ $(function() {
 			// this.showMiniBag(this.opt.bagBtn, this.opt.minBag);
 			//owl slider init
 			this.opt.mineralSlider.owlCarousel(this.opt.mineralOwlOptions);
+			this.owlSetPaginName(this.opt.mineralSlider);
 			// owl partners slider
 			this.opt.partnersSlider.owlCarousel(this.opt.partnersOwlOptions);
 			//mob button toggle
@@ -155,6 +169,7 @@ $(function() {
 			this.inputNumber(this.opt.inputNumber);
 
 			this.fillValue($('input'));
+			this.fillValue($('textarea'));
 
 			this.dropDown('.question-title', '.answer');
 		}
