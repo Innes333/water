@@ -131,6 +131,11 @@ $(function() {
 			});
 		},
 
+		fillValue: function(input) {
+			input.on('keyup', function(e){
+				e.target.value.length > 0 && this.setAttribute('value', e.target.value);
+			});
+		},
 
 		init: function(){
 			// default functions
@@ -153,6 +158,8 @@ $(function() {
 			this.toggleC(this.opt.mobButton);
 
 			this.inputNumber(this.opt.inputNumber);
+
+			this.fillValue($('input'));
 
 			this.dropDown('.question-title', '.answer');
 		}

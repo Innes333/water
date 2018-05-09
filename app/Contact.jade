@@ -13,28 +13,25 @@ html.no-js(lang="en")
 							h3.title.black.left Leave A Message
 							p Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.
 							form.mt3
-								div.container-fluid
-									div.row
-										div.col-sm-6
-											div.form-group.pr-half
-												input(type="text" name="name" id="name" placeholder="Nick")
-												label(for="name") Your Name*
-										div.col-sm-6
-											div.form-group.pl-half
-												input(type="email" name="email" id="email" required placeholder="nick@gmail.com")
-												label(for="email") Your Email*
-										div.col-sm-12
-											div.form-group
-												input(type="text" name="place" id="place" required placeholder="Manager")
-												label(for="place") Subject
-										div.col-sm-12
-											div.form-group.textarea-block.right
-												textarea(name="fancy-textarea" id="fancy-textarea" placeholder="Hello my name is...")
-												label(for="fancy-textarea") Your Message
-												button(type="submit" class="btn mt1") Send Message
-											input(type="hidden" name="project_name" value="Имя сайта")
-											input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
-											input(type="hidden" name="form_subject" value="Заявка с имя сайта")
+								.form-group.half
+									input(type="text" name="firstName" id="firstName" placeholder="First name")
+									label(for="firstName") First name*
+								.form-group.half
+									input(type="text" name="lastName" id="lastName" placeholder="Last name")
+									label(for="lastName") Last name*
+								.form-group
+									input(type="email" name="email" id="email" required placeholder="nick@gmail.com")
+									label(for="email") Email*
+								.form-group
+									input(type="text" name="place" id="place" required placeholder="Subject")
+									label(for="place") Subject
+								.form-group.textarea-block.right
+									textarea(name="fancy-textarea" id="fancy-textarea" placeholder="Comments...")
+									label(for="fancy-textarea") Comment
+									button(type="submit" class="btn mt1") Send Message
+								input(type="hidden" name="project_name" value="AlkastoneH2O")
+								input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
+								input(type="hidden" name="form_subject" value="Comment from AlkastoneH2O")
 						div.col-sm-4
 							h3.title.black.left Our Store
 							p 24/7 support.

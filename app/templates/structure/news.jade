@@ -1,0 +1,22 @@
+section.news
+	.container-fluid
+		.row
+			-
+				var articles = [{
+					title: 'Water and health',
+					url: 'News.html',
+					img: '/img/girl-medium.jpg'
+				}, {
+					title: 'Alkaline water. Why is it better?',
+					url: 'News.html',
+					img: '/img/yoga-medium.jpg'
+				}, {
+					title: 'Keep doing',
+					url: 'News.html',
+					img: '/img/run-medium.jpg'
+				}]
+			for article in articles
+				.col-md-4.news-item(style="background-image: url(" + article.img + ");").gradient
+					.content
+						.news-title Water and health
+						a(href=article.url class="btn")= article.title

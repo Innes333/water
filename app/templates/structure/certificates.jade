@@ -3,23 +3,28 @@ section.certificate
 	h5 People choose us
 	.container
 		.row
-			-
-				var certificates = [{
-					img:'/img/flask.png',
-					title: 'Rinse the bottle with a weak solution of vinegar',
-					text: 'Pour tap water into the aqua-enriched water just above the filter level, add 2 tablespoons of weak vinegar solution 6-9% (apple, rice). Then shake the aqua-dresser until a thick foam' 
-				}, {
-					img:'/img/water-faucet.png',
-					title: 'Rinse with tap water',
-					text: 'Rinse several times with tap water until the odor of vinegar is completely eliminated.'
-				}]
-			for certificate, index in certificates			
-				.col-md-4.col-xs-6
-					div(class="item pop" data-show="popup" + index)
-						.item-img.center
-							img(src=certificate.img)					
-						.item-title= certificate.title
-						
-					div(id="popup"+ index class="popup")
-						.popup-content
-							img(src=certificate.img)
+			.col-md-12
+				-
+					var certificates = [{
+						img:'/img/cert-1.jpeg',
+						title: 'Certificate 1' 
+					}, {
+						img:'/img/cert-2.jpeg',
+						title: 'Certificate 2'
+					}, {
+						img:'/img/cert-3.jpeg',
+						title: 'Certificate 3'
+					}, {
+						img:'/img/cert-4.jpeg',
+						title: 'Certificate 4'
+					}]
+				for certificate, index in certificates			
+					.w-item
+						div(class="item pop" data-show="popup" + index)
+							.item-img.center
+								img(src=certificate.img)
+							.item-title= certificate.title
+							
+						div(id="popup"+ index class="popup")
+							.popup-content
+								img(src=certificate.img)

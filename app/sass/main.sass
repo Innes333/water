@@ -628,6 +628,9 @@ section
 // use and care end ---------	
 // partners start ---------	
 .partner
+	.become-partner
+		margin-top: 25px
+
 	.partner-img
 		padding: 25px		
 		img
@@ -645,24 +648,16 @@ section
 
 // use and care end ---------	
 
-
-.info-gallery
+// news section
+.news
 	padding: 0
 
-	.info-item
+	.news-item
 		position: relative
 		height: 340px
 		padding: 0
 		background-size: cover
 		background-position: 50% 50%
-
-		&.shop
-			background-image: url('../img/yoga-medium.jpg')
-		&.news
-			background-image: url('../img/girl-medium.jpg')
-		&.sport
-			background-image: url('../img/run-medium.jpg')
-
 		.content
 			position: absolute
 			top: 0
@@ -673,7 +668,7 @@ section
 			transition: all 0.3s
 			z-index: 5
 
-			.info-title
+			.news-title
 				margin-top: 20%
 				margin-bottom: 30px
 				font-size: 25px
@@ -694,10 +689,21 @@ section
 
 // info gallery end --------
 
-.certificates
+.certificate
+	text-align: center
+	.w-item
+		display: inline-block
+		margin: 10px 20px
+		cursor: pointer
+		
 	.item-img
+		border: 1px solid $blueLight
+		transition: box-shadow 0.4s
+		&:hover
+			box-shadow: 0 1px 12px 2px rgba(21,101,192,.3)
+
 		img	
-			width: 100%
+			height: 180px
 	.item-title
 		margin-top: 20px
 		text-align: center		
