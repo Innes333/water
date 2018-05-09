@@ -15,6 +15,7 @@ $(function() {
 			slider: $('.slider'),
 			mineralSlider: $('.elements-slider'),
 			partnersSlider: $('.partners-slider'),
+			commentsSlider: $('.comments-slider'),
 			inputNumber: $('.input-number'),
 			minBag: $('.dropdown-mini-bag'),	
 			bagBtn: $('.shop-cart'),
@@ -31,6 +32,13 @@ $(function() {
 				pagination: true,
 				scrollPerPage: true,
 				items: 4					
+			},
+			commentsOwlOptions: {
+				autoPlay: false,
+				navigation: false,
+				pagination: true,
+				scrollPerPage: true,
+				items: 3					
 			}
 		},
 		owlSetPaginName: function(slider){
@@ -163,6 +171,8 @@ $(function() {
 			this.owlSetPaginName(this.opt.mineralSlider);
 			// owl partners slider
 			this.opt.partnersSlider.owlCarousel(this.opt.partnersOwlOptions);
+			// owl comments slider
+			this.opt.commentsSlider.owlCarousel(this.opt.commentsOwlOptions);
 			//mob button toggle
 			this.toggleC(this.opt.mobButton);
 
