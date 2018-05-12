@@ -1,0 +1,27 @@
+section.product-plus
+    h3 What you get with our product
+    h5 Make your life better 
+    .container
+        .row
+            .col-md-8
+                ul.pluses
+                    -
+                        var plusList = [{
+                            title: '1. Good for health',
+                            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda commodi natus sunt adipisci aliquid quod a,  fuga doloremque eaque ipsum ullam, iure dolor totam.'
+                        }, {
+                            title: '2. Save money',
+                            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda commodi natus sunt adipisci aliquid quod a,  fuga doloremque eaque ipsum ullam, iure dolor totam.'
+                        }, {
+                            title: '3. Ecological awareness',
+                            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda commodi natus sunt adipisci aliquid quod a,  fuga doloremque eaque ipsum ullam, iure dolor totam.'
+                        }]
+
+                    for val, index inplusList
+                        li.mt2
+                            .title= val.title
+                            .text= val.text
+                a(href="Catalog.html" class="btn mt4") View all products                            
+            .col-md-4
+                .plus-img
+                    img(src='/img/bottles.png')   
