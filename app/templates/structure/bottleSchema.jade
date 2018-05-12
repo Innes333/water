@@ -6,32 +6,33 @@ section.bottle-structure
 			div.col-md-12
 				div.bottle-schema
 					img(src="../img/black-bottle.png", alt="")
-					-
-						var configList = [{
-								selector: 'one',
-								title:'Cup with a lock pushes up by pressing the button',
-								descr: 'Silicon gasket and lock prevent water from spilling'
-							},{
-								selector: 'two',
-								title: 'Tritan body',
-								descr:'Durable, transparent and environmentally friendly material. Used in the production of children`s tableware. BBPA, BSP, EA free'
-							}, {
-								selector: 'three',
-								title:'Colored sleeve',
-								descr:'Plesant to touch silicone sleeve for slip protection & aesthetic allure'
-							}, {
-								selector: 'four',
-								title:'MINERAL FILTER',
-								descr:'16 natural components enrich and purify water'
-							}]
+					.w-items
+						-
+							var configList = [{
+									selector: 'one',
+									title:'Cup with a lock pushes up by pressing the button',
+									descr: 'Silicon gasket and lock prevent water from spilling'
+								},{
+									selector: 'two',
+									title: 'Tritan body',
+									descr:'Durable, transparent and environmentally friendly material. Used in the production of children`s tableware. BBPA, BSP, EA free'
+								}, {
+									selector: 'three',
+									title:'Colored sleeve',
+									descr:'Plesant to touch silicone sleeve for slip protection & aesthetic allure'
+								}, {
+									selector: 'four',
+									title:'MINERAL FILTER',
+									descr:'16 natural components enrich and purify water'
+								}]
 
-					for config in configList		
-						div(class= config.selector)
-							.line
-							.dot
-							.item-content
-								div.item-title= config.title
-								div.item-descr= config.descr
+						for config in configList		
+							div(class="item")
+								.line
+								.dot
+								.item-content
+									div.item-title= config.title
+									div.item-descr= config.descr
 
 				div.intro-text.center
 					h4 The human body is more than 60% composed of water

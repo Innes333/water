@@ -209,6 +209,26 @@
 	img
 		height: 100%	
 
+
+// About --------------
+
+.about
+	.title
+		margin-bottom: 10px
+	.text
+		margin-bottom: 50px
+		h3, h4, h5, h6
+			margin-bottom: 20px
+			font-family: RobotoLight
+			text-transform: uppercase
+			letter-spacing: 2px
+			font-size: 22px
+			color: $main
+			font-weight: 400
+
+
+// About end ----------		
+
 //Subscribe block-----------
 .subscribe
 	padding: 20px 0
@@ -469,10 +489,7 @@ section
 		height: 550px
 		text-align: center
 
-		.one,
-		.two,
-		.three,
-		.four
+		.item
 			position: absolute
 			width: 50%
 			height: 130px
@@ -510,42 +527,42 @@ section
 				height: 1px
 				background: $main	
 
-		.one
-			width: 52%
-			top: 35px
-			right: 0
-			text-align: right
-			.dot
-				left: 3px
-			.line
-				left: 10px
-			.item-content
-				right: 100px
-		.two
-			top: 180px
-			left: 0
-			text-align: left
-			.dot
+			&:nth-child(1)
+				width: 52%
+				top: 35px
 				right: 0
-			.line
-				right: 10px
-		.three
-			width: 52%
-			top: 300px
-			right: 0
-			text-align: right
-			.dot
+				text-align: right
+				.dot
+					left: 3px
+				.line
+					left: 10px
+				.item-content
+					right: 100px
+			&:nth-child(2)
+				top: 180px
 				left: 0
-			.line
-				left: 10px
-		.four
-			top: 395px
-			left: 0
-			text-align: left
-			.dot
+				text-align: left
+				.dot
+					right: 0
+				.line
+					right: 10px
+			&:nth-child(3)
+				width: 52%
+				top: 300px
 				right: 0
-			.line
-				right: 10px	
+				text-align: right
+				.dot
+					left: 0
+				.line
+					left: 10px
+			&:nth-child(4)
+				top: 395px
+				left: 0
+				text-align: left
+				.dot
+					right: 0
+				.line
+					right: 10px	
 
 
 		img
@@ -637,7 +654,6 @@ section
 
 	form
 		margin-top: 30px
-		max-width: 650px	
 
 .partner
 	.headline
