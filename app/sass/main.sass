@@ -185,7 +185,7 @@
 	p
 		line-height: 40px
 		margin-right: 20px
-//Product-card--------------
+//Product-card end--------------
 
 
 .circle-img
@@ -195,7 +195,16 @@
 	height: 250px
 	border-radius: 50%
 	overflow: hidden
-	background-size: cover
+
+	&::after
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background: linear-gradient(to right, $main 0%, #6cebf1 100%)
+		opacity: 0.2
 
 	img
 		height: 100%	

@@ -28,5 +28,6 @@ section.benefits
 						}]
 				for benefit in benefitList
 					.w-benefit
-						.circle-img(style="background-image: url(" + benefit.img + ")").gradient
+						.circle-img
+							img(src=benefit.img alt=benefit.text)
 						.benefit-text= benefit.text
