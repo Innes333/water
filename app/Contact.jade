@@ -14,19 +14,22 @@ html.no-js(lang="en")
 							p Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.
 							form.mt3
 								.form-group.half
-									input(type="text" name="firstName" id="firstName" placeholder="First name")
+									input(type="text" value="" name="firstName" id="firstName" placeholder="First name")
 									label(for="firstName") First name*
 								.form-group.half
-									input(type="text" name="lastName" id="lastName" placeholder="Last name")
+									input(type="text" value="" name="lastName" id="lastName" placeholder="Last name")
 									label(for="lastName") Last name*
 								.form-group
-									input(type="email" name="email" id="email" required placeholder="nick@gmail.com")
+									input(type="email" value="" name="email" id="email" required placeholder="nick@gmail.com")
 									label(for="email") Email*
 								.form-group
-									input(type="text" name="place" id="place" required placeholder="Subject")
+									input(type="phone" value="" name="phone" id="phone" placeholder="nick@gmail.com")
+									label(for="phone") Phone
+								.form-group
+									input(type="text" value="" name="place" id="place" required placeholder="Subject")
 									label(for="place") Subject
-								.form-group.textarea-block.right
-									textarea(name="fancy-textarea" id="fancy-textarea" placeholder="Comments...")
+								.form-group.textarea-block.center
+									textarea(name="fancy-textarea" value="" id="fancy-textarea" placeholder="Comments...")
 									label(for="fancy-textarea") Comment
 									button(type="submit" class="btn mt1") Send Message
 								input(type="hidden" name="project_name" value="AlkastoneH2O")

@@ -45,23 +45,18 @@ $(function() {
 			var max = el.attr('max') || false;			
 			el.prev().on('click', decrement);
 			el.next().on('click', increment);
+			el.trigger('change');
 			function decrement(e) {
 				var el = $(e.target).next();
 				var value = el[0].value;
 				value--;
-				if(!min || value >= min){
-					el[0].value = value;
-					el.trigger('change');
-				};
+				if(!min || value >= min) el[0].value = value;
 			}
 			function increment(e) {
 				var el = $(e.target).prev();
 				var value = el[0].value;
 				value++;
-				if(!max || value <= max){
-					el[0].value = value++;
-					el.trigger('change');
-				};
+				if(!max || value <= max) el[0].value = value++;
 			}
 		},
 		tabs: function(el){
@@ -90,7 +85,7 @@ $(function() {
 				.css('height', $(window).height() + 'px')
 				.find('.popup-content')
 				.removeClass('anim')
-				.append('<span class="fade_out">&#9587;</span>')
+				.append('<span class="fade_out">&#x2a2f;</span>')
 
 				$('.fade_out').click(function(){
 					pop.fadeOut(600)
@@ -98,6 +93,12 @@ $(function() {
 					.addClass('anim');
 					$(this).detach();
 				});
+
+				$('.popup').on('click', function(){
+					pop.fadeOut(600)
+					.find('.popup-content')
+					.addClass('anim');
+				})
 			});
 		},
 
@@ -138,9 +139,9 @@ $(function() {
 			});
 		},
 
-		fillValue: function(input) {
-			input.on('keyup', function(e){
-				e.target.value.length > 0 && this.setAttribute('value', e.target.value);
+		fillValue: function(formEl) {
+			formEl.on('change', function(e){
+				this.setAttribute('value', e.target.value);
 			});
 		},
 
@@ -168,6 +169,7 @@ $(function() {
 			this.inputNumber(this.opt.inputNumber);
 
 			this.fillValue($('input'));
+			this.fillValue($('textarea'));
 
 			this.dropDown('.question-title', '.answer');
 		}
@@ -193,17 +195,17 @@ $(function() {
 		//Shop add product count--------
 
 		//Ajax mini cart----------------
-		$(document).on('mouseenter', '#dropdown-cart', function(e) {
+		$(document).on('mouseover', '#dropdown-cart', function(e) {
 			e.preventDefault();
 			$.ajax({  
-				type: "POST",
-				url: $(this).attr('data-url'), 
-				data: {parent: '[[*id]]'},
-				success:  function(data) { 
+			  type: "POST",
+			  url: $(this).attr('data-url'), 
+			  data: {parent: '[[*id]]'},
+			  success:  function(data) { 
 					if (data){
-						$('.dropdown-mini-cart').html(data);
+					  $('.dropdown-mini-cart').html(data);
 					}else{
-						miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
+					  miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
 					}} 
 			}); 
 		 });
