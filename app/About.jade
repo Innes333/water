@@ -6,37 +6,37 @@ html.no-js(lang="en")
 		h1.title.black.center About Alkastone H2O
 		p.subtitle.center Our story
 
-	section.about
-		.container
-			.row
-				.col-xs-4.center
-					.circle-img
-						img(src="img/about-1.jpg" alt="Alkastone about")
-				.col-xs-8
-					.text
-						h4 Our Mission
-						| Alkastone H2O is bridging the gap between wellness and convenience with our eco-friendly alkaline water bottles. We believe that living water is the foundation for healthy bodies, conscious minds, and inspired lives—and that you should be able to make it everywhere you go.
-						| For yoga enthusiasts, athletes, and health-seekers alike, Alkastone H2O Inspired strives to energize your lives all while reducing plastic waste. Our goal is to preserve the environment while expanding awareness, one bottle at a time.
-					
-					
-					.title Have any questions? We would like to hear from you
-					form(action="")
-						.form-group.half
-							input(type="text" value="" name="firstName" id="firstName" required placeholder="First name")
-							label(for="firstName") First name*
-						.form-group.half
-							input(type="text" value="" name="lastName" id="lastName" required placeholder="Last name")
-							label(for="lastName") Last name*
-						.form-group
-							input(type="email" value="" name="email" id="email" required placeholder="nick@gmail.com")
-							label(for="email") Email*                    
-						.form-group.textarea-block.center
-							textarea(name="fancy-textarea" value="" id="fancy-textarea" placeholder="Comments...")
-							label(for="fancy-textarea") Comment
-							button(type="submit" class="btn mt1") Send message
-						input(type="hidden" name="project_name" value="AlkastoneH2O")
-						input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
-						input(type="hidden" name="form_subject" value="Comment from AlkastoneH2O")
+		section.about
+			.container
+				.row
+					.col-xs-4.center
+						.circle-img
+							img(src="img/about-1.jpg" alt="Alkastone about")
+					.col-xs-8
+						.text
+							h4 Our Mission
+							| Alkastone H2O is bridging the gap between wellness and convenience with our eco-friendly alkaline water bottles. We believe that living water is the foundation for healthy bodies, conscious minds, and inspired lives—and that you should be able to make it everywhere you go.
+							| For yoga enthusiasts, athletes, and health-seekers alike, Alkastone H2O Inspired strives to energize your lives all while reducing plastic waste. Our goal is to preserve the environment while expanding awareness, one bottle at a time.
+						
+						
+						h3.title Have any questions? Leave a message
+						form(action="")
+							.form-group.half
+								input(type="text" value="" name="firstName" id="firstName" required placeholder="First name")
+								label(for="firstName") First name*
+							.form-group.half
+								input(type="text" value="" name="lastName" id="lastName" required placeholder="Last name")
+								label(for="lastName") Last name*
+							.form-group
+								input(type="email" value="" name="email" id="email" required placeholder="nick@gmail.com")
+								label(for="email") Email*                    
+							.form-group.textarea-block.center
+								textarea(name="fancy-textarea" value="" id="fancy-textarea" placeholder="Comments...")
+								label(for="fancy-textarea") Comment
+								button(type="submit" class="btn mt1") Send message
+							input(type="hidden" name="project_name" value="AlkastoneH2O")
+							input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
+							input(type="hidden" name="form_subject" value="Comment from AlkastoneH2O")
 
 		include templates/structure/certificates
 		include templates/structure/subscribe

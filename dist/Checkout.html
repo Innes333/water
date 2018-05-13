@@ -88,64 +88,151 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <h3 class="title black left">Contact information</h3>
-            <p>Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.</p>
-            <form class="mt3">
-              <div class="form-group half">
-                <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" name="firstName" id="firstName" required placeholder="First name">
-                <label for="firstName">First name*</label>
+            <h3 class="title left">Shipping information</h3>
+            <p>Fill out your devivery information</p>
+            <form class="mt2">
+              <div class="contact-info">
+                <div class="form-group half">
+                  <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" name="firstName" id="firstName" required placeholder="First name">
+                  <label for="firstName">First name*</label>
+                </div>
+                <div class="form-group half">
+                  <input type="text" value="" name="lastName" id="lastName" required placeholder="Last name">
+                  <label for="lastName">Last name*</label>
+                </div>
+                <div class="form-group half">
+                  <input type="text" value="" name="city" id="city" required placeholder="City">
+                  <label for="city">City*</label>
+                </div>
+                <div class="form-group half">
+                  <input type="text" value="" name="country" id="country" required placeholder="Country">
+                  <label for="country">Country*</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" value="" name="address" id="address" required placeholder="Address">
+                  <label for="address">Address*</label>
+                </div>
+                <div class="form-group half">
+                  <input type="text" value="" name="apt" id="apt" placeholder="Apt, suite, etc.(optional)">
+                  <label for="apt">Apt, suite, etc.(optional)</label>
+                </div>
+                <div class="form-group half">
+                  <input type="text" value="" name="postalCode" id="postalCode" required placeholder="Postal code">
+                  <label for="postalCode">Postal code*</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" value="" name="company" id="company" placeholder="Company(optional)">
+                  <label for="company">Company(optional)</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" value="" name="phone" id="phone" required placeholder="Phone">
+                  <label for="phone">Phone*</label>
+                </div>
               </div>
-              <div class="form-group half">
-                <input type="text" value="" name="lastName" id="lastName" required placeholder="Last name">
-                <label for="lastName">Last name*</label>
-              </div>
-              <div class="form-group half">
-                <input type="text" value="" name="city" id="city" required placeholder="City">
-                <label for="city">City*</label>
-              </div>
-              <div class="form-group half">
-                <input type="text" value="" name="country" id="country" required placeholder="Country">
-                <label for="country">Country*</label>
-              </div>
-              <div class="form-group">
-                <input type="text" value="" name="address" id="address" required placeholder="Address">
-                <label for="address">Address*</label>
-              </div>
-              <div class="form-group half">
-                <input type="text" value="" name="apt" id="apt" placeholder="Apt, suite, etc.(optional)">
-                <label for="apt">Apt, suite, etc.(optional)</label>
-              </div>
-              <div class="form-group half">
-                <input type="text" value="" name="postalCode" id="postalCode" required placeholder="Postal code">
-                <label for="postalCode">Postal code*</label>
-              </div>
-              <div class="form-group">
-                <input type="text" value="" name="company" id="company" placeholder="Company(optional)">
-                <label for="company">Company(optional)</label>
-              </div>
-              <div class="form-group">
-                <input type="text" value="" name="phone" id="phone" required placeholder="Phone">
-                <label for="phone">Phone*</label>
-              </div>
-              <div class="form-group">
-                <textarea type="text" value="" name="comment" id="comment" placeholder="comment"></textarea>
-                <label for="comment">Comment</label>
-              </div>
-              <div class="form-group center">
-                <button type="submit" class="btn mt1">Continue</button>
+              <div class="shipping-info">
+                <div class="form-group shipping-choice">
+                  <div class="row">
+                    <div class="col-xs-1">
+                      <input type="radio" name="fancy-radio" id="ground-ship">
+                      <label for="ground-ship"></label>
+                    </div>
+                    <div class="col-xs-9">
+                      <div class="shipping-name">Ground Shipping</div>
+                    </div>
+                    <div class="col-xs-2 right">
+                      <div class="shipping-price">5$</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group shipping-choice">
+                  <div class="row">
+                    <div class="col-xs-1">
+                      <input type="radio" name="fancy-radio" id="fedex-2" checked>
+                      <label for="fedex-2"></label>
+                    </div>
+                    <div class="col-xs-9">
+                      <div class="shipping-name">FedEx 2Day</div>
+                    </div>
+                    <div class="col-xs-2 right">
+                      <div class="shipping-price">12$</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group shipping-choice">
+                  <div class="row">
+                    <div class="col-xs-1">
+                      <input type="radio" name="fancy-radio" id="fedex-night">
+                      <label for="fedex-night"></label>
+                    </div>
+                    <div class="col-xs-9">
+                      <div class="shipping-name">FedEx Overnight</div>
+                    </div>
+                    <div class="col-xs-2 right">
+                      <div class="shipping-price">16$</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </form>
+            <div class="payment">
+              <div id="paypal-button-container"></div>
+            </div>
           </div>
-          <div class="col-md-5">
-            <h3 class="title black left">Our Store</h3>
-            <p>
-              24/7 support.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, incidunt.
-            </p>
-            <ul>
-              <li class="mt2"><span class="label mt-half pr1">e-mail:</span><a href="mailto:support@alkastone.com">support@alcastone.com</a></li>
-              <li class="mt2"><span class="label mt-half pr1">phone:</span><a href="tel://(+31)20 2400 212">(+31)20 2400 212</a></li>
-            </ul>
+          <div class="col-md-5 order-list">
+            <h3 class="title left">Order</h3>
+            <div class="ordered-products">
+              <div class="container-fluid">
+                <div class="row w-product">
+                  <div class="col-xs-2"><img src="/img/bottle-3.jpg" class="lazy"></div>
+                  <div class="col-xs-6">
+                    <div class="product-name">Blue bottle</div>
+                    <div class="product-detail">500ml</div>
+                  </div>
+                  <div class="col-xs-1">
+                    <div class="product-count">2</div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="product-price">Price: 45$</div>
+                  </div>
+                </div>
+                <div class="row w-product">
+                  <div class="col-xs-2"><img src="/img/bottle-1.jpg" class="lazy"></div>
+                  <div class="col-xs-6">
+                    <div class="product-name">Black bottle</div>
+                    <div class="product-detail">500ml</div>
+                  </div>
+                  <div class="col-xs-1">
+                    <div class="product-count">1</div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="product-price">Price: 45$</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="discount">
+              <form action="">
+                <div class="form-group">
+                  <input type="text" id="discount" value>
+                  <label for="discount">Discount code</label>
+                  <button class="btn">Apply</button>
+                </div>
+              </form>
+            </div>
+            <div class="order-price">
+              <div class="subtotal">
+                <div class="name">Subtotal</div>
+                <div class="price">100$</div>
+              </div>
+              <div class="shipping">
+                <div class="name">Shipping</div>
+                <div class="price">-</div>
+              </div>
+              <div class="total">
+                <div class="name">Total</div>
+                <div class="price">110$		</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -161,7 +248,7 @@
         </div>
       </div><span class="close"> <i class="fa fa-close"></i></span>
     </div>
-    <footer class="br-top">
+    <footer>
       <div class="container">
         <div class="row">
           <div class="w-follow">
@@ -204,5 +291,6 @@
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/plagin.min.js"></script>
     <script src="js/common.min.js"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
   </body>
 </html>

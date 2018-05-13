@@ -7,53 +7,116 @@ html.no-js(lang="en")
 			.container
 				div.row
 					div.col-md-7
-						h3.title.black.left Contact information
-						p Maecenas dolor elit, semper a sem sed, pulvinar molestie lacus. Aliquam dignissim, elit non mattis ultrices, neque odio ultricies tellus, eu porttitor nisl ipsum eu massa.
-						form.mt3
-							.form-group.half
-								input(type="text" onkeyup="this.setAttribute('value', this.value);" value="" name="firstName" id="firstName" required placeholder="First name")
-								label(for="firstName") First name*
-							.form-group.half
-								input(type="text" value="" name="lastName" id="lastName" required placeholder="Last name")
-								label(for="lastName") Last name*
-							.form-group.half
-								input(type="text" value="" name="city" id="city" required placeholder="City")
-								label(for="city") City*
-							.form-group.half
-								input(type="text" value="" name="country" id="country" required placeholder="Country")
-								label(for="country") Country*
-							.form-group
-								input(type="text" value="" name="address" id="address" required placeholder="Address")
-								label(for="address") Address*
-							.form-group.half
-								input(type="text" value="" name="apt" id="apt" placeholder="Apt, suite, etc.(optional)")
-								label(for="apt") Apt, suite, etc.(optional)
-							.form-group.half
-								input(type="text" value="" name="postalCode" id="postalCode" required placeholder="Postal code")
-								label(for="postalCode") Postal code*
-							.form-group
-								input(type="text" value="" name="company" id="company" placeholder="Company(optional)")
-								label(for="company") Company(optional)
-							.form-group
-								input(type="text" value="" name="phone" id="phone" required placeholder="Phone")
-								label(for="phone") Phone*
-							.form-group
-								textarea(type="text" value="" name="comment" id="comment" placeholder="comment")
-								label(for="comment") Comment
-							.form-group.center
-								button(type="submit" class="btn mt1") Continue
+						h3.title.left Shipping information
+						p Fill out your devivery information
+						form.mt2
+							.contact-info
+								.form-group.half
+									input(type="text" onkeyup="this.setAttribute('value', this.value);" value="" name="firstName" id="firstName" required placeholder="First name")
+									label(for="firstName") First name*
+								.form-group.half
+									input(type="text" value="" name="lastName" id="lastName" required placeholder="Last name")
+									label(for="lastName") Last name*
+								.form-group.half
+									input(type="text" value="" name="city" id="city" required placeholder="City")
+									label(for="city") City*
+								.form-group.half
+									input(type="text" value="" name="country" id="country" required placeholder="Country")
+									label(for="country") Country*
+								.form-group
+									input(type="text" value="" name="address" id="address" required placeholder="Address")
+									label(for="address") Address*
+								.form-group.half
+									input(type="text" value="" name="apt" id="apt" placeholder="Apt, suite, etc.(optional)")
+									label(for="apt") Apt, suite, etc.(optional)
+								.form-group.half
+									input(type="text" value="" name="postalCode" id="postalCode" required placeholder="Postal code")
+									label(for="postalCode") Postal code*
+								.form-group
+									input(type="text" value="" name="company" id="company" placeholder="Company(optional)")
+									label(for="company") Company(optional)
+								.form-group
+									input(type="text" value="" name="phone" id="phone" required placeholder="Phone")
+									label(for="phone") Phone*
 
-					.col-md-5
-						h3.title.black.left Our Store
-						p 24/7 support.
-							| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, incidunt.
-						ul
-							li.mt2
-								span.label.mt-half.pr1 e-mail:
-								a(href="mailto:support@alkastone.com") support@alcastone.com
-							li.mt2
-								span.label.mt-half.pr1 phone:
-								a(href="tel://(+31)20 2400 212") (+31)20 2400 212
+							.shipping-info
 
+								-
+									var shippingList = [{
+										name: 'Ground Shipping',
+										shortName: 'ground-ship',
+										price: '5$',
+										checked: false
+									}, {
+										name: 'FedEx 2Day',
+										shortName: 'fedex-2',
+										price: '12$',
+										checked: true
+									}, {
+										name: 'FedEx Overnight',
+										shortName: 'fedex-night',
+										price: '16$',
+										checked: false
+									}]
+								for shipping in shippingList	
+									.form-group.shipping-choice
+										.row
+											.col-xs-1
+												input(type="radio" name="fancy-radio" id=shipping.shortName checked=shipping.checked)
+												label(for=shipping.shortName)
+											.col-xs-9
+												.shipping-name= shipping.name
+											.col-xs-2.right
+												.shipping-price= shipping.price
+
+						.payment
+							div(id="paypal-button-container")
+
+					.col-md-5.order-list
+						h3.title.left Order
+						.ordered-products
+							.container-fluid
+								.row.w-product
+									.col-xs-2
+										img(src="/img/bottle-3.jpg" class="lazy")
+									.col-xs-6
+										.product-name Blue bottle
+										.product-detail 500ml
+									.col-xs-1
+										.product-count 2
+									.col-xs-3
+										.product-price Price: 45$
+								.row.w-product
+									.col-xs-2
+										img(src="/img/bottle-1.jpg" class="lazy")
+									.col-xs-6
+										.product-name Black bottle
+										.product-detail 500ml
+									.col-xs-1
+										.product-count 1
+									.col-xs-3
+										.product-price Price: 45$
+								
+						
+						.discount
+							form(action="")
+								.form-group
+									input(type="text" id="discount" value)
+									label(for="discount") Discount code
+									button.btn Apply
+
+						.order-price
+							.subtotal
+								.name Subtotal
+								.price 100$
+							.shipping
+								.name Shipping
+								.price -
+							.total
+								.name Total
+								.price 110$		
+
+										
+											
 		include templates/structure/footer
 		include templates/structure/scripts

@@ -84,77 +84,119 @@
         </div>
       </div>
     </div>
-    <section id="content" class="product-card-inner">
-      <div class="cont-wrap">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-4"><img src="img/bottle-0.jpg"></div>
-            <div class="col-sm-8">
-              <h1 class="title black">Water Bottle</h1>
-              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sunt, quibusdam. Repellat debitis adipisci aspernatur iure sapiente eum, magnam, dolorem sed incidunt, excepturi nesciunt dolores repellendus, nam mollitia! Deleniti quisquam eaque possimus explicabo nihil vel! Sunt architecto dolorem consequuntur, fugit adipisci mollitia perspiciatis repellendus minus quibusdam quaerat sapiente labore at.</p>
-              <div class="product-options mt2">
-                <div class="product size"><span class="option-name">Size:</span>
-                  <div class="options">
-                    <ul>
-                      <li class="active">450ml</li>
-                      <li>600ml</li>
-                    </ul>
+    <section class="shipping">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h3 class="title left">Shipping and payment</h3>
+            <div class="contact-info"><span>Shipping address:</span><span class="shipping-address">Fulton st 45, 90, Atlanta GA 30334, United States</span><a href="Checkout.html" class="link">Edit</a></div>
+            <form class="mt3 shipping-form">
+              <div class="form-group shipping-choice">
+                <div class="row">
+                  <div class="col-xs-1">
+                    <input type="radio" name="fancy-radio" id="ground-ship">
+                    <label for="ground-ship"></label>
+                  </div>
+                  <div class="col-xs-9">
+                    <div class="shipping-name">Ground Shipping</div>
+                  </div>
+                  <div class="col-xs-2 right">
+                    <div class="shipping-price">5$</div>
                   </div>
                 </div>
-                <div class="product-color"><span class="option-name">Color:</span>
-                  <div class="options">
-                    <ul>
-                      <li style="background: url('img/color-0.jpg')" class="active"></li>
-                      <li style="background: url('img/color-1.jpg')"></li>
-                      <li style="background: url('img/color-2.jpg')"></li>
-                      <li style="background: url('img/color-3.jpg')"></li>
-                    </ul>
+              </div>
+              <div class="form-group shipping-choice">
+                <div class="row">
+                  <div class="col-xs-1">
+                    <input type="radio" name="fancy-radio" id="fedex-2" checked>
+                    <label for="fedex-2"></label>
+                  </div>
+                  <div class="col-xs-9">
+                    <div class="shipping-name">FedEx 2Day</div>
+                  </div>
+                  <div class="col-xs-2 right">
+                    <div class="shipping-price">12$</div>
                   </div>
                 </div>
-                <div class="product-count"><span class="option-name">Count:</span>
-                  <div class="options"><span class="input-number-decrement">–</span>
-                    <input type="text" value="1" min="1" max="100" class="input-number"><span class="input-number-increment">+</span>
+              </div>
+              <div class="form-group shipping-choice">
+                <div class="row">
+                  <div class="col-xs-1">
+                    <input type="radio" name="fancy-radio" id="fedex-night">
+                    <label for="fedex-night"></label>
+                  </div>
+                  <div class="col-xs-9">
+                    <div class="shipping-name">FedEx Overnight</div>
+                  </div>
+                  <div class="col-xs-2 right">
+                    <div class="shipping-price">16$</div>
                   </div>
                 </div>
-                <div class="product-price"><span class="option-name">Price: </span>
-                  <div class="options">
-                    <ul> 
-                      <li class="active big">46.00$</li>
-                    </ul>
+              </div>
+            </form>
+            <div class="payment">
+              <div id="paypal-button-container">						</div>
+            </div>
+          </div>
+          <div class="col-md-5 order-list">
+            <h3 class="title left">Order</h3>
+            <div class="ordered-products">
+              <div class="container-fluid">
+                <div class="row w-product">
+                  <div class="col-xs-2"><img src="/img/bottle-3.jpg" class="lazy"></div>
+                  <div class="col-xs-6">
+                    <div class="product-name">Blue bottle</div>
+                    <div class="product-detail">500ml</div>
+                  </div>
+                  <div class="col-xs-1">
+                    <div class="product-count">2</div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="product-price">Price: 45$</div>
                   </div>
                 </div>
-                <button type="button" name="ms2_action" value="cart/add" class="btn">add to basket</button>
+                <div class="row w-product">
+                  <div class="col-xs-2"><img src="/img/bottle-1.jpg" class="lazy"></div>
+                  <div class="col-xs-6">
+                    <div class="product-name">Blue bottle</div>
+                    <div class="product-detail">500ml</div>
+                  </div>
+                  <div class="col-xs-1">
+                    <div class="product-count">1</div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="product-price">Price: 45$</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-sm-12">
-              <ul class="share-btns-list">
-                <li>
-                  <div class="label">Share in social:</div>
-                </li>
-                <li><a href="https://facebook.com/sharer/sharer.php?u=http://www.alkastoneh2o.com/" target="_blank" title="Share in facebook" class="resp-sharing-button"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com/intent/tweet/?text=Lorem ipsum dolor sit amet, consectetur adipisicing elit&amp;amp;url=http://www.alkastoneh2o.com/" target="_blank" title="Share in twitter" class="resp-sharing-button"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://plus.google.com/share?urlhttp://www.alkastoneh2o.com/" target="_blank" title="Share in google" class="resp-sharing-button"><i class="fa fa-google"></i></a></li>
-                <li><a href="https://pinterest.com/pin/create/button/?url=http://www.alkastoneh2o.com/&amp;amp;description=Lorem ipsum dolor sit amet, consectetur adipisicing elit" target="_blank" title="Share in pinterest" class="resp-sharing-button"><i class="fa fa-pinterest"></i></a></li>
-              </ul>
+            <div class="discount">
+              <form action="">
+                <div class="form-group">
+                  <input type="text" id="discount" value>
+                  <label for="discount">Discount code</label>
+                  <button class="btn">Apply</button>
+                </div>
+              </form>
+            </div>
+            <div class="order-price">
+              <div class="subtotal">
+                <div class="name">Subtotal</div>
+                <div class="price">100$</div>
+              </div>
+              <div class="shipping">
+                <div class="name">Shipping</div>
+                <div class="price">12$</div>
+              </div>
+              <div class="total">
+                <div class="name">Total</div>
+                <div class="price">112$		</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div style="background-image:url('../img/subscribe.jpg')" class="subscribe gradient center">
-      <form action="" method="post" class="mb3">
-        <div class="block-content">
-          <div class="form-subscribe-header">
-            <h3 class="title white">Stay in touch</h3>
-            <p class="subtitle white">Sign up to get the latest on sales, new products and more…</p>
-          </div>
-          <div class="form-subscribe-body">
-            <input type="textfield" name="email" value="" placeholder="Enter your email address...">
-            <button type="submit" class="btn">Sign up</button>
-          </div>
-        </div>
-      </form>
-    </div>
     <div id="someone-purchased" class="card">
       <div class="container-fluid">
         <div class="row">

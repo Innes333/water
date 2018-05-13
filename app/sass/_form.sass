@@ -32,7 +32,7 @@ form
 		height: 45px
 		padding: 10px
 		box-sizing: border-box
-		border: 1px solid $greyLight
+		border: 1px solid $blueLight
 		border-radius: 5px
 		color: $textColor		
 		@include transition(all 0.3s)
@@ -53,8 +53,11 @@ form
 		height: auto
 		min-height: 150px
 
-	input:not([value=""]) + label,
 	textarea:not([value=""]) + label,
+	input[type="text"]:not([value=""]) + label,
+	input[type="email"]:not([value=""]) + label,
+	input[type="password"]:not([value=""]) + label,
+	input[type="phone"]:not([value=""]) + label,
 	input[type="text"]:focus + label,
 	input[type="email"]:focus + label,
 	input[type="password"]:focus + label,
@@ -89,8 +92,8 @@ form
 		overflow: hidden
 		text-indent: -9999px
 		background: $grey
-		width: 30px
-		height: 30px		
+		width: 20px
+		height: 20px		
 		cursor: pointer
 		@include border-radius(100%)
 		@include transition(all 0.3s)
@@ -98,8 +101,8 @@ form
 			content: ''
 			position: absolute
 			display: block
-			height: 10px
-			width: 10px
+			height: 8px
+			width: 8px
 			top: 50%
 			left: 50%
 			background: white
@@ -119,8 +122,8 @@ form
 		overflow: hidden
 		text-indent: -9999px
 		background: $grey
-		width: 60px
-		height: 30px
+		width: 40px
+		height: 20px
 		cursor: pointer
 		@include border-radius(100px)
 		@include transition(all 0.3s)
@@ -142,8 +145,8 @@ form
 			top: 2px
 			left: 2px
 			display: block
-			height: 26px
-			width: 26px
+			height: 16px
+			width: 16px
 			background: white
 			box-shadow: 0 0 2px 1px rgba(0,0,0,0.2)			
 			@include border-radius(100%)
@@ -153,7 +156,7 @@ form
 	input[type="checkbox"]:checked + label 
 		background: $main
 		&:after 
-			left: calc(100% - 28px)
+			left: calc(100% - 18px)
 			@include transform(translateZ(0))
 	
 	select
@@ -358,7 +361,7 @@ form
 			height: 28px
 			line-height: 28px
 			text-indent: 8px
-			color: $greyLight
+			color: $silver
 			padding: 0
 		.search-btn
 			position: absolute
@@ -367,7 +370,7 @@ form
 			width: 30px
 			height: 28px
 			background-color: transparent
-			border: 1px solid $greyLight
+			border: 1px solid $blueLight
 			border-left: none
 			font-size: 14px
 			color: $main
