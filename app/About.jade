@@ -3,27 +3,42 @@ html.no-js(lang="en")
 	include templates/structure/head
 	body
 		include templates/structure/header-inner
-		section.info
-			.container
-				.row
-					.col-md-12
-						.info-header
-							i.fa.fa-info-circle
-							span.info-label Customer information				
-					.col-md-12
-						.info-content
-							h1.title.center About us
-							.content Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ullam eius quisquam quam, blanditiis aliquid, delectus omnis labore perspiciatis sapiente ea veniam quae eos ratione natus iusto et! Recusandae, nobis.
-						
-								ul
-									li Items
-									li Links
-									li Articles
+		h1.title.black.center About Alkastone H2O
+		p.subtitle.center Our story
 
-								| Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui a quidem consectetur ex sunt nemo similique quaerat? Ad nisi quis repudiandae tempora ab veniam voluptates nesciunt? Animi cum debitis quaerat!		
-								| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, obcaecati sequi odit amet minima laboriosam sed officiis. Omnis explicabo nam ipsum eveniet iure sapiente, dolores aut sed eius illum expedita!
+	section.about
+		.container
+			.row
+				.col-xs-4.center
+					.circle-img
+						img(src="img/about-1.jpg" alt="Alkastone about")
+				.col-xs-8
+					.text
+						h4 Our Mission
+						| Alkastone H2O is bridging the gap between wellness and convenience with our eco-friendly alkaline water bottles. We believe that living water is the foundation for healthy bodies, conscious minds, and inspired lives—and that you should be able to make it everywhere you go.
+						| For yoga enthusiasts, athletes, and health-seekers alike, Alkastone H2O Inspired strives to energize your lives all while reducing plastic waste. Our goal is to preserve the environment while expanding awareness, one bottle at a time.
+					
+					
+					.title Have any questions? We would like to hear from you
+					form(action="")
+						.form-group.half
+							input(type="text" value="" name="firstName" id="firstName" required placeholder="First name")
+							label(for="firstName") First name*
+						.form-group.half
+							input(type="text" value="" name="lastName" id="lastName" required placeholder="Last name")
+							label(for="lastName") Last name*
+						.form-group
+							input(type="email" value="" name="email" id="email" required placeholder="nick@gmail.com")
+							label(for="email") Email*                    
+						.form-group.textarea-block.center
+							textarea(name="fancy-textarea" value="" id="fancy-textarea" placeholder="Comments...")
+							label(for="fancy-textarea") Comment
+							button(type="submit" class="btn mt1") Send message
+						input(type="hidden" name="project_name" value="AlkastoneH2O")
+						input(type="hidden" name="admin_email" value="tsumbaluk888@gmail.com")
+						input(type="hidden" name="form_subject" value="Comment from AlkastoneH2O")
 
-
+		include templates/structure/certificates
 		include templates/structure/subscribe
 		include templates/structure/footer
 		include templates/structure/scripts

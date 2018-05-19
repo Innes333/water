@@ -215,24 +215,22 @@ $(function() {
 					if (data){
 					  $('.dropdown-mini-cart').html(data);
 					}else{
-					  miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
+					  miniShop2.Message.error('Error!');
 					}} 
 			}); 
 		 });
 		//Ajax mini cart----------------
 
 		//E-mail Ajax Send--------------
-		$("form.send").submit(function() { 
+		$("form.sendmail").submit(function() {
 			var th = $(this);
 			$.ajax({
 				type: "POST",
-				url: "mail.php",
+				url: this.action,
 				data: th.serialize()
 			}).done(function() {
 				alert("Thank you!");
-				setTimeout(function() {
-					th.trigger("reset");
-				}, 1000);
+				th.trigger("reset");
 			});
 			return false;
 		});
