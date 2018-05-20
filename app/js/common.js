@@ -7,6 +7,7 @@ $(function() {
 		opt: {
 			tabs: $('.tabs'),
 			popup: $('.pop'),
+			fadeOutBtn: $('.fade_out'),
 			img: $('img'),
 			linc: $('a'),
 			body: $('body'),
@@ -19,6 +20,7 @@ $(function() {
 			inputNumber: $('.input-number'),
 			minBag: $('.dropdown-mini-bag'),	
 			bagBtn: $('.shop-cart'),
+			readMoreText: $('.read-more-text'),
 			mineralOwlOptions: {
 				autoPlay: false,
 				navigation: false,
@@ -83,6 +85,7 @@ $(function() {
 				.find('.tab-content').addClass('active');
 			});
 		},
+
 		popup: function(el){
 			el.on('click',function(event){
 				event.preventDefault();		
@@ -153,6 +156,20 @@ $(function() {
 			});
 		},
 
+		readMore: function() {
+			var readBtnBlock = '<div class="read-more-btn">...read more</div>';
+			
+			this.opt.readMoreText.append(readBtnBlock);
+
+			$('.read-more-btn').on('click', function(){
+				var $that = $(this),
+					btnText = $that.context.innerText;
+				$that.parent().toggleClass('open');				
+				$that.context.innerText = btnText === '...read more' ? '...read less': '...read more';
+			})
+			
+		},
+
 		init: function(){
 			// default functions
 			this.dragstart(this.opt.img);
@@ -162,6 +179,10 @@ $(function() {
 			this.tabs(this.opt.tabs);
 			// popup init
 			this.popup(this.opt.popup);
+			this.opt.fadeOutBtn.on('click', function() {
+				$('.popup').fadeOut('slow');
+			});
+			
 			// Add el window height
 			this.fullHeight(this.opt.body);
 			// show mini bag
@@ -182,6 +203,9 @@ $(function() {
 			this.fillValue($('textarea'));
 
 			this.dropDown('.question-title', '.answer');
+			
+			// init read more
+			this.readMore();
 
 
 			// Render the PayPal button
