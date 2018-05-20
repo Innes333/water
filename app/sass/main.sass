@@ -369,9 +369,27 @@ section
 		font-size: 20px		
 
 // Pluses
-.product-plus		
-	img
-		width: 100%
+.product-plus
+	.w-plus-item
+		padding: 60px 0
+
+		&:nth-child(even)
+			border-top: 1px solid $blueLight
+			border-bottom: 1px solid $blueLight
+			.plus-text
+				float: right
+			.w-btn
+				text-align: right	
+
+		.text
+			margin-bottom: 10px
+		
+
+		.plus-img
+			text-align: center
+			img
+				max-height: 265px
+				max-width: 100%
 
 
 // How it works

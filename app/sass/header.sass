@@ -130,6 +130,28 @@ input,textarea,button
 		font-weight: 400
 		text-align-last: left
 
+.read-more-text
+	padding-bottom: 30px
+	position: relative
+	overflow: hidden
+	line-height: 26px
+	font-size: 16px	
+	max-height: 130px
+	transition: max-height 0.8s cubic-bezier(0.9, 0.1, 0.1, 0.9)
+	&.open
+		max-height: 700px	
+
+.read-more-btn
+	position: absolute
+	bottom: 0
+	width: 100%
+	background: $white
+	color: $silver
+	font-family: RobotoBold
+	cursor: pointer
+
+
+
 //Navigation start--------------------
 header
 	position: relative
@@ -155,8 +177,6 @@ header
 				position: relative
 				display: inline-block
 				vertical-align: top
-				&.last
-					display: none
 				&.active
 					&::before
 						position: absolute
@@ -367,10 +387,10 @@ header
 		z-index: -1
 
 	.promo-content
-		margin-top: 250px
+		margin-top: 200px
 		.promo-text
 			color: $white
-			font-size: 30px
+			font-size: 28px
 			text-transform: uppercase
 			letter-spacing: 6px
 
@@ -378,16 +398,17 @@ header
 			font-size: 45px
 			letter-spacing: 5px
 			font-family: RobotoBold
+			line-height: 60px
 		.subtitle
-			font-size: 32px
+			font-size: 30px
 			color: $main
 
 	.promo-img
-		margin-top: 200px
+		margin-top: 150px
 		z-index: 8
 
 		img
-			height: 400px
+			height: 640px
 		.promo-btn
 			margin-top: 20px	
 
