@@ -182,6 +182,103 @@ $(function() {
 			this.fillValue($('textarea'));
 
 			this.dropDown('.question-title', '.answer');
+
+
+			// Render the PayPal button
+			if (document.getElementById('paypal-button-container')) {
+
+				paypal.Button.render({
+	
+					env: 'sandbox', // sandbox | production
+					style: {
+						label: 'checkout',  // checkout | credit | pay | buynow | generic
+						size:  'responsive', // small | medium | large | responsive
+						shape: 'pill',   // pill | rect
+						color: 'gold'   // gold | blue | silver | black
+					},
+			
+		
+					// PayPal Client IDs - replace with your own
+					// Create a PayPal app: https://developer.paypal.com/developer/applications/create
+					client: {
+						sandbox:    'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+						production: '<insert production client id>'
+					},
+		
+					// Show the buyer a 'Pay Now' button in the checkout flow
+					commit: true,
+		
+					// payment() is called when the button is clicked
+					payment: function(data, actions) {
+		
+						// Make a call to the REST api to create the payment
+						return actions.payment.create({
+							payment: {
+								transactions: [
+									{
+									  amount: {
+										"total": "30.11",
+										"currency": "USD",
+										"details": {
+										  "subtotal": "30.00",
+										  "tax": "0.07",
+										  "shipping": "0.03",
+										  "handling_fee": "1.00",
+										  "insurance": "0.01",
+										  "shipping_discount": "-1.00"
+										}
+									  },
+									  "description": "This is the payment transaction description.",
+									  "item_list": {
+										"items": [
+										  {
+											"name": "hat",
+											"sku": "1",
+											"price": "3.00",
+											"currency": "USD",
+											"quantity": "5",
+											"description": "Brown color hat",
+											"tax": "0.01"
+										  },
+										  {
+											"name": "handbag",
+											"sku": "product34",
+											"price": "15.00",
+											"currency": "USD",
+											"quantity": "1",
+											"description": "Black color handbag",
+											"tax": "0.02"
+										  }
+										],
+										shipping_address: {
+										  "recipient_name": "HelloWorld",
+										  "line1": "4thFloor",
+										  "line2": "unit#34",
+										  "city": "SAn Jose",
+										  "state": "CA",
+										  "phone": "011862212345678",
+										  "postal_code": "95131",
+										  "country_code": "US"
+										}
+									  }
+									}
+								],
+							}
+						});
+					},
+		
+					// onAuthorize() is called when the buyer approves the payment
+					onAuthorize: function(data, actions) {
+		
+						// Make a call to the REST api to execute the payment
+						return actions.payment.execute().then(function() {
+							window.alert('Payment Complete!');
+						});
+					}
+		
+				}, '#paypal-button-container');
+			}
+			
 		}
 	};
 

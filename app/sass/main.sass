@@ -110,7 +110,7 @@
 
 .product-card-basket
 	.container-fluid
-		border-bottom: 1px solid $grey
+		border-bottom: 1px solid $blueLight
 		padding-bottom: 10px
 	img
 		max-height: 100px
@@ -120,7 +120,7 @@
 			width: 24.5%
 			display: inline-block!important
 			vertical-align: top
-			border-right: 1px solid $grey
+			border-right: 1px solid $blueLight
 			text-align: center
 			&:last-child
 				border-right: none
@@ -137,12 +137,13 @@
 			position: absolute
 			top: 3px
 			right: -20px
-			color: $black
+			color: $main
 			background-color: transparent
 
 .product-card-basket,
 .product-card-inner
 	.title
+		font-family: RobotoBold
 		line-height: 40px
 	.description
 		border-bottom: 1px solid $greyLight
@@ -215,16 +216,8 @@
 .about
 	.title
 		margin-bottom: 10px
-	.text
-		margin-bottom: 50px
-		h3, h4, h5, h6
-			margin-bottom: 20px
-			font-family: RobotoLight
-			text-transform: uppercase
-			letter-spacing: 2px
-			font-size: 22px
-			color: $main
-			font-weight: 400
+		text-align: left
+
 
 
 // About end ----------		
@@ -234,8 +227,13 @@
 	padding: 20px 0
 	background-size: cover
 	background-position: 50% top
+	.title
+		text-align: center
 	.subtitle
+		font-style: normal
+		font-family: RobotoLight
 		margin-bottom: 15px
+		font-size: 18px
 	.form-subscribe-body
 		position: relative
 		input
@@ -274,7 +272,7 @@
 			position: relative
 			&:after,&:before 
 				position: absolute
-				content: '"\"'
+				content: '\201c'
 				font-size: 30px
 				height: 20px
 				line-height: 35px
@@ -282,7 +280,7 @@
 				top: 0
 				left: -5px
 			&:after 
-				bottom: 0
+				bottom: 15px
 				right: -5px
 
 section
@@ -656,6 +654,7 @@ section
 		margin-top: 30px
 
 .partner
+	border-bottom: none
 	.headline
 		margin-top: 50px
 		text-align: center
@@ -682,32 +681,60 @@ section
 		background-size: cover
 		background-position: 50% 50%
 		.content
-			position: absolute
-			top: 0
-			left: 0
+			position: relative
 			width: 100%
 			height: 100%
 			text-align: center
 			transition: all 0.3s
-			z-index: 5
+			z-index: 1
+			overflow: hidden
+			&:after
+				position: absolute
+				content: ''
+				top: 0
+				left: 0
+				height: 100%
+				width: 100%
+				background: linear-gradient(to right, $main 0%, #6cebf1 100%)
+				opacity: 0.2
+				z-index: 0
+
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				min-width: 100%
+				min-height: 100%
+				transform: translate(-50%, -50%)
+
+			&:hover
+				background: rgba(0,0,0,0.4)	
+				.btn
+					bottom: 80px
+					opacity: 1
 
 			.news-title
-				margin-top: 20%
-				margin-bottom: 30px
+				position: absolute
+				top: 135px
+				width: 100%
 				font-size: 25px
 				font-family: RobotoBold
 				text-transform: uppercase
 				letter-spacing: 1px
 				color: $white
+				text-shadow: 1px 1px 5px rgba(0,0,0,0.5)
+				z-index: 5
 
 			.btn
+				position: absolute
+				bottom: -50%
+				left: 50%
+				transform: translateX(-50%)
 				opacity: 0
-				transition: opacity 0.3s
+				z-index: 5
+				transition: opacity 0.3s, bottom 0.8s
 
-			&:hover
-				background: rgba(0,0,0,0.4)	
-				.btn
-					opacity: 1
+		
 
 
 // info gallery end --------
@@ -729,7 +756,11 @@ section
 			height: 180px
 	.item-title
 		margin-top: 20px
-		text-align: center		
+		font-family: serif
+		font-style: italic
+		font-size: 22px
+		color: #7F8C8D
+		text-align: center
 
 // comments
 .comments
@@ -897,12 +928,83 @@ section
 			display: block	
 
 
+// Checkout products
+.order-list
+	.title
+		padding-left: 30px
+
+	.w-product
+		padding-left: 30px
+		margin-bottom: 10px
+
+		img
+			height: 60px
+
+	.discount
+		padding-left: 30px
+		form
+			margin: 10px 0
+			padding: 10px 0
+			border-top: 1px solid $blueLight
+			border-bottom: 1px solid $blueLight
+
+		input
+			width: 60%
+		.btn
+			margin-left: 4%
+			width: 34%
+			min-width: 30%
+
+	.order-price
+		padding-left: 30px
+
+		.name
+			display: inline-block
+			width: 70%
+		.price
+			display: inline-block
+			width: 28%
+			text-align: right
+
+		.total
+			margin-top: 10px
+			padding-top: 10px
+			border-top: 1px solid $blueLight
+
+.shipping-info
+	padding: 20px 30px 20px 5px
+	border: 1px solid $blueLight
+	border-radius: 5px
+
+	.shipping-address
+		margin-left: 10px
+		font-family: RobotoBold
+
+	.shipping-choice
+		label
+			top: 6px	
+
+.payment
+	margin-top: 15px
+	padding: 20px
+	#paypal-button-container
+		margin: 0 auto
+		max-width: 350px
 
 
 
+// Overriding of default styles
 
+#jGrowl.top-right
+	top: 55px
+	right: 20px
 
-
+	.ms2-message-success
+		background-color: rgba(21, 101, 192, 0.8)!important
+	.ms2-message-error
+		background-color: rgba(244, 67, 54, 0.8)!important
+	.ms2-message-info
+		background-color: rgba(21, 101, 192, 0.8)!important
 
 @import "_footer.sass"
 @import "_flipcard.sass"
