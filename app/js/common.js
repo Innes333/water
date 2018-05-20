@@ -40,7 +40,7 @@ $(function() {
 				navigation: false,
 				pagination: true,
 				scrollPerPage: true,
-				items: 3					
+				items: 2					
 			}
 		},
 		owlSetPaginName: function(slider){
