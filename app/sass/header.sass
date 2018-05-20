@@ -387,30 +387,48 @@ header
 		z-index: -1
 
 	.promo-content
-		margin-top: 200px
+		margin-top: 220px
+
+		.title
+			color: $darkMain
+			margin-bottom: 80px
+			font-size: 45px
+			letter-spacing: 6px
+			font-family: RobotoBold
+			line-height: 60px
+			max-width: 600px
+
+		.subtitle
+			margin-bottom: 10px
+			font-size: 30px
+			color: $darkMain
+
 		.promo-text
 			color: $white
 			font-size: 28px
 			text-transform: uppercase
-			letter-spacing: 6px
-
-		.title
-			font-size: 45px
-			letter-spacing: 5px
-			font-family: RobotoBold
-			line-height: 60px
-		.subtitle
-			font-size: 30px
-			color: $main
-
+			letter-spacing: 4px
+			text-shadow: 1px 1px 1px $silver
+			
 	.promo-img
+		position: relative
 		margin-top: 150px
 		z-index: 8
+		&:hover
+			.promo-btn
+				opacity: 1
 
 		img
 			height: 640px
+
 		.promo-btn
-			margin-top: 20px	
+			opacity: 0
+			width: 100%
+			position: absolute
+			bottom: 120px
+			left: 0
+			text-align: center
+			transition: opacity 0.8s
 
 //main promo block---------------------
 
