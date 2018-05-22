@@ -162,12 +162,10 @@ $(function() {
 			this.opt.readMoreText.append(readBtnBlock);
 
 			$('.read-more-btn').on('click', function(){
-				var $that = $(this),
-					btnText = $that.context.innerText;
-				$that.parent().toggleClass('open');				
-				$that.context.innerText = btnText === '...read more' ? '...read less': '...read more';
-			})
-			
+				var $that = $(this);
+				$that.parent().toggleClass('open');
+				$that.html(!$that.parent().hasClass('open')?'...read more':'...read less');
+			})			
 		},
 
 		init: function(){
@@ -310,25 +308,64 @@ $(function() {
 
 		main.init();
 
-		//Shop add product count--------
-		// $('.le-quantity button').click(function(e){
-		// 		// e.preventDefault();
-		// 		var elem = $(this).parents('form').find('input.counter');
-		// 		var currentQty= elem.val();
-		// 		if($(this).hasClass('minus') && currentQty > 0){
-		// 			 elem.val(currentQty-1);
-		// 			 elem.trigger('change');
-		// 		}else	if($(this).hasClass('plus')){
-		// 			elem.val(currentQty-0+1);
-		// 			elem.trigger('change');
-		// 		}
-		// });
-		//Shop add product count--------
+    function getRandomInt(min, max){return Math.floor(Math.random() * (max - min)) + min};
+		var stateData  = null;
+		var citiesData = null;
+	//   $.ajax({
+	// 		type: "GET",
+	// 		url: "assets/js/citiesList.json",
+	// 		}).done(function(data) {
+	// 			stateData  = data;
+	// 			citiesData = Object.keys(data);
+	// 	});
+		var prodUrl = $('#someone-purchased').attr('data-url');
+		setInterval(function(){
+		    // get random product from catalog----
+		    $.ajax({  
+				type: "GET",
+				url: prodUrl,
+				success:  function(data) {
+				    var productBock = $('#someone-purchased .hidden');
+				    productBock.html('').append(data);
+				    var title = productBock.find('form a').html();
+				    var link  = productBock.find('form a').attr('href');
+				    var image = productBock.find('img').attr('src');
+				    
+        			var stateNum = getRandomInt(0,citiesData.length);
+        			var citiNum  = getRandomInt(0,stateData[citiesData[stateNum]].length);
+        			var state    = citiesData[stateNum];
+        			var citi     = stateData[citiesData[stateNum]][citiNum];
+        			
+        			//Get random name from Rest Api----
+        			$.ajax({
+        				url: 'https://randomuser.me/api/',
+        				dataType: 'json',
+        				success: function(data) {
+        					var html =  '<div class="col-xs-3"><img src="'+image+'"></div>'+
+                                    '<div class="col-xs-9"><a href="'+link+'">'+title+'</a>'+
+                                    '<p class="label">purchased about '+getRandomInt(4,40)+' minutes ago</p>'+
+                                    '<h4 class="label">by '+data.results[0].name.first+' from '+state+' '+citi+'</h4></div>';
+				            $('#someone-purchased').attr('class','card').find('.row').html(html);
+				            
+				            setTimeout(function(){
+		                        $('#someone-purchased .close').click();
+				            }, 7000)
+        				}
+        			});
+        			//Get random name from Rest Api----
+				}
+			});
+			// get random product from catalog----
+		}, getRandomInt(15000,30000))
+		
+		$('#someone-purchased .close').on('click', function(){
+		  $(this).parents('#someone-purchased').addClass('hidden');
+		});
 
 		//Ajax mini cart----------------
-		$(document).on('mouseover', '#dropdown-cart', function(e) {
+		$(document).on('mouseenter', '#dropdown-cart', function(e) {
 			e.preventDefault();
-			$.ajax({  
+			$.ajax({
 			  type: "POST",
 			  url: $(this).attr('data-url'), 
 			  data: {parent: '[[*id]]'},
@@ -336,24 +373,22 @@ $(function() {
 					if (data){
 					  $('.dropdown-mini-cart').html(data);
 					}else{
-					  miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
+					  miniShop2.Message.error('Error!');
 					}} 
 			}); 
 		 });
 		//Ajax mini cart----------------
 
 		//E-mail Ajax Send--------------
-		$("form.send").submit(function() { 
+		$("form.sendmail").submit(function() {
 			var th = $(this);
 			$.ajax({
 				type: "POST",
-				url: "mail.php",
+				url: this.action,
 				data: th.serialize()
 			}).done(function() {
 				alert("Thank you!");
-				setTimeout(function() {
-					th.trigger("reset");
-				}, 1000);
+				th.trigger("reset");
 			});
 			return false;
 		});
