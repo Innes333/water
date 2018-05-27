@@ -92,21 +92,31 @@
             <p>Fill out your devivery information</p>
             <form class="mt2">
               <div class="contact-info">
-                <div class="form-group half">
-                  <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" name="firstName" id="firstName" required placeholder="First name">
-                  <label for="firstName">First name*</label>
+                <div class="form-group">
+                  <input type="text" value="" name="receiver" id="receiver" required placeholder="First name">
+                  <label for="receiver">First and last name*</label>
                 </div>
                 <div class="form-group half">
-                  <input type="text" value="" name="lastName" id="lastName" required placeholder="Last name">
-                  <label for="lastName">Last name*</label>
-                </div>
-                <div class="form-group half">
-                  <input type="text" value="" name="country" id="country" required placeholder="Country">
+                  <input type="text" value="United States of America" name="country" id="country" disabled required placeholder="Country">
                   <label for="country">Country*</label>
                 </div>
                 <div class="form-group half">
-                  <input type="text" value="" name="state" id="state" required placeholder="State">
-                  <label for="state">State*</label>
+                  <select name="state" id="state">
+                    <option value="0">Select state</option>
+                    <option value="1">Alabama</option>
+                    <option value="2"> Alaska</option>
+                    <option value="3">Arizona</option>
+                    <option value="4">PHP</option>
+                    <option value="5">C#</option>
+                    <option value="6">Java</option>
+                    <option value="7">C++</option>
+                    <option value="8">Ruby</option>
+                  </select>
+                  <label for="state"><i class="fa fa-angle-down"></i></label>
+                </div>
+                <div class="form-group half">
+                  <input type="text" value="" name="state-1" id="state-1" required placeholder="State">
+                  <label for="state-1">State*</label>
                 </div>
                 <div class="form-group">
                   <input type="text" value="" name="city" id="city" required placeholder="City">
@@ -121,8 +131,8 @@
                   <label for="apt">Apt, suite, etc.(optional)</label>
                 </div>
                 <div class="form-group half">
-                  <input type="text" value="" name="postalCode" id="postalCode" required placeholder="Postal code">
-                  <label for="postalCode">Postal code*</label>
+                  <input type="text" value="" name="index" id="index" required placeholder="Postal code">
+                  <label for="index">Postal code*</label>
                 </div>
                 <div class="form-group">
                   <input type="text" value="" name="company" id="company" placeholder="Company(optional)">
