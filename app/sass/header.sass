@@ -582,20 +582,21 @@ header
 
 // Burger button start----------------------
 .mob-button
-	position: relative
+	display: none
+	position: absolute
 	width: 32px
 	height: 32px
 	cursor: pointer
 	z-index: 1000
-	top: 32px
-	right: 12px
+	top: 17px
+	right: 50px
 	margin: 0 auto
 	span
 		position: absolute
 		width: 100%
 		left: 0
 		height: 3px
-		background-color: $black
+		background-color: $main
 		@include transition(all 0.3s)
 		&:nth-child(1)
 			top: 4px
