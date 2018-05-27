@@ -1,9 +1,17 @@
+$elements: 15;
+@for $i from 0 to $elements
+	.owl-item .col-md-3.col-sm-4:nth-child(#{$i})
+		.flip-card
+			animation-delay: $i*0.15+s
+
 .flip-card
 	position: relative
 	margin-bottom: 30px
 	width: 100%
 	height: 320px
 	border: 1px solid #fefefe
+	opacity: 0
+
 	
 	&:hover
 		.front
