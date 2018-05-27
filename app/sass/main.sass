@@ -314,6 +314,12 @@ section
 	background: aliceblue	
 
 // water-choice
+$elements: 5;
+@for $i from 0 to $elements
+	.water-choice .col-md-4.col-sm-4:nth-child(#{$i})
+		.w-choice-block
+			animation-delay: $i*0.15+s
+
 .water-choice
 	.w-choice-block
 		position: relative
@@ -322,7 +328,7 @@ section
 		min-height: 550px
 		text-align: center
 		border: 1px solid $blueLight
-
+		opacity: 0
 		.choice-title
 			margin-bottom: 10px
 			text-transform: uppercase
@@ -411,12 +417,30 @@ section
 // How it works
 
 .how-works
+	&.active
+		// .work-option
+		// 	img
+		// 		opacity: 1
+		.work-item
+			&:nth-child(even)
+				.work-option
+					&:before
+						width: 100%
+					&:after
+						height: 100%
+			&:nth-child(odd)
+				.work-option
+					&:before
+						height: 100%
+					&:after
+						width: 100%
+
+
 	.work-option
 		position: relative
 		display: inline-block
 		width: 50%
 		height: 135px
-		border-right: 1px solid $main
 		vertical-align: bottom
 
 		.work-title
@@ -431,7 +455,6 @@ section
 			font-family: RobotoBold
 			text-align: center
 			transform: translateY(-50%)
-
 		img
 			position: absolute
 			top: 50%
@@ -440,7 +463,8 @@ section
 			width: 80px
 			padding: 10px
 			background: $white
-
+			// opacity: 0
+			// transition: opacity 0.4s 
 	.work-text
 		position: relative
 		display: inline-block
@@ -454,11 +478,47 @@ section
 		padding: 0
 		&:nth-child(even)
 			margin-left: 33.23%
-
 			.work-option
-				border-top: 1px solid $main
-				border-bottom: 1px solid $main
+				&:before
+					position: absolute
+					content: ''
+					bottom: 0
+					left: 0
+					width: 0%
+					height: 1px
+					background-color: $main
+					transition: width 0.6s
+				&:after
+					position: absolute
+					content: ''
+					bottom: 0
+					right: 0
+					width: 1px
+					height: 0%
+					background-color: $main
+					z-index: -1
+					transition: height 0.6s
 		&:nth-child(odd)
+			.work-option
+				&:before
+					position: absolute
+					content: ''
+					bottom: 0
+					right: 0
+					width: 1px
+					height: 0%
+					background-color: $main
+					transition: height 0.6s
+				&:after
+					position: absolute
+					content: ''
+					bottom: 0
+					right: -100%
+					width: 0%
+					height: 1px
+					background-color: $main
+					transition: width 0.6s
+
 			.work-text
 				color: $silver
 				font-family: RobotoBold
@@ -471,17 +531,14 @@ section
 
 	.work-descr
 		margin-top: 65px
-
 		p
 			margin: 0 auto
 			max-width: 500px
-
 		.work-time
 			margin: 10px auto
 			font-size: 20px
 			font-family: RobotoRegular
 			text-transform: uppercase
-
 		a
 			margin-top: 20px	
 
@@ -494,7 +551,17 @@ section
 		position: relative
 		display: inline-block
 		width: 24%
-		vertical-align: top	
+		vertical-align: top
+		.circle-img
+			overflow: visible
+			&:after
+				border-radius: 50%
+			img
+				border-radius: 50%
+		svg
+			position: absolute
+			top: 0
+			left: 0
 
 	.benefit-text
 		margin: 10px 0 35px
@@ -508,6 +575,11 @@ section
 
 // bottle structure
 .bottle-structure
+	&.active
+		.bottle-schema
+			.item
+				.line
+					width: 37%
 	.intro-text
 		margin: 80px 0 30px
 		h4
@@ -562,9 +634,10 @@ section
 				position: absolute
 				content: ''
 				top: 50%
-				width: 37%
+				width: 0%
 				height: 1px
-				background: $main	
+				background: $main
+				transition: width 0.6s
 
 			&:nth-child(1)
 				width: 52%
@@ -703,11 +776,15 @@ section
 		font-style: italic
 		font-family: serif
 	.partner-img
-		height: 180px	
+		height: 180px
+		position: relative
 		img
-			width: 100%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			max-width: 100%
 			max-height: 100%
-			vertical-align: middle
 
 	.item
 		margin-top: 20px
@@ -791,17 +868,47 @@ section
 
 .certificate
 	text-align: center
+	&.active
+		.w-item
+			.item-img
+				&:before,
+				&:after
+					width: 100%
+					height: 100%
+				
 	.w-item
 		display: inline-block
 		margin: 10px 20px
 		cursor: pointer
-		
 	.item-img
 		border: 1px solid $blueLight
 		transition: box-shadow 0.4s
+		position: relative
+		z-index: 10
 		&:hover
 			box-shadow: 0 1px 12px 2px rgba(21,101,192,.3)
-
+		&:before
+			position: absolute
+			content: ''
+			width: 0%
+			height: 0%
+			top: -1px
+			right: -1px
+			border-top: 1px solid $main
+			border-right: 1px solid $main
+			transition: all 0.5s
+			z-index: -1
+		&:after
+			position: absolute
+			content: ''
+			width: 0%
+			height: 0%
+			bottom: -1px
+			left: -1px
+			border-bottom: 1px solid $main
+			border-left: 1px solid $main
+			transition: all 0.5s
+			z-index: -1
 		img	
 			height: 180px
 	.item-title
@@ -811,7 +918,6 @@ section
 		font-size: 22px
 		color: #7F8C8D
 		text-align: center
-
 // comments
 .comments
 	.circle-img
