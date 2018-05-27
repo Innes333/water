@@ -11,18 +11,21 @@ html.no-js(lang="en")
 						p Fill out your devivery information
 						form.mt2
 							.contact-info
+								.form-group
+									input(type="text" value="" name="receiver" id="receiver" required placeholder="First name")
+									label(for="receiver") First and last name*
 								.form-group.half
-									input(type="text" onkeyup="this.setAttribute('value', this.value);" value="" name="firstName" id="firstName" required placeholder="First name")
-									label(for="firstName") First name*
-								.form-group.half
-									input(type="text" value="" name="lastName" id="lastName" required placeholder="Last name")
-									label(for="lastName") Last name*
-								.form-group.half
-									input(type="text" value="" name="country" id="country" required placeholder="Country")
+									input(type="text" value="United States of America" name="country" id="country" disabled required placeholder="Country")
 									label(for="country") Country*
+								div.form-group.half
+									select(name="state", id="state")
+										each val,ind in ['Select state','Alabama',' Alaska','Arizona','PHP','C#','Java','C++','Ruby']
+											option(value=ind)=val
+									label(for="state")
+										i.fa.fa-angle-down
 								.form-group.half
-									input(type="text" value="" name="state" id="state" required placeholder="State")
-									label(for="state") State*
+									input(type="text" value="" name="state-1" id="state-1" required placeholder="State")
+									label(for="state-1") State*
 								.form-group
 									input(type="text" value="" name="city" id="city" required placeholder="City")
 									label(for="city") City*
@@ -33,8 +36,8 @@ html.no-js(lang="en")
 									input(type="text" value="" name="apt" id="apt" placeholder="Apt, suite, etc.(optional)")
 									label(for="apt") Apt, suite, etc.(optional)
 								.form-group.half
-									input(type="text" value="" name="postalCode" id="postalCode" required placeholder="Postal code")
-									label(for="postalCode") Postal code*
+									input(type="text" value="" name="index" id="index" required placeholder="Postal code")
+									label(for="index") Postal code*
 								.form-group
 									input(type="text" value="" name="company" id="company" placeholder="Company(optional)")
 									label(for="company") Company(optional)

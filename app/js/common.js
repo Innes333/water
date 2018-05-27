@@ -311,13 +311,13 @@ $(function() {
     function getRandomInt(min, max){return Math.floor(Math.random() * (max - min)) + min};
 		var stateData  = null;
 		var citiesData = null;
-	//   $.ajax({
-	// 		type: "GET",
-	// 		url: "assets/js/citiesList.json",
-	// 		}).done(function(data) {
-	// 			stateData  = data;
-	// 			citiesData = Object.keys(data);
-	// 	});
+	  $.ajax({
+			type: "GET",
+			url: "assets/js/citiesList.json",
+			}).done(function(data) {
+				stateData  = data;
+				citiesData = Object.keys(data);
+		});
 		var prodUrl = $('#someone-purchased').attr('data-url');
 		setInterval(function(){
 		    // get random product from catalog----
@@ -356,7 +356,7 @@ $(function() {
 				}
 			});
 			// get random product from catalog----
-		}, getRandomInt(15000,30000))
+		}, getRandomInt(30000,50000))
 		
 		$('#someone-purchased .close').on('click', function(){
 		  $(this).parents('#someone-purchased').addClass('hidden');
