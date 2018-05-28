@@ -736,19 +736,28 @@ $elements: 5;
 
 	.w-use,
 	.w-care
+		position: relative
+		padding: 20px 0 30px
+		height: 290px
+		border: 1px solid $blueLight		
 		margin-bottom: 20px
+		background: $white
+		transition: transform 0.4s, z-index 0.4s
+		&:hover
+			transform: scale(1.1)
+			z-index: 10
 		.item-img
-			line-height: 120px
+			line-height: 100px
 			img
-				width: 50%	
+				max-height: 100px	
 		.item
-			position: relative
-			padding: 25px 30px 25px 70px
-			min-height: 120px
-			border: 1px solid $blueLight
-			border-radius: 0 100px 100px 0
+			text-align: center
 		.title
 			font-size: 18px	
+
+	.w-care
+		height: 270px		
+
 
 	.care
 		margin-top: 60px	
@@ -1091,8 +1100,12 @@ $elements: 5;
 			margin-left: 4%
 			width: 34%
 			min-width: 30%
+	.well
+		padding-top: 15px
+		border-top: 1px solid $blueLight
 
 	.order-price
+		margin-top: 20px
 		padding-left: 30px
 
 		.name
@@ -1106,12 +1119,16 @@ $elements: 5;
 		.total
 			margin-top: 10px
 			padding-top: 10px
+			font-family: RobotoBold
+			text-transform: uppercase
+			color: $main
 			border-top: 1px solid $blueLight
 
 .shipping-info
 	padding: 20px 30px 20px 5px
 	border: 1px solid $blueLight
 	border-radius: 5px
+	background: #f9fcfe
 
 	.shipping-address
 		margin-left: 10px
@@ -1121,9 +1138,27 @@ $elements: 5;
 		label
 			top: 6px	
 
-.payment
-	margin-top: 15px
+.contact-info,
+.delivery-info
+	margin-bottom: 20px
 	padding: 20px
+	border: 1px solid $blueLight	
+	border-radius: 5px
+	background: #f9fcfe		
+	p
+		margin-bottom: 10px
+		color: $blueHover
+		text-transform: uppercase	
+
+.payment-info
+	margin-top: 15px
+	padding: 20px 30px 20px 5px
+	border: 1px solid $blueLight
+	border-radius: 5px
+	background: #f9fcfe
+	img
+		height: 55px
+
 	#paypal-button-container
 		margin: 0 auto
 		max-width: 350px
@@ -1142,6 +1177,33 @@ $elements: 5;
 		background-color: rgba(244, 67, 54, 0.8)!important
 	.ms2-message-info
 		background-color: rgba(21, 101, 192, 0.8)!important
+
+
+// success order page
+.table-responsive	
+	table.table-striped
+		width: 100%
+
+		tr
+			border-top: 1px solid $blueLight 
+		
+			th
+				padding: 10px 0
+				float: none
+				font-size: 15px
+				text-transform: uppercase
+				font-family: RobotoBold
+				color: $black
+				width: 25%
+
+			td
+				float: none
+				padding: 10px 0	
+				width: 25%
+				&.title
+					font-size: 16px
+					text-transform: capitalize
+
 
 @import "_footer.sass"
 @import "_flipcard.sass"

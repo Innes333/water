@@ -2,7 +2,7 @@ section.use-care
 	h3 Use and care
 	h5 Easy steps to keep it clean and fresh
 	.container
-		.use
+		.use.row
 			h6 Before start to use:
 			-
 				var useList = [{
@@ -15,17 +15,15 @@ section.use-care
 					text: 'Rinse several times with tap water until the odor of vinegar is completely eliminated.'
 				}]
 			for use, index in useList
-				.row.w-use
-					.col-md-2
-						.item-img.center
-							img(src=use.img)
-					.col-md-10
-						.item
-							.step= index + 1
-							.title= use.title
-							.text= use.text
+				.w-use.col-md-6
+					.item-img.center
+						img(src=use.img)
+					.item
+						.step= index + 1
+						.title= use.title
+						.text= use.text
 
-		.care
+		.care.row
 			h6 Care routing:
 			-
 				var careList = [{
@@ -40,17 +38,11 @@ section.use-care
 					img:'/img/filter-icon.png',
 					title: 'Once per year',
 					text: 'Replace the filter cartridge'
-				}, {
-					img:'/img/water.png',
-					title: 'Water',
-					text: 'Use bottled or filtered water'
 				}]
 			for care, index in careList
-				.row.w-care
-					.col-md-2
+				.w-care.col-md-4.col-xs-4
 						.item-img.center
-							img(src=care.img)
-					.col-md-10
+							img(src=care.img)					
 						.item
 							.step= index + 1
 							.title= care.title

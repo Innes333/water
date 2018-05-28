@@ -15,10 +15,10 @@ form
 
 	.form-group
 		display: inline-block
-		margin-bottom: 15px
-		margin-top: 10px
+		margin-bottom: 10px
 		position: relative
 		width: 100%
+		vertical-align: top
 
 		&.half
 			width: 49.6%
@@ -32,8 +32,8 @@ form
 	input[type="phone"],
 	textarea
 		width: 100%
-		height: 45px
-		padding: 10px
+		height: 50px
+		padding: 10px 10px 0
 		box-sizing: border-box
 		border: 1px solid $blueLight
 		border-radius: 5px
@@ -66,19 +66,16 @@ form
 	input[type="password"]:focus + label,
 	input[type="phone"]:focus + label,
 	textarea:focus + label
-		@include transform(translate(-6px, -34px))
+		@include transform(translate(-3px, -9px))
+		font-size: 12px
 		color: $blueHover
 
 	select + label
 		position: absolute
-		top: 0
-		left: 88%
-		font-size: 30px
-		line-height: 40px
-		color: $main
-		width: 32px
-		text-align: center
-		@include transition(transform 0.3s)	
+		top: 3px
+		left: 10px
+		color: $blueHover
+		font-size: 14px
 
 	input[type="checkbox"], input[type="radio"] 
 		position: absolute
@@ -164,7 +161,7 @@ form
 	
 	select
 		text-indent: 7px
-		height: 45px
+		height: 50px
 		width: 100%
 		display: inline-block
 		margin: 0 
@@ -172,6 +169,7 @@ form
 		background-color: $white	
 		color: $textColor	
 		padding-right: 32px
+		line-height: 60px
 		cursor: pointer
 		-webkit-appearance: none
 		-moz-appearance: none	
@@ -179,12 +177,12 @@ form
 		-ms-appearance: none
 		appearance: none !important
 		outline: none
-		@include border-radius(3px)
+		@include border-radius(5px)
 		@include transition(all 0.3s)
 		&:focus
 			outline: none
 			+ label
-				@include transform(rotate(180deg))
+				color: $blueHover
 
 *
 	box-sizing: border-box

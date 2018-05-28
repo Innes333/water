@@ -7,25 +7,25 @@ html.no-js(lang="en")
 			.container
 				div.row
 					div.col-md-7
-						h3.title.left Shipping information
-						p Fill out your devivery information
+						h3.title.left Order information
 						form.mt2
 							.contact-info
+								p Contact information
 								.form-group
 									input(type="text" value="" name="receiver" id="receiver" required placeholder="First name")
 									label(for="receiver") First and last name*
 								.form-group.half
-									input(type="text" value="United States of America" name="country" id="country" disabled required placeholder="Country")
+									select(name="country" required id="country")
+										each val,ind in ['Select country','United States']
+											option(value=ind)=val
 									label(for="country") Country*
 								div.form-group.half
-									select(name="state", id="state")
+									select(name="state" required id="state")
 										each val,ind in ['Select state','Alabama',' Alaska','Arizona','PHP','C#','Java','C++','Ruby']
 											option(value=ind)=val
-									label(for="state")
-										i.fa.fa-angle-down
-								.form-group.half
-									input(type="text" value="" name="state-1" id="state-1" required placeholder="State")
-									label(for="state-1") State*
+									label(for="state") State*
+							.delivery-info
+								p Delivery information
 								.form-group
 									input(type="text" value="" name="city" id="city" required placeholder="City")
 									label(for="city") City*
