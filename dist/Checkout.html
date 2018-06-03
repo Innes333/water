@@ -88,9 +88,9 @@
     <section class="checkout">
       <div class="container">
         <div class="row">
-          <div class="col-md-7">
-            <h3 class="title left">Order information</h3>
-            <form class="mt2">
+          <h3 class="title left">Order information</h3>
+          <form class="mt2">
+            <div class="col-md-7">
               <div class="contact-info">
                 <p>Contact information</p>
                 <div class="form-group">
@@ -190,67 +190,64 @@
                   </div>
                 </div>
               </div>
-            </form>
-            <div class="payment">
-              <div id="paypal-button-container"></div>
+              <div class="payment">
+                <div id="paypal-button-container"></div>
+              </div>
             </div>
-          </div>
-          <div class="col-md-5 order-list">
-            <h3 class="title left">Order</h3>
-            <div class="ordered-products">
-              <div class="container-fluid">
-                <div class="row w-product">
-                  <div class="col-xs-2"><img src="/img/bottle-3.jpg" class="lazy"></div>
-                  <div class="col-xs-6">
-                    <div class="product-name">Blue bottle</div>
-                    <div class="product-detail">500ml</div>
+            <div class="col-md-5 order-list">
+              <h3 class="title left">Order</h3>
+              <div class="ordered-products">
+                <div class="container-fluid">
+                  <div class="row w-product">
+                    <div class="col-xs-2"><img src="/img/bottle-3.jpg" class="lazy"></div>
+                    <div class="col-xs-6">
+                      <div class="product-name">Blue bottle</div>
+                      <div class="product-detail">500ml</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="product-count">2</div>
+                    </div>
+                    <div class="col-xs-3">
+                      <div class="product-price">Price: 45$</div>
+                    </div>
                   </div>
-                  <div class="col-xs-1">
-                    <div class="product-count">2</div>
-                  </div>
-                  <div class="col-xs-3">
-                    <div class="product-price">Price: 45$</div>
-                  </div>
-                </div>
-                <div class="row w-product">
-                  <div class="col-xs-2"><img src="/img/bottle-1.jpg" class="lazy"></div>
-                  <div class="col-xs-6">
-                    <div class="product-name">Black bottle</div>
-                    <div class="product-detail">500ml</div>
-                  </div>
-                  <div class="col-xs-1">
-                    <div class="product-count">1</div>
-                  </div>
-                  <div class="col-xs-3">
-                    <div class="product-price">Price: 45$</div>
+                  <div class="row w-product">
+                    <div class="col-xs-2"><img src="/img/bottle-1.jpg" class="lazy"></div>
+                    <div class="col-xs-6">
+                      <div class="product-name">Black bottle</div>
+                      <div class="product-detail">500ml</div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="product-count">1</div>
+                    </div>
+                    <div class="col-xs-3">
+                      <div class="product-price">Price: 45$</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="discount">
-              <form action="">
+              <div class="discount">
                 <div class="form-group">
-                  <input type="text" id="discount" value>
+                  <input type="text" id="discount" placeholder="XXXXX-XXXX-XXXX-XXXX" name="coupon_code" value="">
                   <label for="discount">Discount code</label>
-                  <button class="btn">Apply</button>
                 </div>
-              </form>
+              </div>
+              <div class="order-price">
+                <div class="subtotal">
+                  <div class="name">Subtotal</div>
+                  <div class="price">100$</div>
+                </div>
+                <div class="shipping">
+                  <div class="name">Shipping</div>
+                  <div class="price">-</div>
+                </div>
+                <div class="total">
+                  <div class="name">Total</div>
+                  <div class="price">110$		</div>
+                </div>
+              </div>
             </div>
-            <div class="order-price">
-              <div class="subtotal">
-                <div class="name">Subtotal</div>
-                <div class="price">100$</div>
-              </div>
-              <div class="shipping">
-                <div class="name">Shipping</div>
-                <div class="price">-</div>
-              </div>
-              <div class="total">
-                <div class="name">Total</div>
-                <div class="price">110$		</div>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>

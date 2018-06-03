@@ -404,42 +404,42 @@ $(function() {
 
 		};
 
-		// var promoBottle = $('.promo-img img');
-		// $(document).scroll(function(){	
-		// 	var scrl = $(document).scrollTop();
-		// 	if(scrl < main.winH()){
-		// 		promoBottle.css({'margin-top': scrl/3+'px'});
-		// 	};
-		// });	
+		var promoBottle = $('.promo-img img');
+		$(document).scroll(function(){	
+			var scrl = $(document).scrollTop();
+			if(scrl < main.winH()){
+				promoBottle.css({'margin-top': scrl/3+'px'});
+			};
+		});	
 
-		// $('section').waypoint({
-		// 	handler: function(event, direction){
-		// 		if(direction === "down") {
-		// 			$(event.target).addClass('active')
-		// 			if($(event.target).hasClass('benefits')){
-		// 				$('.w-benefit .circle-img').trigger("redraw");
-		// 			}else if($(event.target).hasClass('water-choice')){						
-		// 				$('.water-choice .w-choice-block').addClass('animated fadeInUp');
-		// 			}else if($(event.target).hasClass('elements')){
-		// 				$('.elements-slider .flip-card').addClass('animated fadeInRight');
-		// 			};
-		// 		}else if(direction === "up"){
-		// 			$(event.target).removeClass('active');					
-		// 			if($(event.target).hasClass('benefits')){
-		// 				$('.w-benefit .circle-img').trigger('reverse');
-		// 			};
-		// 		};
-		// 	},
-		// 	offset: '35%'
-		// });
+		$('section').waypoint({
+			handler: function(event, direction){
+				if(direction === "down") {
+					$(event.target).addClass('active')
+					if($(event.target).hasClass('benefits')){
+						$('.w-benefit .circle-img').trigger("redraw");
+					}else if($(event.target).hasClass('water-choice')){						
+						$('.water-choice .w-choice-block').addClass('animated fadeInUp');
+					}else if($(event.target).hasClass('elements')){
+						$('.elements-slider .flip-card').addClass('animated fadeInRight');
+					};
+				}else if(direction === "up"){
+					$(event.target).removeClass('active');					
+					if($(event.target).hasClass('benefits')){
+						$('.w-benefit .circle-img').trigger('reverse');
+					};
+				};
+			},
+			offset: '35%'
+		});
 
-		// $('.w-benefit .circle-img').svgprogress({
-		// 	figure: "circle",
-		// 	progressFill: '#1565C0',
-  //     progressWidth: 2,
-  //     animationDuration: 1.5,
-  //     unitsOutput: ''
-		// });
+		$('.w-benefit .circle-img').svgprogress({
+			figure: "circle",
+			progressFill: '#1565C0',
+      progressWidth: 2,
+      animationDuration: 1.5,
+      unitsOutput: ''
+		});
 
 
 	});

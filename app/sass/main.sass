@@ -888,6 +888,8 @@ $elements: 5;
 	.w-item
 		display: inline-block
 		margin: 10px 20px
+		max-width: 180px
+		vertical-align: top
 		cursor: pointer
 	.item-img
 		border: 1px solid $blueLight
@@ -919,7 +921,7 @@ $elements: 5;
 			transition: all 0.5s
 			z-index: -1
 		img	
-			height: 180px
+			width: 100%
 	.item-title
 		margin-top: 20px
 		font-family: serif
@@ -1075,6 +1077,15 @@ $elements: 5;
 
 
 // Checkout products
+.discount
+	margin-top: 20px
+	margin-left: 30px
+	padding-top: 30px
+	border-top: 1px solid $blueLight
+
+	input
+		width: 100%
+
 .order-list
 	.title
 		padding-left: 30px
@@ -1086,20 +1097,6 @@ $elements: 5;
 		img
 			height: 60px
 
-	.discount
-		padding-left: 30px
-		form
-			margin: 10px 0
-			padding: 10px 0
-			border-top: 1px solid $blueLight
-			border-bottom: 1px solid $blueLight
-
-		input
-			width: 60%
-		.btn
-			margin-left: 4%
-			width: 34%
-			min-width: 30%
 	.well
 		padding-top: 15px
 		border-top: 1px solid $blueLight

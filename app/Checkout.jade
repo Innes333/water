@@ -6,9 +6,9 @@ html.no-js(lang="en")
 		section.checkout
 			.container
 				div.row
-					div.col-md-7
-						h3.title.left Order information
-						form.mt2
+					h3.title.left Order information
+					form.mt2
+						div.col-md-7
 							.contact-info
 								p Contact information
 								.form-group
@@ -75,52 +75,50 @@ html.no-js(lang="en")
 											.col-xs-2.right
 												.shipping-price= shipping.price
 
-						.payment
-							div(id="paypal-button-container")
+							.payment
+								div(id="paypal-button-container")
 
-					.col-md-5.order-list
-						h3.title.left Order
-						.ordered-products
-							.container-fluid
-								.row.w-product
-									.col-xs-2
-										img(src="/img/bottle-3.jpg" class="lazy")
-									.col-xs-6
-										.product-name Blue bottle
-										.product-detail 500ml
-									.col-xs-1
-										.product-count 2
-									.col-xs-3
-										.product-price Price: 45$
-								.row.w-product
-									.col-xs-2
-										img(src="/img/bottle-1.jpg" class="lazy")
-									.col-xs-6
-										.product-name Black bottle
-										.product-detail 500ml
-									.col-xs-1
-										.product-count 1
-									.col-xs-3
-										.product-price Price: 45$
-								
-						
-						.discount
-							form(action="")
+						.col-md-5.order-list
+							h3.title.left Order
+							.ordered-products
+								.container-fluid
+									.row.w-product
+										.col-xs-2
+											img(src="/img/bottle-3.jpg" class="lazy")
+										.col-xs-6
+											.product-name Blue bottle
+											.product-detail 500ml
+										.col-xs-1
+											.product-count 2
+										.col-xs-3
+											.product-price Price: 45$
+									.row.w-product
+										.col-xs-2
+											img(src="/img/bottle-1.jpg" class="lazy")
+										.col-xs-6
+											.product-name Black bottle
+											.product-detail 500ml
+										.col-xs-1
+											.product-count 1
+										.col-xs-3
+											.product-price Price: 45$
+									
+							
+							.discount
 								.form-group
-									input(type="text" id="discount" value)
+									input(type="text" id="discount" placeholder="XXXXX-XXXX-XXXX-XXXX" name="coupon_code" value="")
 									label(for="discount") Discount code
-									button.btn Apply
 
-						.order-price
-							.subtotal
-								.name Subtotal
-								.price 100$
-							.shipping
-								.name Shipping
-								.price -
-							.total
-								.name Total
-								.price 110$		
+							.order-price
+								.subtotal
+									.name Subtotal
+									.price 100$
+								.shipping
+									.name Shipping
+									.price -
+								.total
+									.name Total
+									.price 110$		
 
 										
 											
