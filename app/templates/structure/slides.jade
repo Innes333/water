@@ -1,0 +1,30 @@
+section.gallery
+		.container-fluid
+			.row
+				.gallery-slider.owl-carousel.owl-theme.col-md-12
+					-
+						var galleryList = [{
+								img:'../img/runers.jpg',
+								text: 'Activation of metabolism',
+							},{
+								img:'/img/runers.jpg',
+								text: 'Increase of immunity'
+							},{
+								img:'/img/runers.jpg',
+								text: 'Detoxification'
+							},{
+								img:'/img/runers.jpg',
+								text: 'Improvement of skin'
+							},{
+								img:'/img/runers.jpg',
+								text: 'Weight loss stimulation'
+							},{
+								img:'/img/runers.jpg',
+								text: 'Increased tone'
+							},{
+								img:'/img/runers.jpg',
+								text: 'Prevention of chronic diseases'
+							}]
+					for gallery in galleryList
+						.item
+							img(src=gallery.img)

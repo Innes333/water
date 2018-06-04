@@ -313,6 +313,17 @@ section
 .certificate
 	background: aliceblue	
 
+.gallery
+	padding: 0	
+	.gallery-slider
+		height: 400px
+		overflow: hidden
+
+		.item
+			img
+				width: 100%
+				height: 100%
+
 // water-choice
 $elements: 5;
 @for $i from 0 to $elements
@@ -325,7 +336,7 @@ $elements: 5;
 		position: relative
 		margin-bottom: 30px
 		padding: 20px 20px 30px
-		min-height: 550px
+		min-height: 580px
 		text-align: center
 		border: 1px solid $blueLight
 		opacity: 0
@@ -336,6 +347,7 @@ $elements: 5;
 
 		.choice-descr
 			line-height: 18px
+			font-size: 14px
 			ul
 				padding: 0 20px
 				list-style-type: disc
