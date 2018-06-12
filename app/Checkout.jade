@@ -116,11 +116,15 @@ html.no-js(lang="en")
 								.shipping
 									.name Shipping
 									.price -
-								.total
+								.total.mb4
 									.name Total
-									.price 110$		
+									.price 110$	
 
+								button(type="submit" name="ms2_action" value="order/submit" class="btn btn-default btn-primary ms2_link") Submit	
 										
+								.form-group.w-terms-of-use
+									span *I agree with
+										a(href="#") terms of use
 											
 		include templates/structure/footer
 		include templates/structure/scripts

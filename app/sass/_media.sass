@@ -70,10 +70,101 @@
 		-ms-animation: none !important
 		animation: none !important
 
+	// forms
+	form
+		.form-group
+			&.half
+				width: 100%
+
+	header
+		nav
+			padding: 0 10px
+		.logo
+			width: 90px	
+	.main-promo
+		.promo-content 
+			.title
+				line-height: 45px
+			.subtitle
+				line-height: 30px
+
+			.promo-text
+				font-size: 20px
+				margin-top: 20px	
+
+	.product-plus
+		.w-plus-item
+			.w-btn
+				text-align: center
+				margin: 10px 0 40px
+		.w-plus-item:nth-child(even) .w-btn		
+			text-align: center
+
 	.flip-card
 		opacity: 1	
+		.front-img
+			text-align: center
+			img
+				width: 80%
+				
 	.water-choice .w-choice-block
 		opacity: 1	
+
+	.bottle-structure
+		.bottle-schema
+			height: 420px
+
+			.item-descr
+				display: none
+
+			.item
+				&:nth-child(1)
+					width: 60%
+					top: 28px
+					right: -20px
+					height: 95px
+					.item-content
+						width: 80%
+					.dot
+						left: -4px
+				&:nth-child(2)
+					height: 80px
+					width: 50%
+					top: 145px
+					left: 0
+				&:nth-child(3)
+					height: 80px
+					width: 55%
+					top: 225px
+					right: 0
+				&:nth-child(4)
+					top: 272px
+					left: -21px
+					width: 57%
+
+
+	.how-works
+		.work-option,
+		.work-text
+			height: 235px
+		.work-item:nth-child(odd) .work-option:after,
+		.work-item:nth-child(even) .work-option:before					
+			background: transparent	
+
+	.product-card-inner
+		.product-options,
+		.title
+			text-align: center
+		.fotorama__stage
+			max-height: 550px
+			text-align: center
+		.fotorama__img
+			max-height: 500px!important
+			width: auto!important	
+			left: 50%!important
+			transform: translateX(-50%)!important
+
+
 
 
 

@@ -34,21 +34,34 @@ $(function() {
 				navigation: false,
 				pagination: true,
 				scrollPerPage: true,
-				items: 4					
+				items: 4,
+				itemsDesktop:  [1199,4],
+				itemsDesktopSmall: [980, 4],
+				itemsTablet: [768,3],
+				itemsMobile: [479,2]				
 			},
 			commentsOwlOptions: {
 				autoPlay: false,
 				navigation: false,
 				pagination: true,
 				scrollPerPage: true,
-				items: 2					
+				items: 2,
+				itemsDesktop:  [1199,2],
+				itemsDesktopSmall: [980, 2],
+				itemsTablet: [768,2],
+				itemsMobile: [479,1]				
 			},
 			galleryOwlOptions: {
-				autoPlay: true,
+				autoPlay: false,
 				navigation: true,
 				pagination: false,
 				scrollPerPage: true,
-				items: 3		
+				items: 3,
+				navigationText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+				itemsDesktop:  [1199,3],
+				itemsDesktopSmall: [980, 2],
+				itemsTablet: [768,1],
+				itemsMobile: [479,1]	
 			}
 		},
 		owlSetPaginName: function(slider){
